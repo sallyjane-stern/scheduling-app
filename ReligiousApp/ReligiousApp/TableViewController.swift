@@ -10,6 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var calBoxes: ViewDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +41,9 @@ class TableViewController: UITableViewController {
         } else {
             cell?.accessoryType = .none
         }
+        
+        calBoxes?.checkedBoxed[indexPath.row] = !(calBoxes?.checkedBoxed[indexPath.row])!
+        //print(calBoxes?.checkedBoxed[indexPath.row])
         
     }
 
