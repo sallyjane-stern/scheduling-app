@@ -15,6 +15,7 @@
 		C9A8AA70226FE6E400231FD9 /* ReligiousAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA6F226FE6E400231FD9 /* ReligiousAppTests.swift */; };
 		C9A8AA7B226FE6E400231FD9 /* ReligiousAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA7A226FE6E400231FD9 /* ReligiousAppUITests.swift */; };
 		C9A8AA89226FE71700231FD9 /* DU Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A8AA88226FE71700231FD9 /* DU Logo.png */; };
+		C9A8AA8B2270FFE800231FD9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C9A8AA7A226FE6E400231FD9 /* ReligiousAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligiousAppUITests.swift; sourceTree = "<group>"; };
 		C9A8AA7C226FE6E400231FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A8AA88226FE71700231FD9 /* DU Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DU Logo.png"; sourceTree = "<group>"; };
+		C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C9A8AA61226FE6E400231FD9 /* Assets.xcassets */,
 				C9A8AA63226FE6E400231FD9 /* LaunchScreen.storyboard */,
 				C9A8AA66226FE6E400231FD9 /* Info.plist */,
+				C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */,
 			);
 			path = ReligiousApp;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A8AA5D226FE6E200231FD9 /* ViewController.swift in Sources */,
+				C9A8AA8B2270FFE800231FD9 /* TableViewController.swift in Sources */,
 				C9A8AA5B226FE6E200231FD9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
