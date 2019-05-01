@@ -24,7 +24,7 @@
                                 <color key="tintColor" red="0.59485822916030884" green="0.0047344756312668324" blue="0.18171411752700806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.59513658290000004" green="0.0011230905069999999" blue="0.17966297270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.59607843137254901" green="0.0" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.59513658290000004" green="0.0011230905069999999" blue="0.17966297270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addToCal(_ sender: Any) {
+        //Booleans representing if the checkbox is checked or not
         let relgious = (calBoxes?.checkedBoxed[0])!
         let canvas = (calBoxes?.checkedBoxed[1])!
         let duEvents = (calBoxes?.checkedBoxed[2])!
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
     }
     
     private func getTitle(index: Int, bool: Bool) -> String{
+        
         if(index == 0 && bool){
             return " Religous Holidays,"
         } else if(index == 1 && bool){
