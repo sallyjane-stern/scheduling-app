@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9036574227368770046588C /* religious_holidays.ics in Resources */ = {isa = PBXBuildFile; fileRef = C9036573227368770046588C /* religious_holidays.ics */; };
 		C9A8AA5B226FE6E200231FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */; };
 		C9A8AA5D226FE6E200231FD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA5C226FE6E200231FD9 /* ViewController.swift */; };
 		C9A8AA60226FE6E200231FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8AA5E226FE6E200231FD9 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9036573227368770046588C /* religious_holidays.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = religious_holidays.ics; sourceTree = "<group>"; };
 		C9A8AA57226FE6E200231FD9 /* ReligiousApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReligiousApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A8AA5C226FE6E200231FD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		C9A8AA4E226FE6E200231FD9 = {
 			isa = PBXGroup;
 			children = (
+				C9036573227368770046588C /* religious_holidays.ics */,
 				C9A8AA88226FE71700231FD9 /* DU Logo.png */,
 				C9A8AA59226FE6E200231FD9 /* ReligiousApp */,
 				C9A8AA6E226FE6E400231FD9 /* ReligiousAppTests */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9036574227368770046588C /* religious_holidays.ics in Resources */,
 				C9A8AA89226FE71700231FD9 /* DU Logo.png in Resources */,
 				C9A8AA65226FE6E400231FD9 /* LaunchScreen.storyboard in Resources */,
 				C9A8AA62226FE6E400231FD9 /* Assets.xcassets in Resources */,
