@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         //right now, only inserting one event
         let event = EKEvent(eventStore: store)
         event.calendar = calendar
-        event.title = "NEW EVENT"
+        event.title = "Example Holiday"
         event.startDate = Date()
         event.endDate = Date().addingTimeInterval(2 * 60 * 60)
         print("[INFO] Event Created")
