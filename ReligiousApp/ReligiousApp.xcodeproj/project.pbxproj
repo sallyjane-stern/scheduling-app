@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C9036574227368770046588C /* religious_holidays.ics in Resources */ = {isa = PBXBuildFile; fileRef = C9036573227368770046588C /* religious_holidays.ics */; };
+		C96FA041227D0CC0002828C9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96FA040227D0CC0002828C9 /* EventViewController.swift */; };
 		C9A8AA5B226FE6E200231FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */; };
 		C9A8AA5D226FE6E200231FD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA5C226FE6E200231FD9 /* ViewController.swift */; };
 		C9A8AA60226FE6E200231FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8AA5E226FE6E200231FD9 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		C9036573227368770046588C /* religious_holidays.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = religious_holidays.ics; sourceTree = "<group>"; };
+		C96FA040227D0CC0002828C9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C9A8AA57226FE6E200231FD9 /* ReligiousApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReligiousApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A8AA5C226FE6E200231FD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */,
 				C9A8AA5C226FE6E200231FD9 /* ViewController.swift */,
+				C96FA040227D0CC0002828C9 /* EventViewController.swift */,
 				C9A8AA5E226FE6E200231FD9 /* Main.storyboard */,
 				C9A8AA61226FE6E400231FD9 /* Assets.xcassets */,
 				C9A8AA63226FE6E400231FD9 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A8AA5D226FE6E200231FD9 /* ViewController.swift in Sources */,
+				C96FA041227D0CC0002828C9 /* EventViewController.swift in Sources */,
 				C9A8AA8B2270FFE800231FD9 /* TableViewController.swift in Sources */,
 				C9A8AA5B226FE6E200231FD9 /* AppDelegate.swift in Sources */,
 			);

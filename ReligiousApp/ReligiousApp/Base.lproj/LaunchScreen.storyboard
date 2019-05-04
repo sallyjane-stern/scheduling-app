@@ -19,8 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DU Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="EIN-Cl-XLY">
-                                <rect key="frame" x="87" y="384" width="240" height="128.00000000000006"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="tintColor" red="0.59485822916030884" green="0.0047344756312668324" blue="0.18171411752700806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>

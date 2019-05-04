@@ -24,14 +24,15 @@
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccj-Dt-GcI">
                                         <rect key="frame" x="21" y="163" width="373" height="312"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <connections>
                                             <segue destination="HwH-0b-c4C" kind="embed" identifier="imbed" id="MyU-H1-b9r"/>
                                         </connections>
                                     </containerView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noD-HX-NvW">
                                         <rect key="frame" x="21" y="471" width="373" height="57"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Add To Calendar" backgroundImage="Union 2">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,7 +45,7 @@
                                 <color key="backgroundColor" red="0.78514629792590673" green="0.0" blue="0.24123553034617934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="qty-ti-aNO" appends="YES" id="4An-op-X7w"/>
+                                    <outletCollection property="gestureRecognizers" destination="Xld-Ig-YWV" appends="YES" id="BSJ-fy-4Kc"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -52,12 +53,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="SwipeRecognizer" destination="Xld-Ig-YWV" id="2rS-mq-rvQ"/>
                         <outlet property="addButton" destination="noD-HX-NvW" id="7VY-lC-sEM"/>
                         <outlet property="containerView" destination="ccj-Dt-GcI" id="P5F-P3-3tX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="qty-ti-aNO"/>
+                <swipeGestureRecognizer direction="right" id="Xld-Ig-YWV">
+                    <connections>
+                        <action selector="swipedScreen:" destination="BYZ-38-t0r" id="Prq-GC-yHN"/>
+                        <segue destination="vCx-FX-wpQ" kind="show" id="2Y0-aR-qGJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
         </scene>
@@ -134,12 +141,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drv-hY-gYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="712" y="-70"/>
+            <point key="canvasLocation" x="949" y="-78"/>
         </scene>
-        <!--View Controller-->
+        <!--Event Viewcontroller-->
         <scene sceneID="q5n-VT-sV4">
             <objects>
-                <viewController id="vCx-FX-wpQ" sceneMemberID="viewController">
+                <viewController id="vCx-FX-wpQ" customClass="EventViewcontroller" customModule="ReligiousApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OIe-t0-Duc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -149,21 +156,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="God-sr-PF7">
-                                <rect key="frame" x="46" y="355" width="268" height="34"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <state key="disabled" title="Hello" backgroundImage="Union 2">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <state key="normal" title="Event Title" backgroundImage="Union 2"/>
+                                <state key="disabled" backgroundImage="Union 2"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.78514629790000001" green="0.0" blue="0.2412355303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="z7S-9F-ynf"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vuo-os-bEZ" appends="YES" id="Qfa-Qd-9p5"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="EventTitle" destination="God-sr-PF7" id="FpI-SS-ikh"/>
+                        <outlet property="imageView" destination="gMO-gc-mff" id="LRS-JR-63t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQe-qS-6oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="vuo-os-bEZ">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="MyT-Ia-xKH"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1337.68115942029" y="92.410714285714278"/>
+            <point key="canvasLocation" x="1640.5797101449277" y="89.732142857142847"/>
         </scene>
     </scenes>
     <resources>
