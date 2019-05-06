@@ -22,8 +22,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //Set the Swipe Recognizer to Recognize Right Swipes
         SwipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func checkOrAddCalendar(store:EKEventStore){
@@ -150,10 +155,6 @@ class ViewController: UIViewController {
         }
     }
     
-    //Function that recognizes when a swipe gesture was made
-    @IBAction func swipedScreen(_ sender: Any) {
-        print("[INFO] Recognized Swipe")
-    }
     
 }
 

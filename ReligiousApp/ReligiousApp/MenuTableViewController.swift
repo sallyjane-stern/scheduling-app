@@ -1,31 +1,19 @@
 //
-//  TableViewController.swift
+//  MenuTableViewController.swift
 //  ReligiousApp
 //
-//  Created by Trenton Parrotte on 4/24/19.
+//  Created by Trenton Parrotte on 5/5/19.
 //  Copyright © 2019 Trenton Parrotte. All rights reserved.
 //
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class MenuTableViewController: UIViewController {
+//class MenuTableViewController: UITableViewController {
 
-    var calBoxes: ViewDelegate?
-    @IBOutlet weak var holidayBox: UITableViewCell!
-    @IBOutlet weak var canvasBox: UITableViewCell!
-    @IBOutlet weak var eventBox: UITableViewCell!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (holidayBox.isHidden){
-            calBoxes?.checkedBoxed[0] = false
-        }
-        if (canvasBox.isHidden){
-            calBoxes?.checkedBoxed[1] = false
-        }
-        if(eventBox.isHidden){
-            calBoxes?.checkedBoxed[2] = false
-        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,35 +21,24 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+
+    }
 
     // MARK: - Table view data source
-
+//
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
-//        return 1
+//        return 0
 //    }
-
+//
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        // #warning Incomplete implementation, return the number of rows
-//        var count = 0
-////        if(!holidayBox.isHidden){count += 1}
-////        if(!canvasBox.isHidden){count += 1}
-////        if(!eventBox.isHidden){count += 1}
-//        return 3
+//        return 0
 //    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        if(cell?.accessoryType != UITableViewCell.AccessoryType.checkmark){
-            cell?.accessoryType = UITableViewCell.AccessoryType.checkmark
-        } else {
-            cell?.accessoryType = .none
-        }
-        
-        calBoxes?.checkedBoxed[indexPath.row] = !(calBoxes?.checkedBoxed[indexPath.row])!
-        //print(calBoxes?.checkedBoxed[indexPath.row])
-        
-    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -16,8 +16,8 @@
 		C9A8AA65226FE6E400231FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A8AA63226FE6E400231FD9 /* LaunchScreen.storyboard */; };
 		C9A8AA70226FE6E400231FD9 /* ReligiousAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA6F226FE6E400231FD9 /* ReligiousAppTests.swift */; };
 		C9A8AA7B226FE6E400231FD9 /* ReligiousAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA7A226FE6E400231FD9 /* ReligiousAppUITests.swift */; };
-		C9A8AA89226FE71700231FD9 /* DU Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A8AA88226FE71700231FD9 /* DU Logo.png */; };
 		C9A8AA8B2270FFE800231FD9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */; };
+		C9C66C13227F635C004EE009 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C66C12227F635C004EE009 /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 		C9A8AA76226FE6E400231FD9 /* ReligiousAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReligiousAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A8AA7A226FE6E400231FD9 /* ReligiousAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligiousAppUITests.swift; sourceTree = "<group>"; };
 		C9A8AA7C226FE6E400231FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9A8AA88226FE71700231FD9 /* DU Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DU Logo.png"; sourceTree = "<group>"; };
 		C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C9C66C12227F635C004EE009 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				C9036573227368770046588C /* religious_holidays.ics */,
-				C9A8AA88226FE71700231FD9 /* DU Logo.png */,
 				C9A8AA59226FE6E200231FD9 /* ReligiousApp */,
 				C9A8AA6E226FE6E400231FD9 /* ReligiousAppTests */,
 				C9A8AA79226FE6E400231FD9 /* ReligiousAppUITests */,
@@ -109,12 +108,13 @@
 			children = (
 				C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */,
 				C9A8AA5C226FE6E200231FD9 /* ViewController.swift */,
+				C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */,
 				C96FA040227D0CC0002828C9 /* EventViewController.swift */,
+				C9C66C12227F635C004EE009 /* MenuTableViewController.swift */,
 				C9A8AA5E226FE6E200231FD9 /* Main.storyboard */,
 				C9A8AA61226FE6E400231FD9 /* Assets.xcassets */,
 				C9A8AA63226FE6E400231FD9 /* LaunchScreen.storyboard */,
 				C9A8AA66226FE6E400231FD9 /* Info.plist */,
-				C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */,
 			);
 			path = ReligiousApp;
 			sourceTree = "<group>";
@@ -242,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9036574227368770046588C /* religious_holidays.ics in Resources */,
-				C9A8AA89226FE71700231FD9 /* DU Logo.png in Resources */,
 				C9A8AA65226FE6E400231FD9 /* LaunchScreen.storyboard in Resources */,
 				C9A8AA62226FE6E400231FD9 /* Assets.xcassets in Resources */,
 				C9A8AA60226FE6E200231FD9 /* Main.storyboard in Resources */,
@@ -272,6 +271,7 @@
 			files = (
 				C9A8AA5D226FE6E200231FD9 /* ViewController.swift in Sources */,
 				C96FA041227D0CC0002828C9 /* EventViewController.swift in Sources */,
+				C9C66C13227F635C004EE009 /* MenuTableViewController.swift in Sources */,
 				C9A8AA8B2270FFE800231FD9 /* TableViewController.swift in Sources */,
 				C9A8AA5B226FE6E200231FD9 /* AppDelegate.swift in Sources */,
 			);
