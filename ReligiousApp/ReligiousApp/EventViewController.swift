@@ -14,7 +14,7 @@ class EventViewcontroller:UITableViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var EventTitle: UIButton!
     @IBOutlet weak var EventName: UILabel!
-    @IBOutlet weak var Pronounciation: UILabel!
+    @IBOutlet weak var pronunciation: UILabel!
     
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var dateView: UIView!
@@ -64,8 +64,8 @@ class EventViewcontroller:UITableViewController {
             //Code Here
         //Get Pronounciation
             //Code Here
-        if(Pronounciation.text == "Pronounce"){
-            Pronounciation.text = "No Pronounciation Found"
+        if(pronunciation.text == "Pronounce"){
+            pronunciation.text = "No Pronunciation Found"
         }
         
         //Mood Cell
@@ -159,9 +159,9 @@ class EventViewcontroller:UITableViewController {
     
     //Function that converts text to speech using Swift's built in AVFoundation Kit
     @IBAction func textToSpeech(_ sender: Any) {
-        let utterance = AVSpeechUtterance(string: Pronounciation.text!)
+        let utterance = AVSpeechUtterance(string: pronunciation.text!)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.1
+        utterance.rate = 0.5
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
