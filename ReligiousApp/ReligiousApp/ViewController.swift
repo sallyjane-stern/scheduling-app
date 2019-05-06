@@ -15,13 +15,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet var SwipeRecognizer: UISwipeGestureRecognizer!
     private var calBoxes: ViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        //Set the Swipe Recognizer to Recognize Right Swipes
+        SwipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func checkOrAddCalendar(store:EKEventStore){
@@ -90,6 +97,7 @@ class ViewController: UIViewController {
         }
     }
 
+    //Function called when "Add To Calendar" button is pressed
     @IBAction func addToCal(_ sender: Any) {
         //Booleans representing if the checkbox is checked or not
         let relgious = (calBoxes?.checkedBoxed[0])!
@@ -119,11 +127,12 @@ class ViewController: UIViewController {
             print("Case default")
         }
         
-        
+        //Test output to ensure program knows what boxes are checked and unchecked
         print("Added to Calendar:\(getTitle(index: 0, bool: relgious))\(getTitle(index: 1, bool: canvas))\(getTitle(index: 2, bool: duEvents))")
         
     }
     
+    //Testing Function to check which menu boxes are checked
     private func getTitle(index: Int, bool: Bool) -> String{
         
         if(index == 0 && bool){
@@ -137,6 +146,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Adds the TableViewController to the Screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "imbed"){
             calBoxes = ViewDelegate()
@@ -145,8 +155,11 @@ class ViewController: UIViewController {
         }
     }
     
+    
 }
 
+
+//Sets the defaults for the TableViewController
 class ViewDelegate {
     var checkedBoxed = [true,true,true]
 }
