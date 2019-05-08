@@ -203,14 +203,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
-                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="iaC-xR-cQ6">
+                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="iaC-xR-cQ6">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="246"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <sections>
                             <tableViewSection id="qsw-JW-rXB">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="65" id="f65-No-TMZ" userLabel="EventCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="65" id="f65-No-TMZ" userLabel="EventCell">
                                         <rect key="frame" x="0.0" y="246" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f65-No-TMZ" id="6Ki-V8-1sR">
@@ -724,18 +724,27 @@
                                         <rect key="frame" x="0.0" y="964" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hCr-p2-JlL" id="jpf-I7-ySw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLR-eQ-V2t">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLR-eQ-V2t" userLabel="InfoButton">
                                                     <rect key="frame" x="379" y="11" width="22" height="22"/>
                                                     <color key="tintColor" red="0.59607843140000005" green="0.0" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <action selector="disclaimerI:" destination="hZm-fB-11V" eventType="touchUpInside" id="Afo-PQ-rgI"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2G-Gr-mj4" userLabel="WikiButton">
+                                                    <rect key="frame" x="5" y="6" width="32" height="32"/>
+                                                    <state key="normal" backgroundImage="16px-Wikipedia's_W.svg"/>
+                                                    <connections>
+                                                        <action selector="sendToWiki:" destination="hZm-fB-11V" eventType="touchUpInside" id="8BI-UJ-YWT"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="w2G-Gr-mj4" firstAttribute="centerY" secondItem="jpf-I7-ySw" secondAttribute="centerY" id="bCu-nO-t9I"/>
+                                                <constraint firstItem="w2G-Gr-mj4" firstAttribute="leading" secondItem="jpf-I7-ySw" secondAttribute="leading" constant="5" id="cAg-GB-gxw"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="DLR-eQ-V2t" secondAttribute="trailing" constant="5" id="dDG-HR-IJX"/>
                                                 <constraint firstItem="DLR-eQ-V2t" firstAttribute="centerY" secondItem="jpf-I7-ySw" secondAttribute="centerY" id="vqK-75-0H3"/>
                                             </constraints>
@@ -753,7 +762,6 @@
                     <connections>
                         <outlet property="EventName" destination="AZz-qe-axY" id="84L-4z-6ea"/>
                         <outlet property="EventTitle" destination="wqg-dG-b49" id="skG-2I-fvJ"/>
-                        <outlet property="Pronounciation" destination="Hgc-ja-Sz6" id="rZc-PL-RQ2"/>
                         <outlet property="busyCheck" destination="ze5-4W-0he" id="Mok-67-JuY"/>
                         <outlet property="celebratoryView" destination="5QL-nn-EL3" id="u1Y-5j-n7Z"/>
                         <outlet property="dateView" destination="uDM-Vk-wOi" id="5WD-Ic-lgC"/>
@@ -767,6 +775,7 @@
                         <outlet property="imageView" destination="iaC-xR-cQ6" id="rxb-zi-65J"/>
                         <outlet property="month" destination="6hV-5y-cfF" id="bcc-Rh-5Uu"/>
                         <outlet property="mournfulView" destination="73u-Pp-z9T" id="Ieg-aO-mWK"/>
+                        <outlet property="pronunciation" destination="Hgc-ja-Sz6" id="rZc-PL-RQ2"/>
                         <outlet property="reflectiveView" destination="VGJ-CO-ocf" id="VKy-NL-jbr"/>
                         <outlet property="religionImage" destination="k7c-qE-YdW" id="66e-nJ-kyc"/>
                         <outlet property="religionView" destination="RGn-eA-r2j" id="bDa-v8-4WH"/>
@@ -804,6 +813,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="16px-Wikipedia's_W.svg" width="32" height="32"/>
         <image name="CheckSymbol" width="23" height="23"/>
         <image name="DU Logo" width="180" height="180"/>
         <image name="Exclusion 1" width="371" height="118"/>
