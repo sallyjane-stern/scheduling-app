@@ -9,8 +9,12 @@
 import UIKit
 import EventKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController{
+    
+    @IBOutlet weak var outlookCal: UIButton!
+    
+    @IBOutlet weak var googleCal: UIButton!
+    @IBOutlet weak var appleCal: UIButton!
     @IBOutlet weak var addButton: UIButton!
     
     @IBOutlet weak var containerView: UIView!
@@ -18,11 +22,14 @@ class ViewController: UIViewController {
     @IBOutlet var SwipeRecognizer: UISwipeGestureRecognizer!
     private var calBoxes: ViewDelegate?
     
+    private var pickerArray = [false, false, false]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Set the Swipe Recognizer to Recognize Right Swipes
         SwipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         
     }
     
@@ -100,35 +107,48 @@ class ViewController: UIViewController {
     //Function called when "Add To Calendar" button is pressed
     @IBAction func addToCal(_ sender: Any) {
         //Booleans representing if the checkbox is checked or not
-        let relgious = (calBoxes?.checkedBoxed[0])!
+        let religious = (calBoxes?.checkedBoxed[0])!
         let canvas = (calBoxes?.checkedBoxed[1])!
         let duEvents = (calBoxes?.checkedBoxed[2])!
         
-        let store = EKEventStore()
+        // apple calendar code
+        if(pickerArray[0]){
+            let store = EKEventStore()
+            
+            switch EKEventStore.authorizationStatus(for: .event){
+            case .authorized:
+                //allowed access to calendar, process .ics
+                print("[INFO] Allowed access to EventStore")
+                checkOrAddCalendar(store: store)
+            case .denied:
+                print("[ERROR]Access to Calendar Denied")
+            case .notDetermined:
+                // not sure what this is
+                store.requestAccess(to: .event, completion:
+                    {[weak self] (granted: Bool, error: Error?) -> Void in
+                        if granted {
+                            self!.checkOrAddCalendar(store: store)
+                        } else {
+                            print("[ERROR] Access denied")
+                        }
+                })
+            default:
+                print("Case default")
+            }
+        }
         
-        switch EKEventStore.authorizationStatus(for: .event){
-        case .authorized:
-            //allowed access to calendar, process .ics
-            print("[INFO] Allowed access to EventStore")
-            checkOrAddCalendar(store: store)
-        case .denied:
-            print("[ERROR]Access to Calendar Denied")
-        case .notDetermined:
-            // not sure what this is
-            store.requestAccess(to: .event, completion:
-                {[weak self] (granted: Bool, error: Error?) -> Void in
-                    if granted {
-                        self!.checkOrAddCalendar(store: store)
-                    } else {
-                        print("[ERROR] Access denied")
-                    }
-            })
-        default:
-            print("Case default")
+        // google calendar code
+        if (pickerArray[1]) {
+            
+        }
+        
+        // outlook calendar code
+        if (pickerArray[2]) {
+            
         }
         
         //Test output to ensure program knows what boxes are checked and unchecked
-        print("Added to Calendar:\(getTitle(index: 0, bool: relgious))\(getTitle(index: 1, bool: canvas))\(getTitle(index: 2, bool: duEvents))")
+        print("Added to Calendar:\(getTitle(index: 0, bool: religious))\(getTitle(index: 1, bool: canvas))\(getTitle(index: 2, bool: duEvents))")
         
     }
     
@@ -145,6 +165,45 @@ class ViewController: UIViewController {
             return " Nothing"
         }
     }
+    
+    // handles calendar choice
+    
+    @IBAction func appleButton(_ sender: Any) {
+        if (pickerArray[0]) {
+            appleCal.setImage(UIImage.init(named: "XSymbol"), for: .normal)
+        }
+        
+        else {
+            appleCal.setImage(UIImage.init(named: "CheckSymbol"), for: .normal)
+        }
+        
+        pickerArray[0] = !pickerArray[0]
+    }
+    
+    @IBAction func googleButton(_ sender: Any) {
+        if (pickerArray[1]) {
+            googleCal.setImage(UIImage.init(named: "XSymbol"), for: .normal)
+        }
+            
+        else {
+            googleCal.setImage(UIImage.init(named: "CheckSymbol"), for: .normal)
+        }
+        
+        pickerArray[1] = !pickerArray[1]
+    }
+    
+    @IBAction func outlookButton(_ sender: Any) {
+        if (pickerArray[2]) {
+            outlookCal.setImage(UIImage.init(named: "XSymbol"), for: .normal)
+        }
+            
+        else {
+            outlookCal.setImage(UIImage.init(named: "CheckSymbol"), for: .normal)
+        }
+        
+        pickerArray[2] = !pickerArray[2]
+    }
+    
     
     //Adds the TableViewController to the Screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
