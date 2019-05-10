@@ -38,6 +38,30 @@
                                     <action selector="addToCal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k8K-zL-hsp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78s-VW-Y9H">
+                                <rect key="frame" x="307" y="215" width="87" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Outlook" image="XSymbol"/>
+                                <connections>
+                                    <action selector="outlookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VI0-lI-Ti3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPx-YD-TcH">
+                                <rect key="frame" x="167" y="215" width="81" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Google" image="XSymbol"/>
+                                <connections>
+                                    <action selector="googleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yU4-qW-pY0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTP-wT-yp5">
+                                <rect key="frame" x="20" y="215" width="70" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apple" image="XSymbol"/>
+                                <connections>
+                                    <action selector="appleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAi-vM-eAv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.78514629790000001" green="0.0" blue="0.2412355303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -66,13 +90,16 @@
                     <connections>
                         <outlet property="SwipeRecognizer" destination="oBL-oU-XLN" id="zcV-jm-buc"/>
                         <outlet property="addButton" destination="noD-HX-NvW" id="7VY-lC-sEM"/>
+                        <outlet property="appleCal" destination="gTP-wT-yp5" id="eIk-da-N1i"/>
                         <outlet property="containerView" destination="ccj-Dt-GcI" id="P5F-P3-3tX"/>
+                        <outlet property="googleCal" destination="HPx-YD-TcH" id="lCn-FX-EfW"/>
+                        <outlet property="outlookCal" destination="78s-VW-Y9H" id="ePR-AZ-Kod"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="oBL-oU-XLN"/>
             </objects>
-            <point key="canvasLocation" x="1803" y="-548"/>
+            <point key="canvasLocation" x="1265" y="-541"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="igq-nA-22h">
@@ -893,6 +920,7 @@
         <image name="Subtraction 1" width="187.5" height="45"/>
         <image name="Subtraction 2" width="187.5" height="45"/>
         <image name="Union 2" width="342" height="70"/>
+        <image name="XSymbol" width="23" height="23"/>
         <image name="hinduism" width="40.5" height="43"/>
         <image name="volume-high" width="18" height="18"/>
     </resources>
