@@ -11,9 +11,21 @@ import UIKit
 class TableViewController: UITableViewController {
 
     var calBoxes: ViewDelegate?
+    @IBOutlet weak var holidayBox: UITableViewCell!
+    @IBOutlet weak var canvasBox: UITableViewCell!
+    @IBOutlet weak var eventBox: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (holidayBox.isHidden){
+            calBoxes?.checkedBoxed[0] = false
+        }
+        if (canvasBox.isHidden){
+            calBoxes?.checkedBoxed[1] = false
+        }
+        if(eventBox.isHidden){
+            calBoxes?.checkedBoxed[2] = false
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,15 +36,19 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
-    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        var count = 0
+////        if(!holidayBox.isHidden){count += 1}
+////        if(!canvasBox.isHidden){count += 1}
+////        if(!eventBox.isHidden){count += 1}
+//        return 3
+//    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
