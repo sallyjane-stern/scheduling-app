@@ -20,15 +20,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Set the Swipe Recognizer to Recognize Right Swipes
-        SwipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func checkOrAddCalendar(store:EKEventStore){
