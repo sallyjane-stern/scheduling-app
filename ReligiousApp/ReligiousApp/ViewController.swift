@@ -8,6 +8,7 @@
 
 import UIKit
 import EventKit
+import MXLCalendarManagerSwift
 
 class ViewController: UIViewController{
     
@@ -26,8 +27,6 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,15 +35,16 @@ class ViewController: UIViewController{
     }
     
     func checkOrAddCalendar(store:EKEventStore){
+        let parsedEventList = parseEventFile()
         let firstCheck = checkForCalendar(store:store)
         if firstCheck.0 {
             print("[INFO] Calendar already exists")
-            insertEvents(store: store, calendar: firstCheck.1!)
+            insertEvents(store: store, calendar: firstCheck.1!, eventList: parsedEventList!)
         } else {
             addOurCalendar(store: store)
             let secondCheck = checkForCalendar(store: store)
             if secondCheck.0{
-                insertEvents(store: store, calendar: secondCheck.1!)
+                insertEvents(store: store, calendar: secondCheck.1!, eventList: parsedEventList!)
             } else {
                 print("NO CALENDAR RETURNED FROM CREATE")
             }
@@ -84,20 +84,34 @@ class ViewController: UIViewController{
         }
     }
     
-    func insertEvents(store: EKEventStore, calendar : EKCalendar){
-        print("[INFO] Creating event...")
-        //right now, only inserting one event
-        let event = EKEvent(eventStore: store)
-        event.calendar = calendar
-        event.title = "Example Holiday"
-        event.startDate = Date()
-        event.endDate = Date().addingTimeInterval(2 * 60 * 60)
-        print("[INFO] Event Created")
-        print("[INFO] Saving event...")
-        do{
-            try store.save(event, span:.thisEvent)
-        } catch {
-            print("[ERROR] Event not saved")
+    func parseEventFile()->MXLCalendar?{
+        print("Parsing ICS File...")
+        guard let filePath = Bundle.main.path(forResource: "religious_holidays", ofType: "ics") else {
+            print("ERROR: Did not find .ics file path")
+            return nil
+        }
+        let calendarManager = MXLCalendarManager()
+        var eventList:MXLCalendar = MXLCalendar()
+        calendarManager.scanICSFileatLocalPath(filePath: filePath) { (calendar, error) in
+            guard let calendar = calendar else {
+                return
+            }
+            eventList = calendar
+        }
+        print("Done Parsing file")
+        return eventList
+    }
+    
+    func insertEvents(store: EKEventStore, calendar : EKCalendar, eventList : MXLCalendar){
+        for eventFromList in eventList.events{
+            let event = eventFromList.convertToEKEventOn(date: eventFromList.eventStartDate!, store: store)
+            event?.calendar = calendar
+            event?.isAllDay = true
+            do{
+                try store.save(event!, span:.thisEvent)
+            } catch {
+                print("[ERROR] Event not saved")
+            }
         }
     }
 
@@ -109,7 +123,7 @@ class ViewController: UIViewController{
         let duEvents = (calBoxes?.checkedBoxed[2])!
         
         // apple calendar code
-        if(pickerArray[0]){
+        //if(pickerArray[0]){
             let store = EKEventStore()
             
             switch EKEventStore.authorizationStatus(for: .event){
@@ -132,7 +146,7 @@ class ViewController: UIViewController{
             default:
                 print("Case default")
             }
-        }
+        //}
         
         // google calendar code
         if (pickerArray[1]) {

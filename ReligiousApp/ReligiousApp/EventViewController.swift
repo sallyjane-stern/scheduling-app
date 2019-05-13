@@ -115,7 +115,7 @@ class EventViewcontroller:UITableViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         //Get the Appropriate Image
-        var googleURL = "https://imgur.com/86y1Tm"
+        let googleURL = "https://imgur.com/86y1Tm"
 //        if(!googleURL.contains(".jpg")){
 //            googleURL.append(".jpg")
 //            print(googleURL)
