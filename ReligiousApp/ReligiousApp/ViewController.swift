@@ -22,11 +22,22 @@ class ViewController: UIViewController{
     
     @IBOutlet var SwipeRecognizer: UISwipeGestureRecognizer!
     private var calBoxes: ViewDelegate?
+    private var isDone = false
     
     private var pickerArray = [false, false, false]
+    let handlerBlock: (Bool) -> Bool = {
+        if $0 {
+            print("Add To Calendar is complete")
+            //Closes the view controller
+            return true
+        } else {
+            return false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +45,7 @@ class ViewController: UIViewController{
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    func checkOrAddCalendar(store:EKEventStore){
+    func checkOrAddCalendar(store:EKEventStore, completion: (Bool) -> Bool){
         let parsedEventList = parseEventFile()
         let firstCheck = checkForCalendar(store:store)
         if firstCheck.0 {
@@ -48,6 +59,9 @@ class ViewController: UIViewController{
             } else {
                 print("NO CALENDAR RETURNED FROM CREATE")
             }
+        }
+        if(completion(true) == true){
+            dismissControllerHelper()
         }
     }
     
@@ -115,6 +129,7 @@ class ViewController: UIViewController{
         }
     }
 
+    
     //Function called when "Add To Calendar" button is pressed
     @IBAction func addToCal(_ sender: Any) {
         //Booleans representing if the checkbox is checked or not
@@ -130,7 +145,7 @@ class ViewController: UIViewController{
             case .authorized:
                 //allowed access to calendar, process .ics
                 print("[INFO] Allowed access to EventStore")
-                checkOrAddCalendar(store: store)
+                checkOrAddCalendar(store: store, completion: handlerBlock)
             case .denied:
                 print("[ERROR]Access to Calendar Denied")
             case .notDetermined:
@@ -138,7 +153,7 @@ class ViewController: UIViewController{
                 store.requestAccess(to: .event, completion:
                     {[weak self] (granted: Bool, error: Error?) -> Void in
                         if granted {
-                            self!.checkOrAddCalendar(store: store)
+                            self!.checkOrAddCalendar(store: store, completion: self!.handlerBlock)
                         } else {
                             print("[ERROR] Access denied")
                         }
@@ -160,6 +175,7 @@ class ViewController: UIViewController{
         
         //Test output to ensure program knows what boxes are checked and unchecked
         print("Added to Calendar:\(getTitle(index: 0, bool: religious))\(getTitle(index: 1, bool: canvas))\(getTitle(index: 2, bool: duEvents))")
+        
         
     }
     
@@ -224,6 +240,16 @@ class ViewController: UIViewController{
             vc.calBoxes = self.calBoxes
         }
     }
+    
+    //Dismisses the view Controller
+    @IBAction func dismissController(_ sender: Any) {
+        dismissControllerHelper()
+    }
+    
+    func dismissControllerHelper(){
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     
 }
