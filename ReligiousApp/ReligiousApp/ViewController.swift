@@ -9,6 +9,8 @@
 import UIKit
 import EventKit
 import MXLCalendarManagerSwift
+import GoogleAPIClientForREST
+import GoogleSignIn
 
 class ViewController: UIViewController{
     
@@ -25,6 +27,8 @@ class ViewController: UIViewController{
     private var isDone = false
     
     private var pickerArray = [false, false, false]
+    
+    //Completion handler so the view does not close when it is not supposed to
     let handlerBlock: (Bool) -> Bool = {
         if $0 {
             print("Add To Calendar is complete")
@@ -35,15 +39,18 @@ class ViewController: UIViewController{
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewDidLoad(){
+        super.viewDidLoad();
+        
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+
+    
     
     func checkOrAddCalendar(store:EKEventStore, completion: (Bool) -> Bool){
         let parsedEventList = parseEventFile()
@@ -138,7 +145,7 @@ class ViewController: UIViewController{
         let duEvents = (calBoxes?.checkedBoxed[2])!
         
         // apple calendar code
-        //if(pickerArray[0]){
+        if(pickerArray[0]){
             let store = EKEventStore()
             
             switch EKEventStore.authorizationStatus(for: .event){
@@ -161,7 +168,7 @@ class ViewController: UIViewController{
             default:
                 print("Case default")
             }
-        //}
+        }
         
         // google calendar code
         if (pickerArray[1]) {
@@ -175,6 +182,10 @@ class ViewController: UIViewController{
         
         //Test output to ensure program knows what boxes are checked and unchecked
         print("Added to Calendar:\(getTitle(index: 0, bool: religious))\(getTitle(index: 1, bool: canvas))\(getTitle(index: 2, bool: duEvents))")
+        
+        if(!pickerArray[0] && !pickerArray[2] && !pickerArray[1]){
+            dismissControllerHelper()
+        }
         
         
     }
@@ -242,9 +253,10 @@ class ViewController: UIViewController{
     }
     
     //Dismisses the view Controller
-    @IBAction func dismissController(_ sender: Any) {
+    @IBAction func closeController(_ sender: Any) {
         dismissControllerHelper()
     }
+    
     
     func dismissControllerHelper(){
         dismiss(animated: true, completion: nil)
