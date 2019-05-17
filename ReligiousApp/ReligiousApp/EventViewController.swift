@@ -11,6 +11,7 @@ import SafariServices
 import AVFoundation
 import UIKit
 import SDWebImage
+import GoogleAPIClientForREST
 
 class EventViewcontroller:UITableViewController {
     @IBOutlet weak var imageView: UIImageView!
@@ -42,6 +43,7 @@ class EventViewcontroller:UITableViewController {
     
     @IBOutlet weak var detailText: UITextView!
     
+    private var infoStruct: SheetData?
     
     
     override func viewDidLoad() {
@@ -134,10 +136,30 @@ class EventViewcontroller:UITableViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        //Resets the navigation controller to its default look
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         self.navigationController?.navigationBar.tintColor = self.view.tintColor
     }
     
+    func googleSheetsParser() {
+        let service = GTLRService()
+        let spreadSheetID = "1issBSCYE-qq00dk2_CD8AH95HPi_Mik1TGBd_0DLNGE"
+        let range = "A1:K"
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadSheetID, range: range)
+        service.executeQuery(query, completionHandler: nil)
+
+    }
+    func addToSheetData(ticket: GTLRServiceTicket, finishedWithObject result : GTLRSheets_ValueRange, error : NSError?) {
+        
+        if let error = error {
+            print("ERROR")
+            return
+        }
+        let data = result.values!
+//        for row in data {
+//            infoSheet = SheetData.init(name: <#T##String#>, pronounce: <#T##String#>, tradition: <#T##String#>, mood: <#T##String#>, impacts: <#T##String#>, food: <#T##String#>, greeting: <#T##String#>, desc: <#T##String#>, imageURL: <#T##String#>, restrictions: <#T##String#>)
+//        }
+    }
     //Function that uses a random number generator to select a random animal from the list and return that animal as an image to be displayed
     func getDefaultImageURL() -> URL{
         
@@ -219,3 +241,17 @@ extension UIImage {
     }
 }
 
+//Struct that will lay out the Sheet Data to be filled in by the Google Sheet Parser
+struct SheetData {
+    var name: String
+    var pronounce: String
+    var tradition: String
+    var mood: String
+    var impacts: String
+    var food: String
+    var greeting: String
+    var desc: String
+    var imageURL: String
+    var restrictions: String
+    
+}
