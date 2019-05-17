@@ -9,8 +9,11 @@
 import UIKit
 import EventKit
 import MXLCalendarManagerSwift
+import GoogleAPIClientForREST
+import GTMOAuth2
+import GoogleSignIn
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var outlookCal: UIButton!
     
@@ -23,10 +26,29 @@ class ViewController: UIViewController{
     @IBOutlet var SwipeRecognizer: UISwipeGestureRecognizer!
     private var calBoxes: ViewDelegate?
     
+    // google stuff
+    private let googleClientID = "744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com"
+    private let googleScope = "https://www.googleapis.com/auth/calendar"
+    private let googleURI = "com.googleusercontent.apps.744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc"
+    private let googleResponse = "code"
+    private let googleRequest = URL(string: "https://accounts.google.com/o/oauth2/v2/auth?client_id=744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com&redirect_uri=com.googleusercontent.apps.744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc&response_type=code&scope=calendar")
+    
     private var pickerArray = [false, false, false]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        // Uncomment to automatically sign in the user.
+        //GIDSignIn.sharedInstance().signInSilently()
+        
+        // TODO(developer) Configure the sign-in button look/feel
+        // ...
+    }
+    
+    @IBAction func didTapSignOut(_ sender: AnyObject) {
+        GIDSignIn.sharedInstance().signOut()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,7 +120,7 @@ class ViewController: UIViewController{
             }
             eventList = calendar
         }
-        print("Done Parsing file")
+        
         return eventList
     }
     
@@ -112,7 +134,9 @@ class ViewController: UIViewController{
             } catch {
                 print("[ERROR] Event not saved")
             }
+            
         }
+        
     }
 
     //Function called when "Add To Calendar" button is pressed
@@ -123,7 +147,7 @@ class ViewController: UIViewController{
         let duEvents = (calBoxes?.checkedBoxed[2])!
         
         // apple calendar code
-        //if(pickerArray[0]){
+        if(pickerArray[0]){
             let store = EKEventStore()
             
             switch EKEventStore.authorizationStatus(for: .event){
@@ -146,11 +170,14 @@ class ViewController: UIViewController{
             default:
                 print("Case default")
             }
-        //}
+        }
         
         // google calendar code
         if (pickerArray[1]) {
-            
+            // get permission to access calendars
+                // send request to google
+            // check if calendar already exists
+            // if doesn't exist add calendar
         }
         
         // outlook calendar code
@@ -233,4 +260,7 @@ class ViewController: UIViewController{
 class ViewDelegate {
     var checkedBoxed = [true,true,true]
 }
+
+
+
 

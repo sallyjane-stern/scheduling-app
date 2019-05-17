@@ -35,7 +35,7 @@ PODS:
 DEPENDENCIES:
   - GoogleAPIClientForREST/Calendar (~> 1.2.1)
   - GoogleAPIClientForREST/Sheets (~> 1.2.1)
-  - GoogleSignIn (~> 4.1.1)
+  - GoogleSignIn
   - MXLCalendarManagerSwift
   - SDWebImage (~> 5.0)
 
@@ -58,6 +58,6 @@ SPEC CHECKSUMS:
   MXLCalendarManagerSwift: bf0539789aa93527902a145b7d628455c93f57f2
   SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
 
-PODFILE CHECKSUM: 47a5583115a8c3ece80756596a3ff35e61d5c584
+PODFILE CHECKSUM: 50f0605b4314e0a895cc84ac6cfb3d104e5b9797
 
 COCOAPODS: 1.6.1
