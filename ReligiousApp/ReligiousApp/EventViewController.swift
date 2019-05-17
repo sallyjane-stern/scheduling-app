@@ -115,11 +115,11 @@ class EventViewcontroller:UITableViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         //Get the Appropriate Image
-        let googleURL = "https://imgur.com/86y1Tm"
-//        if(!googleURL.contains(".jpg")){
-//            googleURL.append(".jpg")
-//            print(googleURL)
-//        }
+        var googleURL = "https://live.staticflickr.com/8406/8629550062_d2ae46a0d9_k.jpg"
+        if(!googleURL.contains(".jpg")){
+            googleURL.append(".jpg")
+            print(googleURL)
+        }
         let url = URL(string: googleURL)
         //Use SDWebView Library to get the appropriate image asyncronisly
         let defaultImage = UIImage().imageFromColor(color: UIColor.init(red: 141/255, green: 25/255, blue: 41/255, alpha: 1), frame: CGRect(x: 0, y: 0, width: 414, height: 246))
