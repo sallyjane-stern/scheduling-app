@@ -25,6 +25,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet var SwipeRecognizer: UISwipeGestureRecognizer!
     private var calBoxes: ViewDelegate?
+    private var isDone = false
     
     // google stuff
     private let googleClientID = "744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com"
@@ -34,6 +35,15 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     private let googleRequest = URL(string: "https://accounts.google.com/o/oauth2/v2/auth?client_id=744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com&redirect_uri=com.googleusercontent.apps.744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc&response_type=code&scope=calendar")
     
     private var pickerArray = [false, false, false]
+    let handlerBlock: (Bool) -> Bool = {
+        if $0 {
+            print("Add To Calendar is complete")
+            //Closes the view controller
+            return true
+        } else {
+            return false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +66,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    func checkOrAddCalendar(store:EKEventStore){
+    func checkOrAddCalendar(store:EKEventStore, completion: (Bool) -> Bool){
         let parsedEventList = parseEventFile()
         let firstCheck = checkForCalendar(store:store)
         if firstCheck.0 {
@@ -70,6 +80,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             } else {
                 print("NO CALENDAR RETURNED FROM CREATE")
             }
+        }
+        if(completion(true) == true){
+            dismissControllerHelper()
         }
     }
     
@@ -139,6 +152,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
     }
 
+    
     //Function called when "Add To Calendar" button is pressed
     @IBAction func addToCal(_ sender: Any) {
         //Booleans representing if the checkbox is checked or not
@@ -154,7 +168,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             case .authorized:
                 //allowed access to calendar, process .ics
                 print("[INFO] Allowed access to EventStore")
-                checkOrAddCalendar(store: store)
+                checkOrAddCalendar(store: store, completion: handlerBlock)
             case .denied:
                 print("[ERROR]Access to Calendar Denied")
             case .notDetermined:
@@ -162,7 +176,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                 store.requestAccess(to: .event, completion:
                     {[weak self] (granted: Bool, error: Error?) -> Void in
                         if granted {
-                            self!.checkOrAddCalendar(store: store)
+                            self!.checkOrAddCalendar(store: store, completion: self!.handlerBlock)
                         } else {
                             print("[ERROR] Access denied")
                         }
@@ -187,6 +201,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
         //Test output to ensure program knows what boxes are checked and unchecked
         print("Added to Calendar:\(getTitle(index: 0, bool: religious))\(getTitle(index: 1, bool: canvas))\(getTitle(index: 2, bool: duEvents))")
+        
         
     }
     
@@ -251,6 +266,16 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             vc.calBoxes = self.calBoxes
         }
     }
+    
+    //Dismisses the view Controller
+    @IBAction func dismissController(_ sender: Any) {
+        dismissControllerHelper()
+    }
+    
+    func dismissControllerHelper(){
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     
 }
