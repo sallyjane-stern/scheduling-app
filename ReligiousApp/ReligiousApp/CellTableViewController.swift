@@ -18,6 +18,7 @@ class CellTableViewController: UITableViewController {
         
         //Load Cells
         cellArray[0].append("Holi")
+        
     }
     
     //MARK: - Table view data source

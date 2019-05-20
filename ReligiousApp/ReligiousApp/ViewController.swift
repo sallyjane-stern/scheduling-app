@@ -10,7 +10,7 @@ import UIKit
 import EventKit
 import MXLCalendarManagerSwift
 import GoogleAPIClientForREST
-import GTMOAuth2
+//import GTMOAuth2
 import GoogleSignIn
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
@@ -20,7 +20,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var googleCal: UIButton!
     @IBOutlet weak var appleCal: UIButton!
     @IBOutlet weak var addButton: UIButton!
-    
+    @IBOutlet weak var GoogleSignInButton: GIDSignInButton!
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet var SwipeRecognizer: UISwipeGestureRecognizer!
@@ -50,6 +50,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        GoogleSignInButton.isHidden = true
         GIDSignIn.sharedInstance().uiDelegate = self
         
         // Uncomment to automatically sign in the user.
@@ -66,6 +67,17 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Google Sign in button configuration
+        if(GIDSignIn.sharedInstance().hasAuthInKeychain()){
+            changeButtonStatus(status: true)
+        }
     }
     
 
@@ -195,9 +207,19 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         if (pickerArray[1]) {
             // get permission to access calendars
                 // send request to google
+            if(GIDSignIn.sharedInstance().hasAuthInKeychain()){
+                print("======Adding to Google Calendar!======")
+            } else {
+                let alert = UIAlertController(title: "Calendar Error", message: "Please sign into your Google Account", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
             // check if calendar already exists
             // if doesn't exist add calendar
         }
+        
         
         // outlook calendar code
         if (pickerArray[2]) {
@@ -252,7 +274,21 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         }
         
         pickerArray[1] = !pickerArray[1]
+        if(pickerArray[1] && !GIDSignIn.sharedInstance().hasAuthInKeychain()){
+            changeButtonStatus(status: false)
+        } else {
+            changeButtonStatus(status: true)
+        }
+        
+        
     }
+    
+    func changeButtonStatus(status: Bool){
+        GoogleSignInButton.isHidden = status
+        addButton.isEnabled = status
+        addButton.isUserInteractionEnabled = status
+    }
+    
     
     @IBAction func outlookButton(_ sender: Any) {
         if (pickerArray[2]) {
