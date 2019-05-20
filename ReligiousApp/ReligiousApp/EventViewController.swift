@@ -18,6 +18,7 @@ class EventViewcontroller:UITableViewController {
     @IBOutlet weak var EventTitle: UIButton!
     @IBOutlet weak var EventName: UILabel!
     @IBOutlet weak var pronunciation: UILabel!
+    @IBOutlet var theTable: UITableView!
     
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var dateView: UIView!
@@ -41,7 +42,7 @@ class EventViewcontroller:UITableViewController {
     
     @IBOutlet weak var greetingText: UILabel!
     
-    @IBOutlet weak var detailText: UITextView!
+    @IBOutlet weak var detailText: UILabel!
     
     private var infoStruct: SheetData?
     
@@ -50,6 +51,7 @@ class EventViewcontroller:UITableViewController {
         print("Got to view did load")
         //Set the Table View to utilize the full screen
         self.tableView.contentInset = UIEdgeInsets(top: -(88 + view.safeAreaInsets.top), left: 0, bottom: 0, right: 0)
+        
 
         //Event Cell
         
@@ -99,7 +101,12 @@ class EventViewcontroller:UITableViewController {
         
         //DetailsTextCell
         
-        detailText.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+        detailText.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.\nLorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+        
+//        theTable.rowHeight = UITableView.automaticDimension
+//        theTable.estimatedRowHeight = 500.0
+//        
+//        theTable.reloadData()
         
         
         

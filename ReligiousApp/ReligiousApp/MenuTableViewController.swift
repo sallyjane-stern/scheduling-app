@@ -91,7 +91,7 @@ class MenuTableViewController: UIViewController {
     }
     
     @IBAction func contactButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Contact Us", message: "Have questions or recommendations?\nEmail us at: Foo@gmail.com", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Contact Us", message: "Have questions or recommendations?\nEmail us at: JurassicProgrammingTeam@gmail.com", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
         }))
