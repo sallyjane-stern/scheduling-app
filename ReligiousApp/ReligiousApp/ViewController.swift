@@ -50,6 +50,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         GoogleSignInButton.isHidden = true
         GIDSignIn.sharedInstance().uiDelegate = self
         

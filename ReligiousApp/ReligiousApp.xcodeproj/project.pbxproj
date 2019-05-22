@@ -22,6 +22,7 @@
 		C9A8AA7B226FE6E400231FD9 /* ReligiousAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA7A226FE6E400231FD9 /* ReligiousAppUITests.swift */; };
 		C9A8AA8B2270FFE800231FD9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */; };
 		C9B1EFFC228A075B0036926E /* CellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1EFFB228A075B0036926E /* CellTableViewController.swift */; };
+		C9B67DF52295914B00207D15 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B67DF42295914B00207D15 /* Event.swift */; };
 		C9C66C13227F635C004EE009 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C66C12227F635C004EE009 /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		C9A8AA7C226FE6E400231FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C9B1EFFB228A075B0036926E /* CellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewController.swift; sourceTree = "<group>"; };
+		C9B67DF42295914B00207D15 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C9C66C12227F635C004EE009 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		F755D91702F95518881F7ACF /* Pods_ReligiousApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReligiousApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD0A5B05D190E94B51D2785E /* Pods-ReligiousAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReligiousAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ReligiousAppUITests/Pods-ReligiousAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				C9036573227368770046588C /* religious_holidays.ics */,
 				C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */,
+				C9B67DF42295914B00207D15 /* Event.swift */,
 				C9A8AA5C226FE6E200231FD9 /* ViewController.swift */,
 				C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */,
 				C96FA040227D0CC0002828C9 /* EventViewController.swift */,
@@ -445,6 +448,7 @@
 				C9C66C13227F635C004EE009 /* MenuTableViewController.swift in Sources */,
 				C9A8AA8B2270FFE800231FD9 /* TableViewController.swift in Sources */,
 				C9A8AA5B226FE6E200231FD9 /* AppDelegate.swift in Sources */,
+				C9B67DF52295914B00207D15 /* Event.swift in Sources */,
 				C9B1EFFC228A075B0036926E /* CellTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

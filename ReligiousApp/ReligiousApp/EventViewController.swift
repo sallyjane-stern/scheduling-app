@@ -13,7 +13,7 @@ import UIKit
 import SDWebImage
 import GoogleAPIClientForREST
 
-class EventViewcontroller:UITableViewController {
+class EventViewcontroller:UITableViewController{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var EventTitle: UIButton!
     @IBOutlet weak var EventName: UILabel!
@@ -39,29 +39,68 @@ class EventViewcontroller:UITableViewController {
     @IBOutlet weak var busyCheck: UIImageView!
     
     @IBOutlet weak var foodList: UILabel!
-    
     @IBOutlet weak var greetingText: UILabel!
-    
     @IBOutlet weak var detailText: UILabel!
     
     private var infoStruct: SheetData?
+    private let kTableHeaderHeight: CGFloat = 246.0
+    var headerView: UIView!
     
     
     override func viewDidLoad() {
         print("Got to view did load")
         //Set the Table View to utilize the full screen
-        self.tableView.contentInset = UIEdgeInsets(top: -(88 + view.safeAreaInsets.top), left: 0, bottom: 0, right: 0)
+        headerView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
         
-
+        //Have the View Strech
+        tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
+        updateHeaderView()
+        
+        //Set Bar Style to White
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //Change the opacity of the navigation controller
+        self.navigationController?.setNavigationBarHidden(false, animated: true) //Sets the bar to visible
+        let color = UIColor.init(red: 125/255, green: 125/255, blue: 125/255, alpha: 0.4)
+        let colorImage = UIImage().imageFromColor(color: color, frame: CGRect(x: 0, y: 0, width: 340, height: 64))
+        self.navigationController?.navigationBar.setBackgroundImage(colorImage, for: .default)
+        //Set tint color to white
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        //Get the Appropriate Image
+        var googleURL = "https://live.staticflickr.com/8406/8629550062_d2ae46a0d9_k.jpg"
+        if(!googleURL.contains(".jpg")){
+            googleURL.append(".jpg")
+            print(googleURL)
+        }
+        let url = URL(string: googleURL)
+        //Use SDWebView Library to get the appropriate image asyncronisly
+        let defaultImage = UIImage().imageFromColor(color: UIColor.init(red: 141/255, green: 25/255, blue: 41/255, alpha: 1), frame: CGRect(x: 0, y: 0, width: 414, height: 246))
+        
+        
+        imageView.sd_setImage(with: url, placeholderImage: defaultImage) { (image, error, cache, url) in
+            //If Image fails to load then set the default image to a random animal
+            if(self.imageView.image == defaultImage){
+                self.imageView.sd_setImage(with: self.getDefaultImageURL(), placeholderImage: defaultImage)
+            }
+        }
+        
         //Event Cell
         
         //Set Button to unclickable
         EventTitle.isUserInteractionEnabled = false
         //Get Holiday Name
-            //Code Here
+        //Code Here
         EventName.text = "Holi"
         //Get Pronounciation
-            //Code Here
+        //Code Here
         if(pronunciation.text == "Pronounce"){
             pronunciation.text = "No Pronunciation Found"
         }
@@ -93,7 +132,7 @@ class EventViewcontroller:UITableViewController {
         
         //FoodListCell
         
-        foodList.text = "Lorem ipsum dolor sit amet"
+        foodList.text = "Lorem ipsum dolor sit amet weafouahwf;oeha;fuheliwasuhfiewuhfiluhliuaehzfliuheawlifhewlifhilewhflieahlifehlieuhaflihawleifhealiufhehlfahufelihauef end"
         
         //GreetingInfoCell
         
@@ -101,51 +140,36 @@ class EventViewcontroller:UITableViewController {
         
         //DetailsTextCell
         
-        detailText.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.\nLorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+        detailText.text = " Star. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.\nLorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. End"
         
-//        theTable.rowHeight = UITableView.automaticDimension
-//        theTable.estimatedRowHeight = 500.0
-//        
-//        theTable.reloadData()
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.reloadData()
         
-        
-        
-
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //Change the opacity of the navigation controller
-        self.navigationController?.setNavigationBarHidden(false, animated: true) //Sets the bar to visible
-        let color = UIColor.init(red: 125/255, green: 125/255, blue: 125/255, alpha: 0.4)
-        let colorImage = UIImage().imageFromColor(color: color, frame: CGRect(x: 0, y: 0, width: 340, height: 64))
-        self.navigationController?.navigationBar.setBackgroundImage(colorImage, for: .default)
-        //Set tint color to white
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        
-        //Get the Appropriate Image
-        var googleURL = "https://live.staticflickr.com/8406/8629550062_d2ae46a0d9_k.jpg"
-        if(!googleURL.contains(".jpg")){
-            googleURL.append(".jpg")
-            print(googleURL)
-        }
-        let url = URL(string: googleURL)
-        //Use SDWebView Library to get the appropriate image asyncronisly
-        let defaultImage = UIImage().imageFromColor(color: UIColor.init(red: 141/255, green: 25/255, blue: 41/255, alpha: 1), frame: CGRect(x: 0, y: 0, width: 414, height: 246))
-        
-        
-        imageView.sd_setImage(with: url, placeholderImage: defaultImage) { (image, error, cache, url) in
-            //If Image fails to load then set the default image to a random animal
-            if(self.imageView.image == defaultImage){
-                self.imageView.sd_setImage(with: self.getDefaultImageURL(), placeholderImage: defaultImage)
-            }
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         //Resets the navigation controller to its default look
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         self.navigationController?.navigationBar.tintColor = self.view.tintColor
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func updateHeaderView() {
+        var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
+        if tableView.contentOffset.y < -kTableHeaderHeight {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+        }
+        
+        headerView.frame = headerRect
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateHeaderView()
     }
     
     func googleSheetsParser() {
@@ -234,6 +258,9 @@ class EventViewcontroller:UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 //Extension for UIImage that will help set the color of the Navigation Controller

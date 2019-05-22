@@ -8,10 +8,12 @@
 
 import UIKit
 import GoogleSignIn
+import MXLCalendarManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
+    private var EventArr = [Event]()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -20,7 +22,76 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = "744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         
+        // Create an event array
+        var event = Event.init()
+        //Only Parse through the calendar files the first time the app is loaded
+        if(!UserDefaults.standard.bool(forKey: "onBoard")){
+            let eventList = parseEventFile()
+            let size = eventList?.events.count ?? 0
+            var index = 0
+            let today = Date.init()
+
+            while(index < size){
+                var mkEvent = eventList?.events.remove(at: 0)
+                var eventName: String = mkEvent!.eventSummary!
+                //Different Religions: Sikh, Jewish, Islam, Hindu, Christian, Buddhist
+                var religion: String = mkEvent!.eventLocation!
+                var startDate: Date = mkEvent!.eventStartDate!
+                var endDate: Date = mkEvent!.eventEndDate!
+                
+                //Only add events if they have not already passed
+                if(endDate >= today){
+                    event = Event.init(title: eventName, start: startDate, end: endDate, tradition: religion)
+                    EventArr.append(event)
+                }
+                index += 1
+            }
+            
+            //Sort the Array by start date for easier retrival
+            EventArr.sort(by: sorterForEvents)
+            UserDefaults.standard.set(true, forKey: "onBoard")
+            saveEvents()
+            
+        } else {
+            //Load in the Events
+            EventArr = loadEvents()!
+        }
+        
+        //Loop through the events for testing
+        for event in EventArr{
+            print("Title: \(event.name)\n Start Date: \(event.startDate)\n End Date: \(event.endDate)\n Tradition: \(event.tradition)")
+        }
+        
+
         return true
+    }
+    
+    //Helper Function to sort Events
+    private func sorterForEvents(this:Event, that:Event) -> Bool {
+        return this.startDate < that.startDate
+    }
+    
+    //Saves Events into the Document Directory
+    private func saveEvents(){
+        do{
+            let isSuccessfulSave = try? NSKeyedArchiver.archivedData(withRootObject: EventArr, requiringSecureCoding: false)
+            try isSuccessfulSave?.write(to: URL(fileURLWithPath: Event.ArchiveURL.path))
+            print("Events were sucessfully saved")
+        } catch {
+            print("Failed to save events")
+        }
+    }
+    
+    //Loads Events from the Document Directory
+    private func loadEvents() -> [Event]?{
+        var savedEvents: [Event] = []
+        do{
+            let loadEvents = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(Data.init(contentsOf: URL(fileURLWithPath: Event.ArchiveURL.path))) as? [Event]
+            savedEvents = loadEvents ?? []
+        } catch {
+            print("Couldn't read file.")
+        }
+        return savedEvents
     }
     
     // here
@@ -96,10 +167,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
     }
+    
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    //Parse Events copied from ViewController.Swift
+    func parseEventFile()->MXLCalendar?{
+        print("Parsing ICS File...")
+        guard let filePath = Bundle.main.path(forResource: "religious_holidays", ofType: "ics") else {
+            print("ERROR: Did not find .ics file path")
+            return nil
+        }
+        let calendarManager = MXLCalendarManager()
+        var eventList:MXLCalendar = MXLCalendar()
+        calendarManager.scanICSFileatLocalPath(filePath: filePath) { (calendar, error) in
+            guard let calendar = calendar else {
+                return
+            }
+            eventList = calendar
+        }
+        
+        return eventList
     }
 
 
