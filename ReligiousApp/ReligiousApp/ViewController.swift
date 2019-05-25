@@ -41,6 +41,7 @@ class ViewController: UIViewController{
             print("[INFO] Calendar already exists")
             insertEvents(store: store, calendar: firstCheck.1!, eventList: parsedEventList!)
         } else {
+            print("[INFO] Calendar does not exist, creating...")
             addOurCalendar(store: store)
             let secondCheck = checkForCalendar(store: store)
             if secondCheck.0{
@@ -66,12 +67,7 @@ class ViewController: UIViewController{
     func addOurCalendar(store:EKEventStore){
         let newCalendar = EKCalendar(for:.event, eventStore: store)
         newCalendar.title="DU Schedule"
-        let sourcesInEventStore = store.sources
-        newCalendar.source = sourcesInEventStore.filter{
-            (source:EKSource) ->Bool in
-            source.sourceType.rawValue == EKSourceType.local.rawValue
-            }.first!
-        
+        newCalendar.source = store.defaultCalendarForNewEvents?.source
         do{
             try store.saveCalendar(newCalendar, commit: true)
             UserDefaults.standard.set(newCalendar.calendarIdentifier, forKey: "EventTrackerPrimaryCalendar")
@@ -82,6 +78,7 @@ class ViewController: UIViewController{
             
             self.present(alert, animated: true, completion: nil)
         }
+        print("[INFO] Calendar created")
     }
     
     func parseEventFile()->MXLCalendar?{
@@ -103,6 +100,7 @@ class ViewController: UIViewController{
     }
     
     func insertEvents(store: EKEventStore, calendar : EKCalendar, eventList : MXLCalendar){
+        print("[INFO] Saving parsed events...")
         for eventFromList in eventList.events{
             let event = eventFromList.convertToEKEventOn(date: eventFromList.eventStartDate!, store: store)
             event?.calendar = calendar
@@ -113,6 +111,7 @@ class ViewController: UIViewController{
                 print("[ERROR] Event not saved")
             }
         }
+        print("[INFO] Finished saving parsed events")
     }
 
     //Function called when "Add To Calendar" button is pressed
