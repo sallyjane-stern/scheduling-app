@@ -10,8 +10,8 @@ import UIKit
 import Foundation
 
 class MenuTableViewController: UIViewController {
-    //class MenuTableViewController: UITableViewController {
     @IBOutlet weak var helloLabel: UILabel!
+    
     
     private var isWeek = true
     
@@ -19,17 +19,7 @@ class MenuTableViewController: UIViewController {
         super.viewDidLoad()
         editLabel()
         
-        //        let main_string = "Hello World"
-        //        let string_to_color = "World"
-        //
-        //        let range = (main_string as NSString).range(of: string_to_color)
-        //
-        //        let attribute = NSMutableAttributedString.init(string: main_string)
-        //        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red , range: range)
         
-        
-        //        txtfield1 = UITextField.init(frame:CGRect(x:10 , y:20 ,width:100 , height:100))
-        //        txtfield1.attributedText = attribute
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -42,15 +32,24 @@ class MenuTableViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        setUsername()
         
+    }
+    
+    /*!
+    @brief sets the username of the user for a more personalized feel
+    @discussion Opens an alert controller with a text field to edit. If the user decides to cancel then the name will be set "User"
+    */
+    private func setUsername(){
         if(UserDefaults.standard.string(forKey: "user") == nil){
             var inputName = "there"
-            //Have user input their
+            //Presets for the alert
             let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
             alertController.addTextField { textField in
                 textField.placeholder = "Your name"
                 textField.isSecureTextEntry = false
             }
+            //Code that runs if the user confirms their action
             let confirmAction = UIAlertAction(title: "OK", style: .default) { [weak alertController] _ in
                 guard let alertController = alertController, let textField = alertController.textFields?.first else { return }
                 inputName = textField.text!
@@ -58,14 +57,30 @@ class MenuTableViewController: UIViewController {
                 UserDefaults.standard.set(inputName, forKey: "user")
                 self.editLabel()
             }
+            //Code that runs if the user cancels their action
             alertController.addAction(confirmAction)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alertController.addAction(cancelAction)
+            self.editLabel()
+            //Present
             present(alertController, animated: true, completion: nil)
             
         }
-        
     }
+    
+    
+    @IBAction func changeUsername(_ sender: Any) {
+        if(UserDefaults.standard.string(forKey: "user") != nil){
+            UserDefaults.standard.removeObject(forKey: "user")
+        }
+        if(isWeek){
+            helloLabel.text = "Hello User, here is your week:"
+        } else {
+            helloLabel.text = "Hello User, here is your day:"
+        }
+        setUsername()
+    }
+    
     @IBAction func pressedDay(_ sender: Any) {
         isWeek = false
         editLabel()
@@ -74,6 +89,15 @@ class MenuTableViewController: UIViewController {
         isWeek = true
         editLabel()
     }
+    
+    @IBAction func contactButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Contact Us", message: "Have questions or recommendations?\nEmail us at: JurassicProgrammingTeam@gmail.com", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     func editLabel(){
         var main = helloLabel.text
@@ -87,7 +111,7 @@ class MenuTableViewController: UIViewController {
         } else {
             main = main?.replacingOccurrences(of: "week", with: "day")
         }
-
+        
         let range = (main as! NSString).range(of: coloredPart)
         
         let attribute = NSMutableAttributedString.init(string: main!)
@@ -98,62 +122,6 @@ class MenuTableViewController: UIViewController {
         helloLabel.attributedText = attribute
     }
     
-    // MARK: - Table view data source
-    //
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        // #warning Incomplete implementation, return the number of sections
-    //        return 0
-    //    }
-    //
-    //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //        // #warning Incomplete implementation, return the number of rows
-    //        return 0
-    //    }
-    
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
     
     /*
      // MARK: - Navigation

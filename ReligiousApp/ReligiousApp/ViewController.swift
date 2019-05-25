@@ -9,32 +9,81 @@
 import UIKit
 import EventKit
 import MXLCalendarManagerSwift
+import GoogleAPIClientForREST
+//import GTMOAuth2
+import GoogleSignIn
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var outlookCal: UIButton!
     
     @IBOutlet weak var googleCal: UIButton!
     @IBOutlet weak var appleCal: UIButton!
     @IBOutlet weak var addButton: UIButton!
-    
+    @IBOutlet weak var GoogleSignInButton: GIDSignInButton!
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet var SwipeRecognizer: UISwipeGestureRecognizer!
     private var calBoxes: ViewDelegate?
+    private var isDone = false
+    
+    // google stuff
+    private let googleClientID = "744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com"
+    private let googleScope = "https://www.googleapis.com/auth/calendar"
+    private let googleURI = "com.googleusercontent.apps.744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc"
+    private let googleResponse = "code"
+    private let googleRequest = URL(string: "https://accounts.google.com/o/oauth2/v2/auth?client_id=744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com&redirect_uri=com.googleusercontent.apps.744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc&response_type=code&scope=calendar")
     
     private var pickerArray = [false, false, false]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    //Completion handler so the view does not close when it is not supposed to
+    let handlerBlock: (Bool) -> Bool = {
+        if $0 {
+            print("Add To Calendar is complete")
+            //Closes the view controller
+            return true
+        } else {
+            return false
+        }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        GoogleSignInButton.isHidden = true
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        // Uncomment to automatically sign in the user.
+        //GIDSignIn.sharedInstance().signInSilently()
+        
+        // TODO(developer) Configure the sign-in button look/feel
+        // ...
+    }
+    
+    @IBAction func didTapSignOut(_ sender: AnyObject) {
+        GIDSignIn.sharedInstance().signOut()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        
     }
     
-    func checkOrAddCalendar(store:EKEventStore){
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Google Sign in button configuration
+        if(GIDSignIn.sharedInstance().hasAuthInKeychain()){
+            changeButtonStatus(status: true)
+        }
+    }
+    
+
+    
+    
+    func checkOrAddCalendar(store:EKEventStore, completion: (Bool) -> Bool){
         let parsedEventList = parseEventFile()
         let firstCheck = checkForCalendar(store:store)
         if firstCheck.0 {
@@ -49,6 +98,9 @@ class ViewController: UIViewController{
             } else {
                 print("NO CALENDAR RETURNED FROM CREATE")
             }
+        }
+        if(completion(true) == true){
+            dismissControllerHelper()
         }
     }
     
@@ -110,10 +162,12 @@ class ViewController: UIViewController{
             } catch {
                 print("[ERROR] Event not saved")
             }
+            
         }
         print("[INFO] Finished saving parsed events")
     }
 
+    
     //Function called when "Add To Calendar" button is pressed
     @IBAction func addToCal(_ sender: Any) {
         //Booleans representing if the checkbox is checked or not
@@ -122,14 +176,14 @@ class ViewController: UIViewController{
         let duEvents = (calBoxes?.checkedBoxed[2])!
         
         // apple calendar code
-        //if(pickerArray[0]){
+        if(pickerArray[0]){
             let store = EKEventStore()
             
             switch EKEventStore.authorizationStatus(for: .event){
             case .authorized:
                 //allowed access to calendar, process .ics
                 print("[INFO] Allowed access to EventStore")
-                checkOrAddCalendar(store: store)
+                checkOrAddCalendar(store: store, completion: handlerBlock)
             case .denied:
                 print("[ERROR]Access to Calendar Denied")
             case .notDetermined:
@@ -137,7 +191,7 @@ class ViewController: UIViewController{
                 store.requestAccess(to: .event, completion:
                     {[weak self] (granted: Bool, error: Error?) -> Void in
                         if granted {
-                            self!.checkOrAddCalendar(store: store)
+                            self!.checkOrAddCalendar(store: store, completion: self!.handlerBlock)
                         } else {
                             print("[ERROR] Access denied")
                         }
@@ -145,12 +199,25 @@ class ViewController: UIViewController{
             default:
                 print("Case default")
             }
-        //}
+        }
         
         // google calendar code
         if (pickerArray[1]) {
-            
+            // get permission to access calendars
+                // send request to google
+            if(GIDSignIn.sharedInstance().hasAuthInKeychain()){
+                print("======Adding to Google Calendar!======")
+            } else {
+                let alert = UIAlertController(title: "Calendar Error", message: "Please sign into your Google Account", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            // check if calendar already exists
+            // if doesn't exist add calendar
         }
+        
         
         // outlook calendar code
         if (pickerArray[2]) {
@@ -159,6 +226,11 @@ class ViewController: UIViewController{
         
         //Test output to ensure program knows what boxes are checked and unchecked
         print("Added to Calendar:\(getTitle(index: 0, bool: religious))\(getTitle(index: 1, bool: canvas))\(getTitle(index: 2, bool: duEvents))")
+        
+        if(!pickerArray[0] && !pickerArray[2] && !pickerArray[1]){
+            dismissControllerHelper()
+        }
+        
         
     }
     
@@ -200,7 +272,21 @@ class ViewController: UIViewController{
         }
         
         pickerArray[1] = !pickerArray[1]
+        if(pickerArray[1] && !GIDSignIn.sharedInstance().hasAuthInKeychain()){
+            changeButtonStatus(status: false)
+        } else {
+            changeButtonStatus(status: true)
+        }
+        
+        
     }
+    
+    func changeButtonStatus(status: Bool){
+        GoogleSignInButton.isHidden = status
+        addButton.isEnabled = status
+        addButton.isUserInteractionEnabled = status
+    }
+    
     
     @IBAction func outlookButton(_ sender: Any) {
         if (pickerArray[2]) {
@@ -224,6 +310,17 @@ class ViewController: UIViewController{
         }
     }
     
+    //Dismisses the view Controller
+    @IBAction func closeController(_ sender: Any) {
+        dismissControllerHelper()
+    }
+    
+    
+    func dismissControllerHelper(){
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 }
 
@@ -232,4 +329,7 @@ class ViewController: UIViewController{
 class ViewDelegate {
     var checkedBoxed = [true,true,true]
 }
+
+
+
 
