@@ -303,7 +303,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="W7b-VP-LsJ" firstAttribute="top" secondItem="Ggq-hv-0WV" secondAttribute="bottom" constant="8" id="2ch-4l-dFc"/>
                             <constraint firstItem="k15-Y4-mX1" firstAttribute="width" secondItem="nZK-R6-Skt" secondAttribute="width" id="365-f2-kjp"/>
                             <constraint firstItem="Ggq-hv-0WV" firstAttribute="top" secondItem="k15-Y4-mX1" secondAttribute="bottom" constant="8" id="6jy-D1-i4k"/>
                             <constraint firstItem="MxZ-Mf-4RW" firstAttribute="leading" secondItem="8dO-xr-1ji" secondAttribute="leading" constant="32" id="704-N5-uj2"/>
@@ -321,6 +320,7 @@
                             <constraint firstItem="k15-Y4-mX1" firstAttribute="leading" secondItem="nZK-R6-Skt" secondAttribute="trailing" id="j0x-ed-dgc"/>
                             <constraint firstItem="nZK-R6-Skt" firstAttribute="leading" secondItem="8dO-xr-1ji" secondAttribute="leading" id="jfD-Rn-JVO"/>
                             <constraint firstItem="k15-Y4-mX1" firstAttribute="leading" secondItem="nZK-R6-Skt" secondAttribute="trailing" id="l17-aU-ewb"/>
+                            <constraint firstItem="W7b-VP-LsJ" firstAttribute="top" secondItem="Ggq-hv-0WV" secondAttribute="bottom" constant="8" id="lcp-6p-ES7"/>
                             <constraint firstItem="Nbt-w0-9Qm" firstAttribute="top" secondItem="5n6-NZ-R4b" secondAttribute="bottom" constant="12" id="m0g-Ys-vjQ"/>
                             <constraint firstItem="Ggq-hv-0WV" firstAttribute="centerX" secondItem="Rbu-YK-1Cv" secondAttribute="centerX" id="mj0-NU-QX2"/>
                             <constraint firstItem="k15-Y4-mX1" firstAttribute="top" secondItem="8dO-xr-1ji" secondAttribute="top" id="nSw-sv-1i4"/>
@@ -345,23 +345,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="596.5"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search Any Event" showsCancelButton="YES" id="Qmu-Pt-i0w">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" red="0.59485822919999998" green="0.0047344756309999998" blue="0.18171411749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="mNg-bJ-a60" id="UOs-2L-VYg"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="default" rowHeight="117" id="R1l-h3-rEX">
-                                <rect key="frame" x="0.0" y="28" width="414" height="117"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="default" rowHeight="117" id="R1l-h3-rEX" customClass="customCell" customModule="ReligiousApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="117"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R1l-h3-rEX" id="QW7-K3-gpX">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bua-rm-Y3L">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
-                                            <state key="normal" backgroundImage="Exclusion 1"/>
-                                            <connections>
-                                                <segue destination="hZm-fB-11V" kind="show" id="Rpi-EK-haK"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcA-A7-mPU">
-                                            <rect key="frame" x="122" y="19.5" width="91" height="24"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mI-Ku-Jf8">
+                                            <rect key="frame" x="20" y="11" width="374" height="95"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="EventButton"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcA-A7-mPU">
+                                            <rect key="frame" x="122" y="19" width="272" height="24.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -387,20 +395,30 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="bua-rm-Y3L" firstAttribute="top" secondItem="QW7-K3-gpX" secondAttribute="top" id="1bX-m7-Qky"/>
                                         <constraint firstItem="lVq-XN-Bzy" firstAttribute="top" secondItem="RcA-A7-mPU" secondAttribute="bottom" constant="1" id="4eH-qT-pJb"/>
                                         <constraint firstItem="igd-4H-QOc" firstAttribute="leading" secondItem="QW7-K3-gpX" secondAttribute="leadingMargin" constant="8" id="8gM-46-7ah"/>
                                         <constraint firstItem="lVq-XN-Bzy" firstAttribute="leading" secondItem="igd-4H-QOc" secondAttribute="trailing" constant="19" id="9t4-kh-7Vb"/>
-                                        <constraint firstAttribute="trailing" secondItem="bua-rm-Y3L" secondAttribute="trailing" id="Olh-C9-K4e"/>
+                                        <constraint firstItem="6mI-Ku-Jf8" firstAttribute="leading" secondItem="QW7-K3-gpX" secondAttribute="leadingMargin" id="Jn8-7t-ia3"/>
+                                        <constraint firstItem="6mI-Ku-Jf8" firstAttribute="top" secondItem="QW7-K3-gpX" secondAttribute="topMargin" id="LXI-U2-6xy"/>
                                         <constraint firstItem="a95-Oz-BZR" firstAttribute="top" secondItem="lVq-XN-Bzy" secondAttribute="bottom" constant="1" id="QkB-57-paF"/>
-                                        <constraint firstItem="bua-rm-Y3L" firstAttribute="leading" secondItem="QW7-K3-gpX" secondAttribute="leading" id="SDG-HO-TT0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="RcA-A7-mPU" secondAttribute="trailing" id="UrS-bb-8Cg"/>
                                         <constraint firstItem="lVq-XN-Bzy" firstAttribute="leading" secondItem="RcA-A7-mPU" secondAttribute="leading" id="axQ-zW-eP5"/>
+                                        <constraint firstItem="6mI-Ku-Jf8" firstAttribute="bottom" secondItem="QW7-K3-gpX" secondAttribute="bottomMargin" id="dFt-p8-7b6"/>
+                                        <constraint firstItem="RcA-A7-mPU" firstAttribute="top" secondItem="QW7-K3-gpX" secondAttribute="topMargin" constant="8" id="hj7-2r-DOQ"/>
                                         <constraint firstItem="lVq-XN-Bzy" firstAttribute="centerY" secondItem="QW7-K3-gpX" secondAttribute="centerY" constant="-2" id="obI-Qs-3Sm"/>
                                         <constraint firstItem="a95-Oz-BZR" firstAttribute="leading" secondItem="RcA-A7-mPU" secondAttribute="leading" id="ozo-iF-lPU"/>
+                                        <constraint firstItem="6mI-Ku-Jf8" firstAttribute="trailing" secondItem="QW7-K3-gpX" secondAttribute="trailingMargin" id="x6I-u0-y8I"/>
                                         <constraint firstItem="igd-4H-QOc" firstAttribute="centerY" secondItem="QW7-K3-gpX" secondAttribute="centerY" id="x95-Vi-Wmz"/>
-                                        <constraint firstAttribute="bottom" secondItem="bua-rm-Y3L" secondAttribute="bottom" id="xFE-SB-iHY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="backView" destination="6mI-Ku-Jf8" id="V5y-G5-wxM"/>
+                                    <outlet property="holidayLabel" destination="a95-Oz-BZR" id="6xg-SY-2QC"/>
+                                    <outlet property="religionImage" destination="igd-4H-QOc" id="KKw-fO-dNX"/>
+                                    <outlet property="timeLabel" destination="lVq-XN-Bzy" id="n4H-68-4To"/>
+                                    <outlet property="titleLabel" destination="RcA-A7-mPU" id="9aQ-5L-0Ey"/>
+                                    <segue destination="hZm-fB-11V" kind="show" identifier="EventSegue" id="4Oo-8p-AHE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -532,6 +550,10 @@
                                                                 </imageView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hinduism" translatesAutoresizingMaskIntoConstraints="NO" id="jST-lI-S8n">
                                                                     <rect key="frame" x="9" y="10" width="40.5" height="43"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="40.5" id="BgR-0u-8zA"/>
+                                                                        <constraint firstAttribute="height" constant="43" id="zxQ-Td-MhD"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1035,7 +1057,8 @@
                         <outlet property="mournfulView" destination="73u-Pp-z9T" id="Ieg-aO-mWK"/>
                         <outlet property="pronunciation" destination="Hgc-ja-Sz6" id="rZc-PL-RQ2"/>
                         <outlet property="reflectiveView" destination="VGJ-CO-ocf" id="VKy-NL-jbr"/>
-                        <outlet property="religionImage" destination="k7c-qE-YdW" id="66e-nJ-kyc"/>
+                        <outlet property="religionImage" destination="jST-lI-S8n" id="aqW-M1-4oX"/>
+                        <outlet property="religionText" destination="k7c-qE-YdW" id="nxM-Ii-W6a"/>
                         <outlet property="religionView" destination="RGn-eA-r2j" id="bDa-v8-4WH"/>
                         <outlet property="sepLine" destination="txK-1O-Xrl" id="vhZ-rB-bib"/>
                         <outlet property="seriousView" destination="eAU-TH-cgS" id="zUB-d6-eFQ"/>
@@ -1074,7 +1097,6 @@
     <resources>
         <image name="16px-Wikipedia's_W.svg" width="32" height="32"/>
         <image name="CheckSymbol" width="23" height="23"/>
-        <image name="Exclusion 1" width="371" height="118"/>
         <image name="Line 1" width="1" height="42"/>
         <image name="Rectangle 304" width="350" height="51"/>
         <image name="Subtraction 1" width="187.5" height="45"/>

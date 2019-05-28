@@ -9,12 +9,17 @@
 import UIKit
 import Foundation
 
+var isWeek = true{
+    didSet{
+        NotificationCenter.default.post(name: .isWeekChanged, object: nil)
+    }
+}
+
 class MenuTableViewController: UIViewController {
     @IBOutlet weak var helloLabel: UILabel!
+
     
-    
-    private var isWeek = true
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         editLabel()
@@ -84,6 +89,7 @@ class MenuTableViewController: UIViewController {
     @IBAction func pressedDay(_ sender: Any) {
         isWeek = false
         editLabel()
+        
     }
     @IBAction func pressedWeek(_ sender: Any) {
         isWeek = true
@@ -123,6 +129,8 @@ class MenuTableViewController: UIViewController {
     }
     
     
+    
+    
     /*
      // MARK: - Navigation
      
@@ -134,3 +142,8 @@ class MenuTableViewController: UIViewController {
      */
     
 }
+
+extension NSNotification.Name {
+    static let isWeekChanged = NSNotification.Name(Bundle.main.bundleIdentifier! + ".isWeek")
+}
+

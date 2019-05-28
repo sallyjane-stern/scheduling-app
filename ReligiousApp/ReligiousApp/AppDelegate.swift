@@ -13,7 +13,7 @@ import MXLCalendarManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
-    private var EventArr = [Event]()
+    public var EventArr = [Event]()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -29,7 +29,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let eventList = parseEventFile()
             let size = eventList?.events.count ?? 0
             var index = 0
+            
+            let calendar = Calendar.current
+            
             let today = Date.init()
+            
+            var components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: today)
+            
+            
+            components.day = 1
+            components.month = 1
+            components.hour = 7
+            components.minute = 1
+            
+            let thisYear = calendar.date(from: components)
 
             while(index < size){
                 var mkEvent = eventList?.events.remove(at: 0)
@@ -39,8 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 var startDate: Date = mkEvent!.eventStartDate!
                 var endDate: Date = mkEvent!.eventEndDate!
                 
-                //Only add events if they have not already passed
-                if(endDate >= today){
+                //Only add events if they are within this year (or greater)
+                if(endDate >= thisYear ?? today){
                     event = Event.init(title: eventName, start: startDate, end: endDate, tradition: religion)
                     EventArr.append(event)
                 }
@@ -59,7 +72,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         //Loop through the events for testing
         for event in EventArr{
-            print("Title: \(event.name)\n Start Date: \(event.startDate)\n End Date: \(event.endDate)\n Tradition: \(event.tradition)")
+            if(event.name == "Hanukkah Starts" || event.name == "Hanukkah Ends"){
+                print("Title: \(event.name)\n Start Date: \(event.startDate)\n End Date: \(event.endDate)\n Tradition: \(event.tradition)")
+            }
         }
         
 

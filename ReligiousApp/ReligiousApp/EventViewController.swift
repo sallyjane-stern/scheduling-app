@@ -25,7 +25,9 @@ class EventViewcontroller:UITableViewController{
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var religionView: UIView!
-    @IBOutlet weak var religionImage: UILabel!
+    @IBOutlet weak var religionImage: UIImageView!
+    @IBOutlet weak var religionText: UILabel!
+    
     @IBOutlet weak var celebratoryView: UIView!
     @IBOutlet weak var funView: UIView!
     @IBOutlet weak var reflectiveView: UIView!
@@ -42,6 +44,7 @@ class EventViewcontroller:UITableViewController{
     @IBOutlet weak var greetingText: UILabel!
     @IBOutlet weak var detailText: UILabel!
     
+    public var theEvent: Event!
     private var infoStruct: SheetData?
     private let kTableHeaderHeight: CGFloat = 246.0
     var headerView: UIView!
@@ -75,7 +78,7 @@ class EventViewcontroller:UITableViewController{
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         //Get the Appropriate Image
-        var googleURL = "https://live.staticflickr.com/8406/8629550062_d2ae46a0d9_k.jpg"
+        var googleURL = ""
         if(!googleURL.contains(".jpg")){
             googleURL.append(".jpg")
             print(googleURL)
@@ -98,12 +101,69 @@ class EventViewcontroller:UITableViewController{
         EventTitle.isUserInteractionEnabled = false
         //Get Holiday Name
         //Code Here
-        EventName.text = "Holi"
+        EventName.text = theEvent.name
         //Get Pronounciation
         //Code Here
         if(pronunciation.text == "Pronounce"){
             pronunciation.text = "No Pronunciation Found"
         }
+        
+        //Date
+        //Get date Components
+        let date = theEvent.startDate
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: date)
+        
+        let monthNum = components.month
+        switch monthNum {
+        case 1:
+            month.text = "Jan"
+        case 2:
+            month.text = "Feb"
+        case 3:
+            month.text = "Mar"
+        case 4:
+            month.text = "Apr"
+        case 5:
+            month.text = "May"
+        case 6:
+            month.text = "June"
+        case 7:
+            month.text = "July"
+        case 8:
+            month.text = "Aug"
+        case 9:
+            month.text = "Sep"
+        case 10:
+            month.text = "Oct"
+        case 11:
+            month.text = "Nov"
+        default:
+            month.text = "Dec"
+        }
+        
+        day.text = String(components.day!)
+        
+        //Religion Image
+        let tradition = theEvent.tradition
+        switch tradition{
+        case "Sikh":
+            religionImage.image = UIImage.init(named: "Khanda1x")
+        case "Jewish":
+            religionImage.image = UIImage.init(named: "judaism")
+        case "Islam":
+            religionImage.image = UIImage.init(named: "islam")
+        case "Hindu":
+            religionImage.image = UIImage.init(named: "hinduism")
+        case "Christian":
+            religionImage.image = UIImage.init(named: "christianity")
+        case "Buddhist":
+            religionImage.image = UIImage.init(named: "buddhism")
+        default:
+            religionImage.image = UIImage.init(named: "XSymbol")
+        }
+        
+        religionText.text = tradition
         
         //Mood Cell
         
@@ -217,7 +277,7 @@ class EventViewcontroller:UITableViewController{
     
     //Function that opens Safari Web Controller and links them to the appropriate wikipedia
     @IBAction func sendToWiki(_ sender: Any) {
-        let text:String = EventName.text!
+        let text:String = EventName.text!.replacingOccurrences(of: " ", with: "_")
         let url = URL(string: "https://en.wikipedia.org/wiki/\(text)")!
         print(url)
         let safari = SFSafariViewController.init(url: url)

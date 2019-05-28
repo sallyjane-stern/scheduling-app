@@ -90,7 +90,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         let firstCheck = checkForCalendar(store:store)
         if firstCheck.0 {
             print("[INFO] Calendar already exists")
-            insertEvents(store: store, calendar: firstCheck.1!, eventList: parsedEventList!)
+            //insertEvents(store: store, calendar: firstCheck.1!, eventList: parsedEventList!)
         } else {
             addOurCalendar(store: store)
             let secondCheck = checkForCalendar(store: store)
