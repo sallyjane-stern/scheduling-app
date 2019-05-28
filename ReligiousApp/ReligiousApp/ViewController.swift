@@ -92,6 +92,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             print("[INFO] Calendar already exists")
             //insertEvents(store: store, calendar: firstCheck.1!, eventList: parsedEventList!)
         } else {
+            print("[INFO] Calendar does not exist, creating...")
             addOurCalendar(store: store)
             let secondCheck = checkForCalendar(store: store)
             if secondCheck.0{
@@ -120,12 +121,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     func addOurCalendar(store:EKEventStore){
         let newCalendar = EKCalendar(for:.event, eventStore: store)
         newCalendar.title="DU Schedule"
-        let sourcesInEventStore = store.sources
-        newCalendar.source = sourcesInEventStore.filter{
-            (source:EKSource) ->Bool in
-            source.sourceType.rawValue == EKSourceType.local.rawValue
-            }.first!
-        
+        newCalendar.source = store.defaultCalendarForNewEvents?.source
         do{
             try store.saveCalendar(newCalendar, commit: true)
             UserDefaults.standard.set(newCalendar.calendarIdentifier, forKey: "EventTrackerPrimaryCalendar")
@@ -136,6 +132,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             
             self.present(alert, animated: true, completion: nil)
         }
+        print("[INFO] Calendar created")
     }
     
     func parseEventFile()->MXLCalendar?{
@@ -152,11 +149,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             }
             eventList = calendar
         }
-        
+        print("Done Parsing file")
         return eventList
     }
     
     func insertEvents(store: EKEventStore, calendar : EKCalendar, eventList : MXLCalendar){
+        print("[INFO] Saving parsed events...")
         for eventFromList in eventList.events{
             let event = eventFromList.convertToEKEventOn(date: eventFromList.eventStartDate!, store: store)
             event?.calendar = calendar
@@ -168,7 +166,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             }
             
         }
-        
+        print("[INFO] Finished saving parsed events")
     }
 
     
