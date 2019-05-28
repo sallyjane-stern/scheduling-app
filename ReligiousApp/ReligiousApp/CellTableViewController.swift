@@ -204,7 +204,11 @@ extension CellTableViewController: UISearchBarDelegate{
             //I.E. "A" will result in all events beginning with the letter 'A' or 'a'
             searchEvents = del.EventArr.filter({$0.name.lowercased().prefix(searchText.count) == searchText.lowercased()})
         }
-        isSearching = true
+        if(searchText == ""){
+            isSearching = false
+        } else {
+            isSearching = true
+        }
         cellArray[0] = createEventList()
         tableView.reloadData()
     }
