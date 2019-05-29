@@ -135,7 +135,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Dsd-Xx-ptJ">
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Dsd-Xx-ptJ">
                     <connections>
                         <action selector="closeController:" destination="BYZ-38-t0r" id="BUj-p0-88s"/>
                     </connections>
@@ -341,7 +341,7 @@
         <scene sceneID="5aN-Xd-8gD">
             <objects>
                 <tableViewController id="mNg-bJ-a60" customClass="CellTableViewController" customModule="ReligiousApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="55Q-e3-jP3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="55Q-e3-jP3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="596.5"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

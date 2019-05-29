@@ -64,6 +64,24 @@ class EventViewcontroller:UITableViewController{
         
         //Set Bar Style to White
         navigationController?.navigationBar.barStyle = .black
+        
+        //Get the Appropriate Image
+        var googleURL = ""
+        if(!googleURL.contains(".jpg")){
+            googleURL.append(".jpg")
+            //print(googleURL)
+        }
+        let url = URL(string: googleURL)
+        //Use SDWebView Library to get the appropriate image asyncronisly
+        let defaultImage = UIImage().imageFromColor(color: UIColor.init(red: 141/255, green: 25/255, blue: 41/255, alpha: 1), frame: CGRect(x: 0, y: 0, width: 414, height: 246))
+        
+        
+        imageView.sd_setImage(with: url, placeholderImage: defaultImage) { (image, error, cache, url) in
+            //If Image fails to load then set the default image to a random animal
+            if(self.imageView.image == defaultImage){
+                self.imageView.sd_setImage(with: self.getDefaultImageURL(), placeholderImage: defaultImage)
+            }
+        }
     }
     
     
@@ -77,23 +95,6 @@ class EventViewcontroller:UITableViewController{
         //Set tint color to white
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        //Get the Appropriate Image
-        var googleURL = ""
-        if(!googleURL.contains(".jpg")){
-            googleURL.append(".jpg")
-            print(googleURL)
-        }
-        let url = URL(string: googleURL)
-        //Use SDWebView Library to get the appropriate image asyncronisly
-        let defaultImage = UIImage().imageFromColor(color: UIColor.init(red: 141/255, green: 25/255, blue: 41/255, alpha: 1), frame: CGRect(x: 0, y: 0, width: 414, height: 246))
-        
-        
-        imageView.sd_setImage(with: url, placeholderImage: defaultImage) { (image, error, cache, url) in
-            //If Image fails to load then set the default image to a random animal
-            if(self.imageView.image == defaultImage){
-                self.imageView.sd_setImage(with: self.getDefaultImageURL(), placeholderImage: defaultImage)
-            }
-        }
         
         //Event Cell
         

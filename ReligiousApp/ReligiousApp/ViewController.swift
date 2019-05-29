@@ -50,10 +50,11 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         GoogleSignInButton.isHidden = true
         GIDSignIn.sharedInstance().uiDelegate = self
+        
+        addButton.isEnabled = false
+        addButton.isUserInteractionEnabled = false
         
         // Uncomment to automatically sign in the user.
         //GIDSignIn.sharedInstance().signInSilently()
@@ -262,6 +263,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         }
         
         pickerArray[0] = !pickerArray[0]
+        changeAddButtonStatus()
     }
     
     @IBAction func googleButton(_ sender: Any) {
@@ -279,14 +281,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         } else {
             changeButtonStatus(status: true)
         }
-        
+       changeAddButtonStatus()
         
     }
     
     func changeButtonStatus(status: Bool){
         GoogleSignInButton.isHidden = status
-        addButton.isEnabled = status
-        addButton.isUserInteractionEnabled = status
     }
     
     
@@ -300,6 +300,27 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         }
         
         pickerArray[2] = !pickerArray[2]
+        changeAddButtonStatus()
+    }
+    
+    func changeAddButtonStatus(){
+        if(pickerArray[0] || pickerArray[1] || pickerArray[2]){
+            if(pickerArray[1]){
+                if(GIDSignIn.sharedInstance().hasAuthInKeychain()){
+                    addButton.isEnabled = true
+                    addButton.isUserInteractionEnabled = true
+                } else {
+                    addButton.isEnabled = false
+                    addButton.isUserInteractionEnabled = false
+                }
+            } else {
+                addButton.isEnabled = true
+                addButton.isUserInteractionEnabled = true
+            }
+        } else {
+            addButton.isEnabled = false
+            addButton.isUserInteractionEnabled = false
+        }
     }
     
     
