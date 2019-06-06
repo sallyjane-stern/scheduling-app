@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReligiousApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InterfaithIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +146,7 @@
         <!--Table View Controller-->
         <scene sceneID="igq-nA-22h">
             <objects>
-                <tableViewController id="HwH-0b-c4C" customClass="TableViewController" customModule="ReligiousApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="HwH-0b-c4C" customClass="TableViewController" customModule="InterfaithIt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eXV-Ar-hMm">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="312"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,23 +229,48 @@
         <!--Menu Table View Controller-->
         <scene sceneID="FMW-XN-ICz">
             <objects>
-                <viewController id="QZF-tc-Vy1" customClass="MenuTableViewController" customModule="ReligiousApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QZF-tc-Vy1" customClass="MenuTableViewController" customModule="InterfaithIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rbu-YK-1Cv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k15-Y4-mX1">
-                                <rect key="frame" x="207" y="88" width="207" height="45"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VPf-vw-ddH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                <color key="backgroundColor" red="0.59485822919999998" green="0.0047344756309999998" blue="0.18171411749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="odm-k3-9Zi"/>
+                                    <constraint firstAttribute="height" constant="140" id="XYH-Av-YPI"/>
                                 </constraints>
-                                <state key="normal" title="Day" backgroundImage="Subtraction 2"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJu-o5-oq1">
+                                <rect key="frame" x="14" y="92" width="201.5" height="49"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbw-Py-iwK">
+                                <rect key="frame" x="335" y="53" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="1VQ-7c-rRw"/>
+                                    <constraint firstAttribute="height" constant="28" id="dj2-io-eY8"/>
+                                </constraints>
+                                <state key="normal" title="Button" backgroundImage="calendar-add"/>
                                 <connections>
-                                    <action selector="pressedDay:" destination="QZF-tc-Vy1" eventType="touchUpInside" id="i8B-Ba-yZI"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="overCurrentContext" id="HHa-Aj-rIA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh9-LM-Oet">
+                                <rect key="frame" x="11" y="56" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="eo6-AE-grH"/>
+                                    <constraint firstAttribute="width" constant="22" id="flk-eS-rDU"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="contactButton:" destination="QZF-tc-Vy1" eventType="touchUpInside" id="42j-wM-7YN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZK-R6-Skt">
-                                <rect key="frame" x="0.0" y="88" width="207" height="45"/>
+                                <rect key="frame" x="0.0" y="140" width="207" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fRK-Sy-kOv"/>
                                 </constraints>
@@ -254,38 +279,8 @@
                                     <action selector="pressedWeek:" destination="QZF-tc-Vy1" eventType="touchUpInside" id="r4H-bU-yDE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggq-hv-0WV">
-                                <rect key="frame" x="75" y="141" width="264.5" height="23.5"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Hello User, here is your week:">
-                                        <attributes>
-                                            <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" metaFont="system" size="20"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            <integer key="NSUnderline" value="1"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbt-w0-9Qm">
-                                <rect key="frame" x="360" y="840" width="22" height="22"/>
-                                <color key="tintColor" red="0.59485822919999998" green="0.0047344756309999998" blue="0.18171411749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="contactButton:" destination="QZF-tc-Vy1" eventType="touchUpInside" id="XHg-QD-jrn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxZ-Mf-4RW">
-                                <rect key="frame" x="32" y="836" width="128" height="30"/>
-                                <state key="normal" title="Change Username">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeUsername:" destination="QZF-tc-Vy1" eventType="touchUpInside" id="M6g-S2-w8H"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n6-NZ-R4b">
-                                <rect key="frame" x="32" y="777" width="350" height="51"/>
+                                <rect key="frame" x="32" y="825" width="350" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Add to Calendar" backgroundImage="Rectangle 304">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,41 +290,57 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7b-VP-LsJ">
-                                <rect key="frame" x="0.0" y="172.5" width="414" height="596.5"/>
+                                <rect key="frame" x="0.0" y="193" width="414" height="624"/>
                                 <connections>
                                     <segue destination="mNg-bJ-a60" kind="embed" id="roE-tk-Hb9"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k15-Y4-mX1">
+                                <rect key="frame" x="207" y="140" width="207" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="odm-k3-9Zi"/>
+                                </constraints>
+                                <state key="normal" title="Day" backgroundImage="Subtraction 2"/>
+                                <connections>
+                                    <action selector="pressedDay:" destination="QZF-tc-Vy1" eventType="touchUpInside" id="i8B-Ba-yZI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="k15-Y4-mX1" firstAttribute="width" secondItem="nZK-R6-Skt" secondAttribute="width" id="365-f2-kjp"/>
-                            <constraint firstItem="Ggq-hv-0WV" firstAttribute="top" secondItem="k15-Y4-mX1" secondAttribute="bottom" constant="8" id="6jy-D1-i4k"/>
-                            <constraint firstItem="MxZ-Mf-4RW" firstAttribute="leading" secondItem="8dO-xr-1ji" secondAttribute="leading" constant="32" id="704-N5-uj2"/>
-                            <constraint firstItem="MxZ-Mf-4RW" firstAttribute="top" secondItem="5n6-NZ-R4b" secondAttribute="bottom" constant="8" id="9t4-W3-MXp"/>
-                            <constraint firstItem="Nbt-w0-9Qm" firstAttribute="bottom" secondItem="8dO-xr-1ji" secondAttribute="bottom" id="FFe-xc-BQt"/>
-                            <constraint firstItem="8dO-xr-1ji" firstAttribute="trailing" secondItem="Nbt-w0-9Qm" secondAttribute="trailing" constant="32" id="IbR-Pw-Lgf"/>
+                            <constraint firstItem="W7b-VP-LsJ" firstAttribute="top" secondItem="k15-Y4-mX1" secondAttribute="bottom" constant="8" id="4ez-Ha-sxn"/>
+                            <constraint firstItem="nZK-R6-Skt" firstAttribute="top" secondItem="VPf-vw-ddH" secondAttribute="bottom" id="DMs-y5-pfE"/>
+                            <constraint firstItem="zJu-o5-oq1" firstAttribute="top" secondItem="Rbw-Py-iwK" secondAttribute="bottom" constant="11" id="FMX-Bz-ejj"/>
                             <constraint firstItem="W7b-VP-LsJ" firstAttribute="trailing" secondItem="8dO-xr-1ji" secondAttribute="trailing" id="J5A-s4-NQz"/>
-                            <constraint firstItem="5n6-NZ-R4b" firstAttribute="top" secondItem="W7b-VP-LsJ" secondAttribute="bottom" constant="8" id="Jh8-rP-yYt"/>
+                            <constraint firstItem="VPf-vw-ddH" firstAttribute="leading" secondItem="8dO-xr-1ji" secondAttribute="leading" id="KvG-Rn-QOp"/>
+                            <constraint firstItem="zJu-o5-oq1" firstAttribute="top" secondItem="Zh9-LM-Oet" secondAttribute="bottom" constant="14" id="Kxo-t4-wUR"/>
+                            <constraint firstAttribute="bottom" secondItem="5n6-NZ-R4b" secondAttribute="bottom" constant="20" id="PIU-JW-Yjq"/>
+                            <constraint firstAttribute="trailing" secondItem="Rbw-Py-iwK" secondAttribute="trailing" constant="51" id="PPv-7T-38S"/>
+                            <constraint firstItem="Zh9-LM-Oet" firstAttribute="leading" secondItem="Rbu-YK-1Cv" secondAttribute="leading" constant="11" id="Rwg-0k-RjL"/>
                             <constraint firstItem="8dO-xr-1ji" firstAttribute="trailing" secondItem="5n6-NZ-R4b" secondAttribute="trailing" constant="32" id="StN-Pz-Nhu"/>
                             <constraint firstItem="8dO-xr-1ji" firstAttribute="trailing" secondItem="k15-Y4-mX1" secondAttribute="trailing" id="Voh-Dv-Rxr"/>
-                            <constraint firstItem="nZK-R6-Skt" firstAttribute="top" secondItem="8dO-xr-1ji" secondAttribute="top" id="WtJ-m6-BKX"/>
+                            <constraint firstItem="zJu-o5-oq1" firstAttribute="leading" secondItem="8dO-xr-1ji" secondAttribute="leading" constant="14" id="XZA-BQ-OKZ"/>
                             <constraint firstItem="k15-Y4-mX1" firstAttribute="height" secondItem="nZK-R6-Skt" secondAttribute="height" id="bEt-mU-Oz5"/>
                             <constraint firstItem="5n6-NZ-R4b" firstAttribute="leading" secondItem="8dO-xr-1ji" secondAttribute="leading" constant="32" id="bXz-IP-uv3"/>
+                            <constraint firstItem="5n6-NZ-R4b" firstAttribute="top" secondItem="W7b-VP-LsJ" secondAttribute="bottom" constant="8" id="doy-bR-aVo"/>
+                            <constraint firstItem="Zh9-LM-Oet" firstAttribute="top" secondItem="Rbu-YK-1Cv" secondAttribute="top" constant="56" id="egg-6m-To3"/>
+                            <constraint firstItem="VPf-vw-ddH" firstAttribute="trailing" secondItem="8dO-xr-1ji" secondAttribute="trailing" id="fCT-nk-lFd"/>
                             <constraint firstItem="W7b-VP-LsJ" firstAttribute="leading" secondItem="8dO-xr-1ji" secondAttribute="leading" id="fjm-b3-qB7"/>
                             <constraint firstItem="k15-Y4-mX1" firstAttribute="leading" secondItem="nZK-R6-Skt" secondAttribute="trailing" id="j0x-ed-dgc"/>
                             <constraint firstItem="nZK-R6-Skt" firstAttribute="leading" secondItem="8dO-xr-1ji" secondAttribute="leading" id="jfD-Rn-JVO"/>
                             <constraint firstItem="k15-Y4-mX1" firstAttribute="leading" secondItem="nZK-R6-Skt" secondAttribute="trailing" id="l17-aU-ewb"/>
-                            <constraint firstItem="W7b-VP-LsJ" firstAttribute="top" secondItem="Ggq-hv-0WV" secondAttribute="bottom" constant="8" id="lcp-6p-ES7"/>
-                            <constraint firstItem="Nbt-w0-9Qm" firstAttribute="top" secondItem="5n6-NZ-R4b" secondAttribute="bottom" constant="12" id="m0g-Ys-vjQ"/>
-                            <constraint firstItem="Ggq-hv-0WV" firstAttribute="centerX" secondItem="Rbu-YK-1Cv" secondAttribute="centerX" id="mj0-NU-QX2"/>
-                            <constraint firstItem="k15-Y4-mX1" firstAttribute="top" secondItem="8dO-xr-1ji" secondAttribute="top" id="nSw-sv-1i4"/>
+                            <constraint firstItem="VPf-vw-ddH" firstAttribute="top" secondItem="Rbu-YK-1Cv" secondAttribute="top" id="pw9-nR-AiJ"/>
+                            <constraint firstItem="k15-Y4-mX1" firstAttribute="top" secondItem="VPf-vw-ddH" secondAttribute="bottom" id="rnp-lE-He6"/>
+                            <constraint firstItem="Rbw-Py-iwK" firstAttribute="top" secondItem="Rbu-YK-1Cv" secondAttribute="top" constant="53" id="tXc-5y-gKL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8dO-xr-1ji"/>
                     </view>
-                    <navigationItem key="navigationItem" id="F9L-JU-DAY"/>
+                    <navigationItem key="navigationItem" id="F9L-JU-DAY">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="helloLabel" destination="Ggq-hv-0WV" id="vpC-1E-Jvh"/>
+                        <outlet property="helloLabel" destination="zJu-o5-oq1" id="zpc-Es-2eW"/>
                     </connections>
                 </viewController>
                 <swipeGestureRecognizer direction="right" id="kPn-wg-hwB"/>
@@ -340,9 +351,9 @@
         <!--Cell Table View Controller-->
         <scene sceneID="5aN-Xd-8gD">
             <objects>
-                <tableViewController id="mNg-bJ-a60" customClass="CellTableViewController" customModule="ReligiousApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mNg-bJ-a60" customClass="CellTableViewController" customModule="InterfaithIt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="55Q-e3-jP3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="596.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="624"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" misplaced="YES" searchBarStyle="minimal" text="" placeholder="Search Any Event" showsCancelButton="YES" id="Qmu-Pt-i0w">
@@ -356,7 +367,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="default" rowHeight="117" id="R1l-h3-rEX" customClass="customCell" customModule="ReligiousApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="default" rowHeight="117" id="R1l-h3-rEX" customClass="customCell" customModule="InterfaithIt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="117"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R1l-h3-rEX" id="QW7-K3-gpX">
@@ -434,9 +445,9 @@
         <!--Event Viewcontroller-->
         <scene sceneID="Ohk-ni-FM4">
             <objects>
-                <tableViewController id="hZm-fB-11V" customClass="EventViewcontroller" customModule="ReligiousApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hZm-fB-11V" customClass="EventViewcontroller" customModule="InterfaithIt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="246" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="U6I-TB-462">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="596.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="624"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -1103,7 +1114,11 @@
         <image name="Subtraction 2" width="187.5" height="45"/>
         <image name="Union 2" width="342" height="70"/>
         <image name="XSymbol" width="23" height="23"/>
+        <image name="calendar-add" width="28" height="28"/>
         <image name="hinduism" width="40.5" height="43"/>
         <image name="volume-high" width="18" height="18"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HHa-Aj-rIA"/>
+    </inferredMetricsTieBreakers>
 </document>

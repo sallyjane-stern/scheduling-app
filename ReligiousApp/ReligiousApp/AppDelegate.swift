@@ -11,6 +11,7 @@ import GoogleSignIn
 import MXLCalendarManagerSwift
 
 @UIApplicationMain
+//App Delegate
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
     public var EventArr = [Event]()

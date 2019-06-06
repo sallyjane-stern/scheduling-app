@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Class representing the table that is displayed when "Add To Calendar" is pressed
 class TableViewController: UITableViewController {
 
     var calBoxes: ViewDelegate?

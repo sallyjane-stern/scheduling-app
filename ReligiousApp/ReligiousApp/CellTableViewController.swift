@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//Class representing the table that the home screen displays
 class CellTableViewController: UITableViewController {
   
     private var eventArr = [Event]()
@@ -36,7 +37,7 @@ class CellTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return 1 //Religious Events is the only section we need
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +52,7 @@ class CellTableViewController: UITableViewController {
         if(indexPath.section == 0) {
             cell = tableView.dequeueReusableCell(withIdentifier: "default", for: indexPath) as! customCell
             
-            
+            //Set up the look of the cell
             let layer = cell.backView.layer
             layer.masksToBounds = false
             layer.cornerRadius = 15
@@ -59,8 +60,7 @@ class CellTableViewController: UITableViewController {
             layer.shadowRadius = 5
             layer.shadowOpacity = 0.5
             
-            
-            //let it = eventArr[indexPath.row]
+            //Get the data from the cell
             let it = cellArray[0][indexPath.row]
             
             cell.holidayLabel.text = it.tradition
@@ -73,7 +73,7 @@ class CellTableViewController: UITableViewController {
             dateFormatter.locale = Locale(identifier: "en_US")
             
             dateFormatter.setLocalizedDateFormatFromTemplate("MMMMd")// set template after setting locale
-            cell.timeLabel.text = dateFormatter.string(from: date) // December 31
+            cell.timeLabel.text = dateFormatter.string(from: date) // Example: December 31
             
             //Get Religion Image
             let tradition = it.tradition
@@ -110,7 +110,8 @@ class CellTableViewController: UITableViewController {
             if(isWeek){
                 lastDate = Date.init(timeInterval: (7*24*60*60), since: lastDate)
             } else {
-                lastDate = Date.init(timeInterval: (24*60*60), since: lastDate)
+                //isDay
+                lastDate = today
             }
             
             for event in eventArr{
@@ -123,7 +124,6 @@ class CellTableViewController: UITableViewController {
                 }
             }
         } else {
-            //lastDate = eventArr[eventArr.count].endDate
             //Load the items in as events
             loadArray = searchEvents
         }

@@ -53,17 +53,17 @@
 		B82FC0FC92F10168BCD8901A /* Pods-ReligiousAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReligiousAppTests.release.xcconfig"; path = "Target Support Files/Pods-ReligiousAppTests/Pods-ReligiousAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9036573227368770046588C /* religious_holidays.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = religious_holidays.ics; sourceTree = "<group>"; };
 		C96FA040227D0CC0002828C9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		C9A8AA57226FE6E200231FD9 /* ReligiousApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReligiousApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A8AA57226FE6E200231FD9 /* InterfaithIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterfaithIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A8AA5C226FE6E200231FD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9A8AA5F226FE6E200231FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9A8AA61226FE6E400231FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9A8AA64226FE6E400231FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9A8AA66226FE6E400231FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9A8AA6B226FE6E400231FD9 /* ReligiousAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReligiousAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A8AA6B226FE6E400231FD9 /* InterfaithItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterfaithItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A8AA6F226FE6E400231FD9 /* ReligiousAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligiousAppTests.swift; sourceTree = "<group>"; };
 		C9A8AA71226FE6E400231FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9A8AA76226FE6E400231FD9 /* ReligiousAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReligiousAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A8AA76226FE6E400231FD9 /* InterfaithItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterfaithItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A8AA7A226FE6E400231FD9 /* ReligiousAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligiousAppUITests.swift; sourceTree = "<group>"; };
 		C9A8AA7C226FE6E400231FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A8AA8A2270FFE800231FD9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +128,7 @@
 		C9A8AA4E226FE6E200231FD9 = {
 			isa = PBXGroup;
 			children = (
+				C9036573227368770046588C /* religious_holidays.ics */,
 				C9A8AA59226FE6E200231FD9 /* ReligiousApp */,
 				C9A8AA6E226FE6E400231FD9 /* ReligiousAppTests */,
 				C9A8AA79226FE6E400231FD9 /* ReligiousAppUITests */,
@@ -140,9 +141,9 @@
 		C9A8AA58226FE6E200231FD9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9A8AA57226FE6E200231FD9 /* ReligiousApp.app */,
-				C9A8AA6B226FE6E400231FD9 /* ReligiousAppTests.xctest */,
-				C9A8AA76226FE6E400231FD9 /* ReligiousAppUITests.xctest */,
+				C9A8AA57226FE6E200231FD9 /* InterfaithIt.app */,
+				C9A8AA6B226FE6E400231FD9 /* InterfaithItTests.xctest */,
+				C9A8AA76226FE6E400231FD9 /* InterfaithItUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,7 +151,6 @@
 		C9A8AA59226FE6E200231FD9 /* ReligiousApp */ = {
 			isa = PBXGroup;
 			children = (
-				C9036573227368770046588C /* religious_holidays.ics */,
 				C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */,
 				C9B67DF42295914B00207D15 /* Event.swift */,
 				C9A8AA5C226FE6E200231FD9 /* ViewController.swift */,
@@ -187,9 +187,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C9A8AA56226FE6E200231FD9 /* ReligiousApp */ = {
+		C9A8AA56226FE6E200231FD9 /* InterfaithIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9A8AA7F226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "ReligiousApp" */;
+			buildConfigurationList = C9A8AA7F226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "InterfaithIt" */;
 			buildPhases = (
 				FEB8B352CE6E2E214FC196E9 /* [CP] Check Pods Manifest.lock */,
 				C9A8AA53226FE6E200231FD9 /* Sources */,
@@ -202,14 +202,14 @@
 			);
 			dependencies = (
 			);
-			name = ReligiousApp;
+			name = InterfaithIt;
 			productName = ReligiousApp;
-			productReference = C9A8AA57226FE6E200231FD9 /* ReligiousApp.app */;
+			productReference = C9A8AA57226FE6E200231FD9 /* InterfaithIt.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C9A8AA6A226FE6E400231FD9 /* ReligiousAppTests */ = {
+		C9A8AA6A226FE6E400231FD9 /* InterfaithItTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9A8AA82226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "ReligiousAppTests" */;
+			buildConfigurationList = C9A8AA82226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "InterfaithItTests" */;
 			buildPhases = (
 				AB12749FAFC3C8E324734ABA /* [CP] Check Pods Manifest.lock */,
 				C9A8AA67226FE6E400231FD9 /* Sources */,
@@ -221,14 +221,14 @@
 			dependencies = (
 				C9A8AA6D226FE6E400231FD9 /* PBXTargetDependency */,
 			);
-			name = ReligiousAppTests;
+			name = InterfaithItTests;
 			productName = ReligiousAppTests;
-			productReference = C9A8AA6B226FE6E400231FD9 /* ReligiousAppTests.xctest */;
+			productReference = C9A8AA6B226FE6E400231FD9 /* InterfaithItTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C9A8AA75226FE6E400231FD9 /* ReligiousAppUITests */ = {
+		C9A8AA75226FE6E400231FD9 /* InterfaithItUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9A8AA85226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "ReligiousAppUITests" */;
+			buildConfigurationList = C9A8AA85226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "InterfaithItUITests" */;
 			buildPhases = (
 				93E263FE92AC1960610DABD0 /* [CP] Check Pods Manifest.lock */,
 				C9A8AA72226FE6E400231FD9 /* Sources */,
@@ -240,9 +240,9 @@
 			dependencies = (
 				C9A8AA78226FE6E400231FD9 /* PBXTargetDependency */,
 			);
-			name = ReligiousAppUITests;
+			name = InterfaithItUITests;
 			productName = ReligiousAppUITests;
-			productReference = C9A8AA76226FE6E400231FD9 /* ReligiousAppUITests.xctest */;
+			productReference = C9A8AA76226FE6E400231FD9 /* InterfaithItUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -268,7 +268,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C9A8AA52226FE6E200231FD9 /* Build configuration list for PBXProject "ReligiousApp" */;
+			buildConfigurationList = C9A8AA52226FE6E200231FD9 /* Build configuration list for PBXProject "InterfaithIt" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -281,9 +281,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C9A8AA56226FE6E200231FD9 /* ReligiousApp */,
-				C9A8AA6A226FE6E400231FD9 /* ReligiousAppTests */,
-				C9A8AA75226FE6E400231FD9 /* ReligiousAppUITests */,
+				C9A8AA56226FE6E200231FD9 /* InterfaithIt */,
+				C9A8AA6A226FE6E400231FD9 /* InterfaithItTests */,
+				C9A8AA75226FE6E400231FD9 /* InterfaithItUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -474,12 +474,12 @@
 /* Begin PBXTargetDependency section */
 		C9A8AA6D226FE6E400231FD9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9A8AA56226FE6E200231FD9 /* ReligiousApp */;
+			target = C9A8AA56226FE6E200231FD9 /* InterfaithIt */;
 			targetProxy = C9A8AA6C226FE6E400231FD9 /* PBXContainerItemProxy */;
 		};
 		C9A8AA78226FE6E400231FD9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9A8AA56226FE6E200231FD9 /* ReligiousApp */;
+			target = C9A8AA56226FE6E200231FD9 /* InterfaithIt */;
 			targetProxy = C9A8AA77226FE6E400231FD9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -682,7 +682,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReligiousApp.app/ReligiousApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InterfaithIt.app/InterfaithIt";
 			};
 			name = Debug;
 		};
@@ -704,7 +704,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReligiousApp.app/ReligiousApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InterfaithIt.app/InterfaithIt";
 			};
 			name = Release;
 		};
@@ -753,7 +753,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C9A8AA52226FE6E200231FD9 /* Build configuration list for PBXProject "ReligiousApp" */ = {
+		C9A8AA52226FE6E200231FD9 /* Build configuration list for PBXProject "InterfaithIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9A8AA7D226FE6E400231FD9 /* Debug */,
@@ -762,7 +762,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9A8AA7F226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "ReligiousApp" */ = {
+		C9A8AA7F226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "InterfaithIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9A8AA80226FE6E400231FD9 /* Debug */,
@@ -771,7 +771,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9A8AA82226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "ReligiousAppTests" */ = {
+		C9A8AA82226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "InterfaithItTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9A8AA83226FE6E400231FD9 /* Debug */,
@@ -780,7 +780,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9A8AA85226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "ReligiousAppUITests" */ = {
+		C9A8AA85226FE6E400231FD9 /* Build configuration list for PBXNativeTarget "InterfaithItUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9A8AA86226FE6E400231FD9 /* Debug */,

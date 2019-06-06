@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import os.log
 
+//Class representing Event object that we can pass around throughout the app
 class Event: NSObject, NSCoding{
     
     //MARK: Properties

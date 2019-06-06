@@ -13,6 +13,7 @@ import GoogleAPIClientForREST
 //import GTMOAuth2
 import GoogleSignIn
 
+//Class that represents the screen that is presented when "Add to Calendar" is pressed, minus the table
 class ViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var outlookCal: UIButton!
@@ -26,6 +27,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var SwipeRecognizer: UISwipeGestureRecognizer!
     private var calBoxes: ViewDelegate?
     private var isDone = false
+    
+    fileprivate let calendarTitle = "DU Calendar"
     
     // google stuff
     private let googleClientID = "744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com"
@@ -56,8 +59,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         addButton.isEnabled = false
         addButton.isUserInteractionEnabled = false
         
+        
+        
         // Uncomment to automatically sign in the user.
-        //GIDSignIn.sharedInstance().signInSilently()
+        GIDSignIn.sharedInstance().signInSilently()
         
         // TODO(developer) Configure the sign-in button look/feel
         // ...
@@ -209,7 +214,26 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             // get permission to access calendars
                 // send request to google
             if(GIDSignIn.sharedInstance().hasAuthInKeychain()){
+                //List User Calendar to check if our calendar exists
+//                guard let service = self.calendarService else {
+//                    return
+//                }
                 print("======Adding to Google Calendar!======")
+                let service = GTLRCalendarService.init()
+                let inst = GIDSignIn.sharedInstance()
+                print(inst)
+                service.authorizer = GIDSignIn.sharedInstance().currentUser.authentication.fetcherAuthorizer()
+
+                let calList = GTLRCalendarQuery_CalendarListList.query()
+                
+//                print(service.executeQuery(calList).)
+                service.executeQuery(calList, completionHandler: { (ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
+                    print("\(object) error: \(error)")
+                    })
+                
+                //var googleCal = GTLRCalendarQuery_CalendarListGet.query(withCalendarId: <#T##String#>)
+                //print(googleCal.summary)
+                
             } else {
                 let alert = UIAlertController(title: "Calendar Error", message: "Please sign into your Google Account", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
@@ -236,6 +260,31 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
         
     }
+//    /*
+//     *  Code retrived from:
+//     *  https://stackoverflow.com/questions/50227276/obtaining-google-calendar-in-swift
+//     */
+//    /// Creates calendar service with current authentication
+//    fileprivate lazy var calendarService: GTLRCalendarService = {
+//        let service = GTLRCalendarService()
+//        // Have the service object set tickets to fetch consecutive pages
+//        // of the feed so we do not need to manually fetch them
+//        service.shouldFetchNextPages = true
+//        // Have the service object set tickets to retry temporary error conditions
+//        // automatically
+//        service.isRetryEnabled = true
+//        service.maxRetryInterval = 15
+//
+//        guard let currentUser = GIDSignIn.sharedInstance().currentUser,
+//            let authentication = currentUser.authentication else {
+//                return
+//        }
+//
+//        service.authorizer = authentication.fetcherAuthorizer()
+//        return service
+//    }()
+
+    
     
     //Testing Function to check which menu boxes are checked
     private func getTitle(index: Int, bool: Bool) -> String{

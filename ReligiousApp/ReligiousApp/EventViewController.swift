@@ -13,6 +13,7 @@ import UIKit
 import SDWebImage
 import GoogleAPIClientForREST
 
+//Class representing the Event Information Screen
 class EventViewcontroller:UITableViewController{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var EventTitle: UIButton!
