@@ -28,7 +28,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     private var calBoxes: ViewDelegate?
     private var isDone = false
     
-    fileprivate let calendarTitle = "DU Calendar"
+    fileprivate let calendarTitle = "Interfaith Calendar"
+    private var localTimeZoneName: String { return TimeZone.current.identifier }
     
     // google stuff
     private let googleClientID = "744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com"
@@ -38,6 +39,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     private let googleRequest = URL(string: "https://accounts.google.com/o/oauth2/v2/auth?client_id=744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc.apps.googleusercontent.com&redirect_uri=com.googleusercontent.apps.744700381381-flvfrkqv2tqvkma7jsdthd82ogsg7dhc&response_type=code&scope=calendar")
     
     private var pickerArray = [false, false, false]
+    private var queryArry:[GTLRQuery] = []
     
     //Completion handler so the view does not close when it is not supposed to
     let handlerBlock: (Bool) -> Bool = {
@@ -71,7 +73,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     @IBAction func didTapSignOut(_ sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -88,7 +90,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         }
     }
     
-
+    
     
     
     func checkOrAddCalendar(store:EKEventStore, completion: (Bool) -> Bool){
@@ -117,7 +119,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         for calendar in userCals{
             //determine if we have already created a seperate calendar for
             //app use
-            if calendar.title == "DU Schedule"{
+            if calendar.title == calendarTitle{
                 return (true, calendar)
             }
         }
@@ -126,7 +128,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     
     func addOurCalendar(store:EKEventStore){
         let newCalendar = EKCalendar(for:.event, eventStore: store)
-        newCalendar.title="DU Schedule"
+        newCalendar.title = calendarTitle
         newCalendar.source = store.defaultCalendarForNewEvents?.source
         do{
             try store.saveCalendar(newCalendar, commit: true)
@@ -174,7 +176,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         }
         print("[INFO] Finished saving parsed events")
     }
-
+    
     
     //Function called when "Add To Calendar" button is pressed
     @IBAction func addToCal(_ sender: Any) {
@@ -211,28 +213,84 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
         // google calendar code
         if (pickerArray[1]) {
-            // get permission to access calendars
-                // send request to google
+            // Check if the user has signed into Google
             if(GIDSignIn.sharedInstance().hasAuthInKeychain()){
-                //List User Calendar to check if our calendar exists
-//                guard let service = self.calendarService else {
-//                    return
-//                }
                 print("======Adding to Google Calendar!======")
                 let service = GTLRCalendarService.init()
                 let inst = GIDSignIn.sharedInstance()
-                print(inst)
                 service.authorizer = GIDSignIn.sharedInstance().currentUser.authentication.fetcherAuthorizer()
-
-                let calList = GTLRCalendarQuery_CalendarListList.query()
                 
-//                print(service.executeQuery(calList).)
-                service.executeQuery(calList, completionHandler: { (ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
-                    print("\(object) error: \(error)")
-                    })
+                let calListQuery = GTLRCalendarQuery_CalendarListList.query()
+                var hasCalendar = false
+                var hasEvents = false
+                var ourCal:GTLRCalendar_Calendar = GTLRCalendar_Calendar.init()
+                var calID: String = ""
                 
-                //var googleCal = GTLRCalendarQuery_CalendarListGet.query(withCalendarId: <#T##String#>)
-                //print(googleCal.summary)
+                //Check to see if the Calendar already exists
+                service.executeQuery(calListQuery, completionHandler: { (ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
+                    var calList = object as! GTLRCalendar_CalendarList
+                    
+                    for calendar in calList.items!{
+                        var calTitle = calendar.summary!
+                        if(calTitle == self.calendarTitle){
+                            //if(calTitle == "DU AGO"){
+                            hasCalendar = true
+                            //Initialize ourCal to the calendar in the List
+                            ourCal.eTag = calendar.eTag
+                            ourCal.descriptionProperty = calendar.descriptionProperty
+                            ourCal.identifier = calendar.identifier
+                            ourCal.kind = calendar.kind
+                            ourCal.location = calendar.location
+                            ourCal.summary = calendar.summary
+                            ourCal.timeZone = calendar.timeZone
+                            break;
+                        }
+                    }
+                    
+                    if error != nil {print("\(object) error: \(error)")}
+                    //If Calendar exists, check to see if our events have been added
+                    if(hasCalendar){
+                        print("GOOGLE CALENDAR ALREADY CREATED")
+                        //Set Calendar ID
+                        calID = ourCal.identifier!
+                        //Check and see if the events are already created
+                        let eventListQuery = GTLRCalendarQuery_EventsList.query(withCalendarId: calID)
+                        service.executeQuery(eventListQuery, completionHandler: {(ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
+                            let eventList = object as! GTLRCalendar_Events
+                            if(eventList.items?.count == 0){
+                                //The events need to be added
+                                print("CALENDAR HAS NO EVENTS")
+                                self.addGoogleEvents(service: service, calendarID: calID)
+                                
+                            } else {
+                                //The events have already been added
+                                print("EVENTS HAVE ALREADY BEEN ADDED")
+                            }
+                        })
+                        
+                        
+                    } else {
+                        //Create the Calendar
+                        print("CREATING GOOGLE CALENDAR")
+                        ourCal.summary = self.calendarTitle
+                        ourCal.timeZone = self.localTimeZoneName
+                        //Add the calendar to the list
+                        
+                        let insertCalendarQuery = GTLRCalendarQuery_CalendarsInsert.query(withObject: ourCal)
+                        
+                        service.executeQuery(insertCalendarQuery, completionHandler: {(ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
+                            let theCal:GTLRCalendar_Calendar = object as! GTLRCalendar_Calendar
+                            calID = theCal.identifier!
+                            self.addGoogleEvents(service: service, calendarID: calID)
+                            if(error != nil){print("\(theCal) Error: \(error)")}
+                        })
+                        
+                    }
+                    
+                })
+                
+                
+                
                 
             } else {
                 let alert = UIAlertController(title: "Calendar Error", message: "Please sign into your Google Account", preferredStyle: .alert)
@@ -241,8 +299,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                 }))
                 self.present(alert, animated: true, completion: nil)
             }
-            // check if calendar already exists
-            // if doesn't exist add calendar
         }
         
         
@@ -260,31 +316,59 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
         
     }
-//    /*
-//     *  Code retrived from:
-//     *  https://stackoverflow.com/questions/50227276/obtaining-google-calendar-in-swift
-//     */
-//    /// Creates calendar service with current authentication
-//    fileprivate lazy var calendarService: GTLRCalendarService = {
-//        let service = GTLRCalendarService()
-//        // Have the service object set tickets to fetch consecutive pages
-//        // of the feed so we do not need to manually fetch them
-//        service.shouldFetchNextPages = true
-//        // Have the service object set tickets to retry temporary error conditions
-//        // automatically
-//        service.isRetryEnabled = true
-//        service.maxRetryInterval = 15
-//
-//        guard let currentUser = GIDSignIn.sharedInstance().currentUser,
-//            let authentication = currentUser.authentication else {
-//                return
-//        }
-//
-//        service.authorizer = authentication.fetcherAuthorizer()
-//        return service
-//    }()
-
     
+    //Using the service that has the Oath2 Token and the Calendar ID, Add Events to the Calendar
+    //Calendar ID has to be a paramater as calID may be nil when creating a new calendar due to
+    //  the asynchronized function
+    func addGoogleEvents(service: GTLRCalendarService, calendarID: String) {
+        var index = 0;
+        var calEventArray:[GTLRCalendar_Event] = self.createGoogleEvents()
+        //Add Events to Calendar
+        for calEvent in calEventArray{
+            var addEventQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calEvent, calendarId: calendarID)
+            self.queryArry.append(addEventQuery)
+        }
+        //Send the Batch to the server to prcoess
+        let batchQuery = GTLRBatchQuery.init(queries: self.queryArry)
+        service.executeQuery(batchQuery, completionHandler: {(ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
+            let qObject = object
+            print("=======FINISHED ADDING TO GOOGLE CALENDAR=======")
+            if(error != nil){print("\(qObject) Error: \(error)")}
+        })
+    }
+    
+    //Goes the the App Delegate's Event Array and converts those to GTLRCalendar_Events
+    func createGoogleEvents() -> [GTLRCalendar_Event]{
+        var calEventArray:[GTLRCalendar_Event] = []
+        let del = UIApplication.shared.delegate as! AppDelegate
+        var eventArray = del.EventArr
+        var calEvent: GTLRCalendar_Event = GTLRCalendar_Event.init()
+        
+        for event in eventArray{
+            //Set the event
+            var name = event.name.replacingOccurrences(of: " ", with: "_")
+            calEvent.descriptionProperty = "https://en.wikipedia.org/wiki/\(name) to know more about \(event.name)"
+            
+            //Obnoxious Date Setting
+            var startDateTime:GTLRDateTime = GTLRDateTime.init(date: event.startDate)
+            var start:GTLRCalendar_EventDateTime = GTLRCalendar_EventDateTime.init()
+            start.dateTime = startDateTime
+            start.timeZone = localTimeZoneName
+            
+            var endDateTime:GTLRDateTime = GTLRDateTime.init(date: event.endDate)
+            var end:GTLRCalendar_EventDateTime = GTLRCalendar_EventDateTime.init()
+            end.dateTime = endDateTime
+            end.timeZone = localTimeZoneName
+ 
+            calEvent.start = start
+            calEvent.end = end
+            
+            calEvent.summary = event.name
+            
+            calEventArray.append(calEvent.copy() as! GTLRCalendar_Event)
+        }
+        return calEventArray
+    }
     
     //Testing Function to check which menu boxes are checked
     private func getTitle(index: Int, bool: Bool) -> String{
@@ -306,7 +390,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         if (pickerArray[0]) {
             appleCal.setImage(UIImage.init(named: "XSymbol"), for: .normal)
         }
-        
+            
         else {
             appleCal.setImage(UIImage.init(named: "CheckSymbol"), for: .normal)
         }
@@ -330,7 +414,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         } else {
             changeButtonStatus(status: true)
         }
-       changeAddButtonStatus()
+        changeAddButtonStatus()
         
     }
     
