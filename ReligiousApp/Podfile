@@ -1,22 +1,24 @@
- platform :ios, '8.0'
+ platform :ios, '10.0'
 
-target 'ReligiousApp' do
+target 'InterfaithIt' do
 
   use_frameworks!
 
-  # Pods for ReligiousApp
+  # Pods for InterfaithIt
 pod 'SDWebImage', '~> 5.0'
 pod 'GoogleAPIClientForREST/Sheets', '~> 1.2.1'
 pod 'GoogleAPIClientForREST/Calendar', '~> 1.2.1'
 pod 'GoogleSignIn'
 pod 'MXLCalendarManagerSwift'
+pod 'Alamofire', '4.8.1'
+pod 'SwiftSoup'
 
-  target 'ReligiousAppTests' do
+  target 'InterfaithItTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'ReligiousAppUITests' do
+  target 'InterfaithItUITests' do
     inherit! :search_paths
     # Pods for testing
   end

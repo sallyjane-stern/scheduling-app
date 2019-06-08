@@ -286,12 +286,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                         })
                         
                     }
-                    
+                    self.dismissControllerHelper()
                 })
-                
-                
-                
-                
             } else {
                 let alert = UIAlertController(title: "Calendar Error", message: "Please sign into your Google Account", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
@@ -333,6 +329,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         service.executeQuery(batchQuery, completionHandler: {(ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
             let qObject = object
             print("=======FINISHED ADDING TO GOOGLE CALENDAR=======")
+            self.dismissControllerHelper()
             if(error != nil){print("\(qObject) Error: \(error)")}
         })
     }
