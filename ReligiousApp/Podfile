@@ -1,0 +1,24 @@
+ platform :ios, '8.0'
+
+target 'ReligiousApp' do
+
+  use_frameworks!
+
+  # Pods for ReligiousApp
+pod 'SDWebImage', '~> 5.0'
+pod 'GoogleAPIClientForREST/Sheets', '~> 1.2.1'
+pod 'GoogleAPIClientForREST/Calendar', '~> 1.2.1'
+pod 'GoogleSignIn'
+pod 'MXLCalendarManagerSwift'
+
+  target 'ReligiousAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ReligiousAppUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

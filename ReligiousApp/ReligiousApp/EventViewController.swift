@@ -7,14 +7,18 @@
 //
 
 import Foundation
+import SafariServices
 import AVFoundation
 import UIKit
+import SDWebImage
+import GoogleAPIClientForREST
 
 class EventViewcontroller:UITableViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var EventTitle: UIButton!
     @IBOutlet weak var EventName: UILabel!
     @IBOutlet weak var pronunciation: UILabel!
+    @IBOutlet var theTable: UITableView!
     
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var dateView: UIView!
@@ -38,30 +42,24 @@ class EventViewcontroller:UITableViewController {
     
     @IBOutlet weak var greetingText: UILabel!
     
-    @IBOutlet weak var detailText: UITextView!
+    @IBOutlet weak var detailText: UILabel!
     
-    
+    private var infoStruct: SheetData?
     
     
     override func viewDidLoad() {
-        
-        //Get image if they are in the assets
-            //Code Here
-        
-        //Get default image if the event does not have an image
-        if(imageView.image == nil) {
-            imageView.image = getDefaultImage()
-        }
-        
+        print("Got to view did load")
         //Set the Table View to utilize the full screen
         self.tableView.contentInset = UIEdgeInsets(top: -(88 + view.safeAreaInsets.top), left: 0, bottom: 0, right: 0)
         
+
         //Event Cell
         
         //Set Button to unclickable
         EventTitle.isUserInteractionEnabled = false
         //Get Holiday Name
             //Code Here
+        EventName.text = "Holi"
         //Get Pronounciation
             //Code Here
         if(pronunciation.text == "Pronounce"){
@@ -103,7 +101,12 @@ class EventViewcontroller:UITableViewController {
         
         //DetailsTextCell
         
-        detailText.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+        detailText.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.\nLorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+        
+//        theTable.rowHeight = UITableView.automaticDimension
+//        theTable.estimatedRowHeight = 500.0
+//        
+//        theTable.reloadData()
         
         
         
@@ -119,42 +122,63 @@ class EventViewcontroller:UITableViewController {
         self.navigationController?.navigationBar.setBackgroundImage(colorImage, for: .default)
         //Set tint color to white
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        //Get the Appropriate Image
+        var googleURL = "https://live.staticflickr.com/8406/8629550062_d2ae46a0d9_k.jpg"
+        if(!googleURL.contains(".jpg")){
+            googleURL.append(".jpg")
+            print(googleURL)
+        }
+        let url = URL(string: googleURL)
+        //Use SDWebView Library to get the appropriate image asyncronisly
+        let defaultImage = UIImage().imageFromColor(color: UIColor.init(red: 141/255, green: 25/255, blue: 41/255, alpha: 1), frame: CGRect(x: 0, y: 0, width: 414, height: 246))
+        
+        
+        imageView.sd_setImage(with: url, placeholderImage: defaultImage) { (image, error, cache, url) in
+            //If Image fails to load then set the default image to a random animal
+            if(self.imageView.image == defaultImage){
+                self.imageView.sd_setImage(with: self.getDefaultImageURL(), placeholderImage: defaultImage)
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        //Resets the navigation controller to its default look
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         self.navigationController?.navigationBar.tintColor = self.view.tintColor
     }
     
+    func googleSheetsParser() {
+        let service = GTLRService()
+        let spreadSheetID = "1issBSCYE-qq00dk2_CD8AH95HPi_Mik1TGBd_0DLNGE"
+        let range = "A1:K"
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadSheetID, range: range)
+        service.executeQuery(query, completionHandler: nil)
+
+    }
+    func addToSheetData(ticket: GTLRServiceTicket, finishedWithObject result : GTLRSheets_ValueRange, error : NSError?) {
+        
+        if let error = error {
+            print("ERROR")
+            return
+        }
+        let data = result.values!
+//        for row in data {
+//            infoSheet = SheetData.init(name: <#T##String#>, pronounce: <#T##String#>, tradition: <#T##String#>, mood: <#T##String#>, impacts: <#T##String#>, food: <#T##String#>, greeting: <#T##String#>, desc: <#T##String#>, imageURL: <#T##String#>, restrictions: <#T##String#>)
+//        }
+    }
     //Function that uses a random number generator to select a random animal from the list and return that animal as an image to be displayed
-    func getDefaultImage() -> UIImage{
-        //Create image Variable
-        var image:UIImage
+    func getDefaultImageURL() -> URL{
         
         //Get Randomized Animal Image
         let animals = ["meerkat","aardvark","addax","alligator","alpaca","anteater","antelope","ape","argali","armadillo","baboon","badger","beagle","basilisk","bat","bear","beaver","bighorn","bison","budgerigar","buffalo","bull","bunny","burro","camel","canary","capybara","cat","chameleon","chamois","cheetah","chimpanzee","chinchilla","chipmunk","civet","coati","colt","cougar","cow","coyote","crocodile","crow","deer","dingo","doe","dungbeetle","dog","donkey","dormouse","dromedary","platypus","dugong","eland","elephant","elk","ermine","ewe","fawn","ferret","finch","fish","fox","frog","gazelle","gemsbok","giraffe","gnu","goat","gopher","gorilla","grizzlybear","groundhog","guanaco","guineapig","hamster","hare","hartebeest","hedgehog","highlandcow","hippopotamus","hog","horse","hyena","ibex","iguana","impala","jackal","jaguar","jerboa","kangaroo","kitten","koala","lemur","leopard","lion","lizard","llama","lovebird","lynx","mandrill","mare","marmoset","marten","mink","mole","mongoose","monkey","moose","mountaingoat","mouse","mule","musk-ox","muskrat","mustang","mynahbird","newt","ocelot","okapi","opossum","orangutan","oryx","otter","ox","panda","panther","parakeet","parrot","peccary","pig","quokka","octopus","starfish","crab","snowyowl","chicken","rooster","bumblebee","polarbear","pony","porcupine","porpoise","prairiedog","pronghorn","puma","puppy","quagga","rabbit","raccoon","ram","rat","reindeer","rhinoceros","salamander","seal","sheep","shrew","silverfox","skunk","sloth","snake","springbok","squirrel","stallion","steer","tapir","tiger","toad","turtle","vicuna","walrus","warthog","waterbuck","weasel","whale","wildcat","baldeagle","wolf","wolverine","wombat","woodchuck","yak","zebra","zebu"]
         let size = animals.count
         let rng = Int.random(in: 0 ..< size)
         let animal = animals[rng]
+        //The size of the UI Image View is 414x246
         let url = URL(string: "https://loremflickr.com/414/246/animal,\(animal)/all")!
-        image = downloadImage(url: url)
         
-        return image
-    }
-    
-    //Function that downloads an image from the Internet
-    func downloadImage(url: URL) -> UIImage{
-        var image:UIImage
-        do{
-            //The size of the UI Image View is 414x246
-            print(url)
-            let imageData = try Data(contentsOf: url)
-            image = UIImage(data: imageData)!
-        } catch {
-            print("[Error] Failed to load image")
-            image = UIImage(named: "DU Logo")!
-        }
-        return image
+        return url
     }
     
     //Function that converts text to speech using Swift's built in AVFoundation Kit
@@ -166,6 +190,16 @@ class EventViewcontroller:UITableViewController {
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
     }
+    
+    //Function that opens Safari Web Controller and links them to the appropriate wikipedia
+    @IBAction func sendToWiki(_ sender: Any) {
+        let text:String = EventName.text!
+        let url = URL(string: "https://en.wikipedia.org/wiki/\(text)")!
+        print(url)
+        let safari = SFSafariViewController.init(url: url)
+        present(safari, animated: true, completion: nil)
+    }
+    
     
     //Functions dealing with information buttons
     @IBAction func impactI(_ sender: Any) {
@@ -212,4 +246,19 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
+}
+
+//Struct that will lay out the Sheet Data to be filled in by the Google Sheet Parser
+struct SheetData {
+    var name: String
+    var pronounce: String
+    var tradition: String
+    var mood: String
+    var impacts: String
+    var food: String
+    var greeting: String
+    var desc: String
+    var imageURL: String
+    var restrictions: String
+    
 }
