@@ -3,15 +3,15 @@ PRODID:fd29_buddhist_religious_holidays@calendarlabs.com
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Buddhist Holidays
-X-WR-TIMEZONE:America/New_York
+X_WR_CALNAME:Buddhist Holidays
+X_WR_TIMEZONE:America/New_York
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20180102
 DTEND;VALUE=DATE:20180103
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240efe@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/mahayana-new-year.php to know more about Mahayana New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/mahayana_new_year to know more about Mahayana New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -26,7 +26,7 @@ DTEND;VALUE=DATE:20180209
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240f31@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/nirvana-day.php to know more about Nirvana Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/nirvana_day to know more about Nirvana Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -41,7 +41,7 @@ DTEND;VALUE=DATE:20180217
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240f4e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/china/chinese-new-year.php to know more about Chinese New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/chinese_new_year to know more about Chinese New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -56,7 +56,7 @@ DTEND;VALUE=DATE:20180316
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240f6f@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/magha-puja-day.php to know more about Magha Puja Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/magha_puja_day to know more about Magha Puja Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -71,7 +71,7 @@ DTEND;VALUE=DATE:20180501
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240f8b@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/theravada-new-year.php to know more about Theravada New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/theravada_new_year to know more about Theravada New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -86,13 +86,13 @@ DTEND;VALUE=DATE:20180530
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240fa8@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/singapore/vesak-day.php to know more about Vesak - Buddha Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vesak_day to know more about Vesak _ Buddha Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Vesak - Buddha Day
+SUMMARY:Vesak _ Buddha Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -101,7 +101,7 @@ DTEND;VALUE=DATE:20180714
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240fc3@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/obon.php to know more about Obon. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/obon to know more about Obon. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -116,13 +116,13 @@ DTEND;VALUE=DATE:20180728
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240fdf@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/asala-dharma-day.php to know more about Asala - Dharma Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/asala_dharma_day to know more about Asala _ Dharma Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Asala - Dharma Day
+SUMMARY:Asala _ Dharma Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -131,7 +131,7 @@ DTEND;VALUE=DATE:20181209
 DTSTAMP:20111213T124028Z
 UID:5c0f45e240ffb@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/bodhi-day.php to know more about Bodhi Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/bodhi_day to know more about Bodhi Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -146,7 +146,7 @@ DTEND;VALUE=DATE:20190122
 DTSTAMP:20111213T124028Z
 UID:5c0f45e241020@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/mahayana-new-year.php to know more about Mahayana New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/mahayana_new_year to know more about Mahayana New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -161,7 +161,7 @@ DTEND;VALUE=DATE:20190206
 DTSTAMP:20111213T124028Z
 UID:5c0f45e24103c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/china/chinese-new-year.php to know more about Chinese New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/chinese_new_year to know more about Chinese New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -176,7 +176,7 @@ DTEND;VALUE=DATE:20190209
 DTSTAMP:20111213T124028Z
 UID:5c0f45e241058@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/nirvana-day.php to know more about Nirvana Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/nirvana_day to know more about Nirvana Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -191,7 +191,7 @@ DTEND;VALUE=DATE:20190322
 DTSTAMP:20111213T124028Z
 UID:5c0f45e241074@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/magha-puja-day.php to know more about Magha Puja Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/magha_puja_day to know more about Magha Puja Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -206,7 +206,7 @@ DTEND;VALUE=DATE:20190420
 DTSTAMP:20111213T124028Z
 UID:5c0f45e241090@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/theravada-new-year.php to know more about Theravada New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/theravada_new_year to know more about Theravada New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -221,13 +221,13 @@ DTEND;VALUE=DATE:20190519
 DTSTAMP:20111213T124028Z
 UID:5c0f45e2410ac@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/singapore/vesak-day.php to know more about Vesak - Buddha Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vesak_day to know more about Vesak _ Buddha Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Vesak - Buddha Day
+SUMMARY:Vesak _ Buddha Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -236,7 +236,7 @@ DTEND;VALUE=DATE:20190714
 DTSTAMP:20111213T124028Z
 UID:5c0f45e2410c8@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/obon.php to know more about Obon. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/obon to know more about Obon. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -251,13 +251,13 @@ DTEND;VALUE=DATE:20190717
 DTSTAMP:20111213T124028Z
 UID:5c0f45e2410e5@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/asala-dharma-day.php to know more about Asala - Dharma Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/asala_dharma_day to know more about Asala _ Dharma Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Asala - Dharma Day
+SUMMARY:Asala _ Dharma Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -266,7 +266,7 @@ DTEND;VALUE=DATE:20191209
 DTSTAMP:20111213T124028Z
 UID:5c0f45e241102@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/buddhist/bodhi-day.php to know more about Bodhi Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/bodhi_day to know more about Bodhi Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Buddhist
@@ -280,15 +280,15 @@ PRODID:fd29_christian_religious_holidays@calendarlabs.com
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Christian Holidays
-X-WR-TIMEZONE:America/New_York
+X_WR_CALNAME:Christian Holidays
+X_WR_TIMEZONE:America/New_York
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20180106
 DTEND;VALUE=DATE:20180107
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf24d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/spain/epiphany.php to know more about Epiphany. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/epiphany to know more about Epiphany. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -303,7 +303,7 @@ DTEND;VALUE=DATE:20180108
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf274@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/baptism-of-the-lord.php to know more about Baptism of the Jesus. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/baptism_of_the_lord to know more about Baptism of the Jesus. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -318,7 +318,7 @@ DTEND;VALUE=DATE:20180203
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf299@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/candlemas.php to know more about Candlemas. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/candlemas to know more about Candlemas. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -333,7 +333,7 @@ DTEND;VALUE=DATE:20180215
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf2bb@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/ash-wednesday.php to know more about Ash Wednesday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ash_wednesday to know more about Ash Wednesday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -348,7 +348,7 @@ DTEND;VALUE=DATE:20180215
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf2df@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/valentines-day.php to know more about St. Valentine's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/valentines_day to know more about St. Valentine's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -363,7 +363,7 @@ DTEND;VALUE=DATE:20180318
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf2fe@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/st-patricks-day.php to know more about St. Patrick's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_patricks_day to know more about St. Patrick's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -378,7 +378,7 @@ DTEND;VALUE=DATE:20180320
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf31d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-josephs-day-.php to know more about St. Joseph's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_josephs_day to know more about St. Joseph's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -393,7 +393,7 @@ DTEND;VALUE=DATE:20180326
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf3c6@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/palm-sunday.php to know more about Palm Sunday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/palm_sunday to know more about Palm Sunday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -408,7 +408,7 @@ DTEND;VALUE=DATE:20180330
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf3ed@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/philippines/maundy-thursday.php to know more about Maundy (Holy) Thursday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/maundy_thursday to know more about Maundy (Holy) Thursday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -423,7 +423,7 @@ DTEND;VALUE=DATE:20180331
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf41f@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/good-friday.php to know more about Good Friday . 
+DESCRIPTION:Visit https://en.wikipedia.org/-zgood_friday to know more about Good Friday . 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -438,7 +438,7 @@ DTEND;VALUE=DATE:20180402
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf44d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/easter.php to know more about Easter. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/easter to know more about Easter. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -453,7 +453,7 @@ DTEND;VALUE=DATE:20180403
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf46c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/easter-monday.php to know more about Easter Monday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/easter_monday to know more about Easter Monday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -468,7 +468,7 @@ DTEND;VALUE=DATE:20180424
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf48c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-georges-day.php to know more about St. George's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_georges_day to know more about St. George's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -483,7 +483,7 @@ DTEND;VALUE=DATE:20180511
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf4bb@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/romania/ascension-day.php to know more about Ascension of Jesus. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ascension_day to know more about Ascension of Jesus. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -498,7 +498,7 @@ DTEND;VALUE=DATE:20180521
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf50f@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/pentecost.php to know more about Pentecost. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/pentecost to know more about Pentecost. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -513,7 +513,7 @@ DTEND;VALUE=DATE:20180528
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf556@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/trinity-sunday.php to know more about Trinity Sunday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/trinity_sunday to know more about Trinity Sunday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -528,7 +528,7 @@ DTEND;VALUE=DATE:20180601
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf585@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/corpus-christi.php to know more about Corpus Christi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/corpus_christi to know more about Corpus Christi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -543,7 +543,7 @@ DTEND;VALUE=DATE:20180616
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf5a7@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/saint-vladimir.php to know more about Saint Vladimir. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/saint_vladimir to know more about Saint Vladimir. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -558,7 +558,7 @@ DTEND;VALUE=DATE:20180630
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf5d8@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/saints-peter-and-paul.php to know more about Saints Peter and Paul. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/saints_peter_and_paul to know more about Saints Peter and Paul. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -573,7 +573,7 @@ DTEND;VALUE=DATE:20180726
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf5fd@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-james-the-great-day-.php to know more about St. James the Great Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_james_the_great_day_ to know more about St. James the Great Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -588,7 +588,7 @@ DTEND;VALUE=DATE:20180802
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf62e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/lammas.php to know more about Lammas. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/lammas to know more about Lammas. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -603,7 +603,7 @@ DTEND;VALUE=DATE:20180816
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf675@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/the-assumption-of-mary.php to know more about The Assumption of Mary. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/the_assumption_of_mary to know more about The Assumption of Mary. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -618,7 +618,7 @@ DTEND;VALUE=DATE:20180915
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf69a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/holy-cross-day.php to know more about Holy Cross Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holy_cross_day to know more about Holy Cross Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -633,7 +633,7 @@ DTEND;VALUE=DATE:20180930
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf6bb@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/michael-and-all-angels.php to know more about Michael and All Angels. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/michael_and_all_angels to know more about Michael and All Angels. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -648,7 +648,7 @@ DTEND;VALUE=DATE:20181101
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf6e2@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/halloween.php to know more about All Hallows Eve. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/halloween to know more about All Hallows Eve. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -663,7 +663,7 @@ DTEND;VALUE=DATE:20181102
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf707@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/philippines/all-saints-day.php to know more about All Saints' Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/all_saints_day to know more about All Saints' Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -678,7 +678,7 @@ DTEND;VALUE=DATE:20181103
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf72a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/all-souls-day.php to know more about All Souls' Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/all_souls_day to know more about All Souls' Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -693,7 +693,7 @@ DTEND;VALUE=DATE:20181126
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf766@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/christ-the-king.php to know more about Christ the King. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/christ_the_king to know more about Christ the King. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -708,7 +708,7 @@ DTEND;VALUE=DATE:20181201
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf78d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-andrews-day.php to know more about St. Andrew's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_andrews_day to know more about St. Andrew's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -723,13 +723,13 @@ DTEND;VALUE=DATE:20181203
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf7b1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/advent-first-sunday.php to know more about Advent - first Sunday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/advent_first_sunday to know more about Advent _ first Sunday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Advent - first Sunday
+SUMMARY:Advent _ first Sunday
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -738,7 +738,7 @@ DTEND;VALUE=DATE:20181207
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf7d5@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-nicholas-day.php to know more about St. Nicholas Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_nicholas_day to know more about St. Nicholas Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -753,7 +753,7 @@ DTEND;VALUE=DATE:20181225
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf7fb@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php to know more about Christmas Eve. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/christmas to know more about Christmas Eve. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -768,7 +768,7 @@ DTEND;VALUE=DATE:20181226
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf81d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php to know more about Christmas. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/christmas to know more about Christmas. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -783,7 +783,7 @@ DTEND;VALUE=DATE:20181229
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf83f@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/holy-innocents.php to know more about Holy Innocents. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holy_innocents to know more about Holy Innocents. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -798,7 +798,7 @@ DTEND;VALUE=DATE:20190101
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf862@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/watch-night.php to know more about Watch Night. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/watch_night to know more about Watch Night. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -813,7 +813,7 @@ DTEND;VALUE=DATE:20190107
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf895@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/spain/epiphany.php to know more about Epiphany. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/epiphany to know more about Epiphany. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -828,7 +828,7 @@ DTEND;VALUE=DATE:20190114
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf8bc@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/baptism-of-the-lord.php to know more about Baptism of the Jesus. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/baptism_of_the_lord to know more about Baptism of the Jesus. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -843,7 +843,7 @@ DTEND;VALUE=DATE:20190203
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf8dd@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/candlemas.php to know more about Candlemas. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/candlemas to know more about Candlemas. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -858,7 +858,7 @@ DTEND;VALUE=DATE:20190215
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf900@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/valentines-day.php to know more about St. Valentine's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/valentines_day to know more about St. Valentine's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -873,7 +873,7 @@ DTEND;VALUE=DATE:20190307
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf924@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/ash-wednesday.php to know more about Ash Wednesday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ash_wednesday to know more about Ash Wednesday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -888,7 +888,7 @@ DTEND;VALUE=DATE:20190318
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf948@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/st-patricks-day.php to know more about St. Patrick's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_patricks_day to know more about St. Patrick's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -903,7 +903,7 @@ DTEND;VALUE=DATE:20190320
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf96d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-josephs-day-.php to know more about St. Joseph's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_josephs_day_ to know more about St. Joseph's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -918,7 +918,7 @@ DTEND;VALUE=DATE:20190415
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf994@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/palm-sunday.php to know more about Palm Sunday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/palm_sunday to know more about Palm Sunday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -933,7 +933,7 @@ DTEND;VALUE=DATE:20190419
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf9b9@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/philippines/maundy-thursday.php to know more about Maundy (Holy) Thursday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/maundy_thursday to know more about Maundy (Holy) Thursday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -948,7 +948,7 @@ DTEND;VALUE=DATE:20190420
 DTSTAMP:20111213T124028Z
 UID:5c0f462edf9ea@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/good-friday.php to know more about Good Friday . 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/good_friday to know more about Good Friday . 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -963,7 +963,7 @@ DTEND;VALUE=DATE:20190422
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfa0f@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/easter.php to know more about Easter. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/easter to know more about Easter. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -978,7 +978,7 @@ DTEND;VALUE=DATE:20190423
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfa35@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/easter-monday.php to know more about Easter Monday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/easter_monday to know more about Easter Monday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -993,7 +993,7 @@ DTEND;VALUE=DATE:20190424
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfa58@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-georges-day.php to know more about St. George's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_georges_day to know more about St. George's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1008,7 +1008,7 @@ DTEND;VALUE=DATE:20190531
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfa7d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/romania/ascension-day.php to know more about Ascension of Jesus. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ascension_day to know more about Ascension of Jesus. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1023,7 +1023,7 @@ DTEND;VALUE=DATE:20190610
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfaa3@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/pentecost.php to know more about Pentecost. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/pentecost to know more about Pentecost. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1038,7 +1038,7 @@ DTEND;VALUE=DATE:20190616
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfad5@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/saint-vladimir.php to know more about Saint Vladimir. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/saint_vladimir to know more about Saint Vladimir. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1053,7 +1053,7 @@ DTEND;VALUE=DATE:20190617
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfb14@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/trinity-sunday.php to know more about Trinity Sunday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/trinity_sunday to know more about Trinity Sunday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1068,7 +1068,7 @@ DTEND;VALUE=DATE:20190621
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfb32@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/corpus-christi.php to know more about Corpus Christi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/corpus_christi to know more about Corpus Christi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1083,7 +1083,7 @@ DTEND;VALUE=DATE:20190630
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfb5c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/saints-peter-and-paul.php to know more about Saints Peter and Paul. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/saints_peter_and_paul to know more about Saints Peter and Paul. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1098,7 +1098,7 @@ DTEND;VALUE=DATE:20190726
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfb7c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-james-the-great-day-.php to know more about St. James the Great Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_james_the_great_day_ to know more about St. James the Great Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1113,7 +1113,7 @@ DTEND;VALUE=DATE:20190802
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfbbd@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/lammas.php to know more about Lammas. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/lammas to know more about Lammas. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1128,7 +1128,7 @@ DTEND;VALUE=DATE:20190816
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfbed@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/the-assumption-of-mary.php to know more about The Assumption of Mary. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/the_assumption_of_mary to know more about The Assumption of Mary. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1143,7 +1143,7 @@ DTEND;VALUE=DATE:20190915
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfc0c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/holy-cross-day.php to know more about Holy Cross Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holy_cross_day to know more about Holy Cross Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1158,7 +1158,7 @@ DTEND;VALUE=DATE:20190930
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfc2a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/michael-and-all-angels.php to know more about Michael and All Angels. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/michael_and_all_angels to know more about Michael and All Angels. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1173,7 +1173,7 @@ DTEND;VALUE=DATE:20191101
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfc49@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/halloween.php to know more about All Hallows Eve. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/halloween to know more about All Hallows Eve. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1188,7 +1188,7 @@ DTEND;VALUE=DATE:20191102
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfc67@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/philippines/all-saints-day.php to know more about All Saints' Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/all_saints_day to know more about All Saints' Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1203,7 +1203,7 @@ DTEND;VALUE=DATE:20191103
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfc86@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/all-souls-day.php to know more about All Souls' Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/all_souls_day to know more about All Souls' Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1218,7 +1218,7 @@ DTEND;VALUE=DATE:20191124
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfcb1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/thanksgiving-day.php to know more about Thanksgiving (USA). 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/thanksgiving_day to know more about Thanksgiving (USA). 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1233,7 +1233,7 @@ DTEND;VALUE=DATE:20191127
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfcd1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/christ-the-king.php to know more about Christ the King. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/christ_the_king to know more about Christ the King. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1248,7 +1248,7 @@ DTEND;VALUE=DATE:20191201
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfd10@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-andrews-day.php to know more about St. Andrew's Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_andrews_day to know more about St. Andrew's Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1263,13 +1263,13 @@ DTEND;VALUE=DATE:20191202
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfd30@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/advent-first-sunday.php to know more about Advent - first Sunday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/advent_first_sunday to know more about Advent _ first Sunday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Advent - first Sunday
+SUMMARY:Advent _ first Sunday
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -1278,7 +1278,7 @@ DTEND;VALUE=DATE:20191207
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfd4e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/st-nicholas-day.php to know more about St. Nicholas Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/st_nicholas_day to know more about St. Nicholas Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1293,7 +1293,7 @@ DTEND;VALUE=DATE:20191225
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfd6e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php to know more about Christmas Eve. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/christmas to know more about Christmas Eve. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1308,7 +1308,7 @@ DTEND;VALUE=DATE:20191226
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfd8c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php to know more about Christmas. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/christmas to know more about Christmas. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1323,7 +1323,7 @@ DTEND;VALUE=DATE:20191229
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfdab@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/holy-innocents.php to know more about Holy Innocents. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holy_innocents to know more about Holy Innocents. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1338,7 +1338,7 @@ DTEND;VALUE=DATE:20200101
 DTSTAMP:20111213T124028Z
 UID:5c0f462edfdc9@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/watch-night.php to know more about Watch Night. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/watch_night to know more about Watch Night. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Christian
@@ -1352,15 +1352,15 @@ PRODID:fd29_hindu_religious_holidays@calendarlabs.com
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Hindu Holidays
-X-WR-TIMEZONE:America/New_York
+X_WR_CALNAME:Hindu Holidays
+X_WR_TIMEZONE:America/New_York
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20180114
 DTEND;VALUE=DATE:20180115
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6c9e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/pongal.php to know more about Makarsankranti / Pongal. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/pongal to know more about Makarsankranti / Pongal. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1375,7 +1375,7 @@ DTEND;VALUE=DATE:20180123
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6cd7@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/vasant-panchami.php to know more about Vasant Panchami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vasant_panchami to know more about Vasant Panchami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1390,7 +1390,7 @@ DTEND;VALUE=DATE:20180201
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6cff@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/thaipusam.php to know more about Thaipusam. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/thaipusam to know more about Thaipusam. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1405,7 +1405,7 @@ DTEND;VALUE=DATE:20180215
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6d2c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/maha-shivratri.php to know more about Maha Shivaratri. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/maha_shivratri to know more about Maha Shivaratri. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1420,7 +1420,7 @@ DTEND;VALUE=DATE:20180302
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6d52@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/holi.php to know more about Holika Dahan. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holi to know more about Holika Dahan. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1435,7 +1435,7 @@ DTEND;VALUE=DATE:20180303
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6d78@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/holi.php to know more about Holi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holi to know more about Holi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1450,7 +1450,7 @@ DTEND;VALUE=DATE:20180319
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6d9e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/hindi-new-year.php to know more about Hindi New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hindi_new_year to know more about Hindi New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1465,7 +1465,7 @@ DTEND;VALUE=DATE:20180319
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6dc4@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/ugadi-telugu-new-year.php to know more about Ugadi / Gudi Padwa / Telugu New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ugadi_telugu_new_year to know more about Ugadi / Gudi Padwa / Telugu New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1480,7 +1480,7 @@ DTEND;VALUE=DATE:20180326
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6e01@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/ramanavami.php to know more about Ramanavami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ramanavami to know more about Ramanavami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1495,7 +1495,7 @@ DTEND;VALUE=DATE:20180401
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6e33@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/hanuman-jayanti.php to know more about Hanuman Jayanti. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hanuman_jayanti to know more about Hanuman Jayanti. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1510,7 +1510,7 @@ DTEND;VALUE=DATE:20180415
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6e5a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/vishu.php to know more about Vaisakhi / Baisakhi / Vishu . 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vishu to know more about Vaisakhi / Baisakhi / Vishu . 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1525,7 +1525,7 @@ DTEND;VALUE=DATE:20180415
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6e80@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/tamil-new-year.php to know more about Tamil New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/tamil_new_year to know more about Tamil New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1540,7 +1540,7 @@ DTEND;VALUE=DATE:20180416
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6eb1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/bihu-bengali-new-year.php to know more about Bengali New Year / Bihu. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/bihu_bengali_new_year to know more about Bengali New Year / Bihu. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1555,7 +1555,7 @@ DTEND;VALUE=DATE:20180419
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6ee3@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/akshaya-tritiya.php to know more about Akshaya Tritiya. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/akshaya_tritiya to know more about Akshaya Tritiya. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1570,7 +1570,7 @@ DTEND;VALUE=DATE:20180516
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6f08@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/savitri-pooja.php to know more about Savitri Pooja. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/savitri_pooja to know more about Savitri Pooja. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1585,7 +1585,7 @@ DTEND;VALUE=DATE:20180715
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6f2d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/rath-yatra.php to know more about Puri Rath Yatra. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/rath_yatra to know more about Puri Rath Yatra. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1600,7 +1600,7 @@ DTEND;VALUE=DATE:20180728
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6f85@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/guru-purnima.php to know more about Guru Purnima. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/guru_purnima to know more about Guru Purnima. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1615,7 +1615,7 @@ DTEND;VALUE=DATE:20180816
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6fbb@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/nag-panchami.php to know more about Nag Panchami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/nag_panchami to know more about Nag Panchami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1630,7 +1630,7 @@ DTEND;VALUE=DATE:20180825
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d6ff2@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/onam.php to know more about Onam. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/onam to know more about Onam. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1645,7 +1645,7 @@ DTEND;VALUE=DATE:20180825
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7019@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/varalakshmi-vrat.php to know more about Varalakshmi Vrat. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/varalakshmi_vrat to know more about Varalakshmi Vrat. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1660,7 +1660,7 @@ DTEND;VALUE=DATE:20180827
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d703f@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/raksha-bandhan.php to know more about Raksha Bandhan. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/raksha_bandhan to know more about Raksha Bandhan. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1675,7 +1675,7 @@ DTEND;VALUE=DATE:20180903
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7065@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/janmashtami.php to know more about Krishna Janmashtami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/janmashtami to know more about Krishna Janmashtami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1690,7 +1690,7 @@ DTEND;VALUE=DATE:20180914
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d708b@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/ganesh-chaturthi.php to know more about Ganesh Chaturthi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ganesh_chaturthi to know more about Ganesh Chaturthi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1705,7 +1705,7 @@ DTEND;VALUE=DATE:20180918
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d70bc@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/vishwakarma-puja.php to know more about Vishwakarma Puja. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vishwakarma_puja to know more about Vishwakarma Puja. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1720,7 +1720,7 @@ DTEND;VALUE=DATE:20181009
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d70ee@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/mahalaya-amavasya.php to know more about Mahalaya Amavasya. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/mahalaya_amavasya to know more about Mahalaya Amavasya. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1735,7 +1735,7 @@ DTEND;VALUE=DATE:20181011
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7113@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/navaratri.php to know more about Navaratri begins. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/navaratri to know more about Navaratri begins. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1750,7 +1750,7 @@ DTEND;VALUE=DATE:20181018
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7139@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/navaratri.php to know more about Navaratri ends / Maha Navami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/navaratri to know more about Navaratri ends / Maha Navami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1765,7 +1765,7 @@ DTEND;VALUE=DATE:20181020
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7167@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/dussehra.php to know more about Dusshera . 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/dussehra to know more about Dusshera . 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1780,7 +1780,7 @@ DTEND;VALUE=DATE:20181024
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d718e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/sharad-purnima.php to know more about Sharad Purnima. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/sharad_purnima to know more about Sharad Purnima. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1795,7 +1795,7 @@ DTEND;VALUE=DATE:20181028
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d71be@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/karva-chauth.php to know more about Karwa Chauth. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/karva_chauth to know more about Karwa Chauth. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1810,7 +1810,7 @@ DTEND;VALUE=DATE:20181106
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d71da@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/dhanteras.php to know more about Dhan Teras. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/dhanteras to know more about Dhan Teras. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1825,7 +1825,7 @@ DTEND;VALUE=DATE:20181108
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d71f6@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/diwali.php to know more about Diwali. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/diwali to know more about Diwali. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1840,7 +1840,7 @@ DTEND;VALUE=DATE:20181110
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7212@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/bhai-dooj.php to know more about Bhai Dooj. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/bhai_dooj to know more about Bhai Dooj. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1855,7 +1855,7 @@ DTEND;VALUE=DATE:20181114
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d722e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/chhath-puja.php to know more about Chhath Puja. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/chhath_puja to know more about Chhath Puja. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1870,7 +1870,7 @@ DTEND;VALUE=DATE:20181124
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d724b@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/kartik-poornima.php to know more about Kartik Poornima. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/kartik_poornima to know more about Kartik Poornima. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1885,7 +1885,7 @@ DTEND;VALUE=DATE:20181217
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7267@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/dhanu-sankranti.php to know more about Dhanu Sankranti. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/dhanu_sankranti to know more about Dhanu Sankranti. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1900,7 +1900,7 @@ DTEND;VALUE=DATE:20181219
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7295@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/geeta-jayanti.php to know more about Geeta Jayanti. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/geeta_jayanti to know more about Geeta Jayanti. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1915,7 +1915,7 @@ DTEND;VALUE=DATE:20190116
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d72b4@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/pongal.php to know more about Makarsankranti / Pongal. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/pongal to know more about Makarsankranti / Pongal. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1930,7 +1930,7 @@ DTEND;VALUE=DATE:20190122
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d72d2@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/thaipusam.php to know more about Thaipusam. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/thaipusam to know more about Thaipusam. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1945,7 +1945,7 @@ DTEND;VALUE=DATE:20190210
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d72f0@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/vasant-panchami.php to know more about Vasant Panchami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vasant_panchami to know more about Vasant Panchami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1960,7 +1960,7 @@ DTEND;VALUE=DATE:20190305
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d730e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/maha-shivratri.php to know more about Maha Shivaratri. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/maha_shivratri to know more about Maha Shivaratri. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1975,7 +1975,7 @@ DTEND;VALUE=DATE:20190321
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d732d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/holi.php to know more about Holika Dahan. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holi to know more about Holika Dahan. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -1990,7 +1990,7 @@ DTEND;VALUE=DATE:20190322
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d734b@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/holi.php to know more about Holi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holi to know more about Holi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2005,7 +2005,7 @@ DTEND;VALUE=DATE:20190323
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7369@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/hindi-new-year.php to know more about Hindi New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hindi_new_year to know more about Hindi New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2020,7 +2020,7 @@ DTEND;VALUE=DATE:20190407
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7388@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/ugadi-telugu-new-year.php to know more about Ugadi / Gudi Padwa / Telugu New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ugadi_telugu_new_year to know more about Ugadi / Gudi Padwa / Telugu New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2035,7 +2035,7 @@ DTEND;VALUE=DATE:20190414
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d73ad@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/ramanavami.php to know more about Ramanavami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ramanavami to know more about Ramanavami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2050,7 +2050,7 @@ DTEND;VALUE=DATE:20190415
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d73e1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/tamil-new-year.php to know more about Tamil New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/tamil_new_year to know more about Tamil New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2065,7 +2065,7 @@ DTEND;VALUE=DATE:20190416
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d73ff@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/vishu.php to know more about Vaisakhi / Baisakhi / Vishu . 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vishu to know more about Vaisakhi / Baisakhi / Vishu . 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2080,7 +2080,7 @@ DTEND;VALUE=DATE:20190416
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7435@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/bihu-bengali-new-year.php to know more about Bengali New Year / Bihu. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/bihu_bengali_new_year to know more about Bengali New Year / Bihu. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2095,7 +2095,7 @@ DTEND;VALUE=DATE:20190420
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7455@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/hanuman-jayanti.php to know more about Hanuman Jayanti. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hanuman_jayanti to know more about Hanuman Jayanti. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2110,7 +2110,7 @@ DTEND;VALUE=DATE:20190508
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7474@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/akshaya-tritiya.php to know more about Akshaya Tritiya. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/akshaya_tritiya to know more about Akshaya Tritiya. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2125,7 +2125,7 @@ DTEND;VALUE=DATE:20190604
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7492@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/savitri-pooja.php to know more about Savitri Pooja. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/savitri_pooja to know more about Savitri Pooja. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2140,7 +2140,7 @@ DTEND;VALUE=DATE:20190705
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d74b0@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/rath-yatra.php to know more about Puri Rath Yatra. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/rath_yatra to know more about Puri Rath Yatra. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2155,7 +2155,7 @@ DTEND;VALUE=DATE:20190717
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d74ce@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/guru-purnima.php to know more about Guru Purnima. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/guru_purnima to know more about Guru Purnima. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2170,7 +2170,7 @@ DTEND;VALUE=DATE:20190806
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d74f2@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/nag-panchami.php to know more about Nag Panchami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/nag_panchami to know more about Nag Panchami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2185,7 +2185,7 @@ DTEND;VALUE=DATE:20190810
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7511@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/varalakshmi-vrat.php to know more about Varalakshmi Vrat. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/varalakshmi_vrat to know more about Varalakshmi Vrat. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2200,7 +2200,7 @@ DTEND;VALUE=DATE:20190816
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d752f@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/raksha-bandhan.php to know more about Raksha Bandhan. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/raksha_bandhan to know more about Raksha Bandhan. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2215,7 +2215,7 @@ DTEND;VALUE=DATE:20190825
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d754c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/janmashtami.php to know more about Krishna Janmashtami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/janmashtami to know more about Krishna Janmashtami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2230,7 +2230,7 @@ DTEND;VALUE=DATE:20190903
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d756a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/ganesh-chaturthi.php to know more about Ganesh Chaturthi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ganesh_chaturthi to know more about Ganesh Chaturthi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2245,7 +2245,7 @@ DTEND;VALUE=DATE:20190912
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7589@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/onam.php to know more about Onam. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/onam to know more about Onam. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2260,7 +2260,7 @@ DTEND;VALUE=DATE:20190918
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d75a8@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/vishwakarma-puja.php to know more about Vishwakarma Puja. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vishwakarma_puja to know more about Vishwakarma Puja. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2275,7 +2275,7 @@ DTEND;VALUE=DATE:20190929
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d75db@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/mahalaya-amavasya.php to know more about Mahalaya Amavasya. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/mahalaya_amavasya to know more about Mahalaya Amavasya. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2290,7 +2290,7 @@ DTEND;VALUE=DATE:20190930
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d75f9@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/navaratri.php to know more about Navaratri begins. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/navaratri to know more about Navaratri begins. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2305,7 +2305,7 @@ DTEND;VALUE=DATE:20191008
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d761d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/navaratri.php to know more about Navaratri ends / Maha Navami. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/navaratri to know more about Navaratri ends / Maha Navami. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2320,7 +2320,7 @@ DTEND;VALUE=DATE:20191009
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d763c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/dussehra.php to know more about Dusshera . 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/dussehra to know more about Dusshera . 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2335,7 +2335,7 @@ DTEND;VALUE=DATE:20191014
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d765a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/sharad-purnima.php to know more about Sharad Purnima. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/sharad_purnima to know more about Sharad Purnima. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2350,7 +2350,7 @@ DTEND;VALUE=DATE:20191018
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7679@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/karva-chauth.php to know more about Karwa Chauth. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/karva_chauth to know more about Karwa Chauth. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2365,7 +2365,7 @@ DTEND;VALUE=DATE:20191026
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7701@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/dhanteras.php to know more about Dhan Teras. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/dhanteras to know more about Dhan Teras. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2380,7 +2380,7 @@ DTEND;VALUE=DATE:20191028
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d772a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/diwali.php to know more about Diwali. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/diwali to know more about Diwali. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2395,7 +2395,7 @@ DTEND;VALUE=DATE:20191030
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d774c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/bhai-dooj.php to know more about Bhai Dooj. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/bhai_dooj to know more about Bhai Dooj. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2410,7 +2410,7 @@ DTEND;VALUE=DATE:20191103
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7770@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/chhath-puja.php to know more about Chhath Puja. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/chhath_puja to know more about Chhath Puja. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2425,7 +2425,7 @@ DTEND;VALUE=DATE:20191113
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d7794@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/kartik-poornima.php to know more about Kartik Poornima. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/kartik_poornima to know more about Kartik Poornima. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2440,7 +2440,7 @@ DTEND;VALUE=DATE:20191209
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d77dd@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/geeta-jayanti.php to know more about Geeta Jayanti. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/geeta_jayanti to know more about Geeta Jayanti. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2455,7 +2455,7 @@ DTEND;VALUE=DATE:20191217
 DTSTAMP:20111213T124028Z
 UID:5c0f4641d780c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/hindu/dhanu-sankranti.php to know more about Dhanu Sankranti. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/dhanu_sankranti to know more about Dhanu Sankranti. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Hindu
@@ -2469,15 +2469,15 @@ PRODID:fd29_islam_religious_holidays@calendarlabs.com
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Islam Holidays
-X-WR-TIMEZONE:America/New_York
+X_WR_CALNAME:Islam Holidays
+X_WR_TIMEZONE:America/New_York
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20180413
 DTEND;VALUE=DATE:20180414
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ab52@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/lailat-al-miraj.php to know more about Lailat al Miraj. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/lailat_al_miraj to know more about Lailat al Miraj. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2492,7 +2492,7 @@ DTEND;VALUE=DATE:20180502
 DTSTAMP:20111213T124028Z
 UID:5c0f46506abc5@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/lailat-al-baraah.php to know more about Lailat al Bara'ah. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/lailat_al_baraah to know more about Lailat al Bara'ah. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2507,7 +2507,7 @@ DTEND;VALUE=DATE:20180517
 DTSTAMP:20111213T124028Z
 UID:5c0f46506abfc@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/ramadan.php to know more about Ramadan (start). 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ramadan to know more about Ramadan (start). 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2522,7 +2522,7 @@ DTEND;VALUE=DATE:20180612
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ac36@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/laylat-al-kadr.php to know more about Laylat al Kadr. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/laylat_al_kadr to know more about Laylat al Kadr. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2537,13 +2537,13 @@ DTEND;VALUE=DATE:20180616
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ac69@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/singapore/hari-raya-puasa.php to know more about Eid-al-Fitr (End of Ramadan). 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hari_raya_puasa to know more about Eid_al_Fitr (End of Ramadan). 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Eid-al-Fitr (End of Ramadan)
+SUMMARY:Eid_al_Fitr (End of Ramadan)
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2552,13 +2552,13 @@ DTEND;VALUE=DATE:20180821
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ac96@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/waqf-al-arafa-hajj.php to know more about Waqf al Arafa - Hajj. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/waqf_al_arafa_hajj to know more about Waqf al Arafa _ Hajj. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Waqf al Arafa - Hajj
+SUMMARY:Waqf al Arafa _ Hajj
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2567,13 +2567,13 @@ DTEND;VALUE=DATE:20180822
 DTSTAMP:20111213T124028Z
 UID:5c0f46506accf@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/singapore/hari-raya-haji.php to know more about Eid-al-Adha. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hari_raya_haji to know more about Eid_al_Adha. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Eid-al-Adha
+SUMMARY:Eid_al_Adha
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2582,13 +2582,13 @@ DTEND;VALUE=DATE:20180912
 DTSTAMP:20111213T124028Z
 UID:5c0f46506acfc@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/muharram.php to know more about Hijra - Islamic New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/muharram to know more about Hijra _ Islamic New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Hijra - Islamic New Year
+SUMMARY:Hijra _ Islamic New Year
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2597,7 +2597,7 @@ DTEND;VALUE=DATE:20180921
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ad28@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/muharram.php to know more about Day of Ashura / Muharram. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/muharram to know more about Day of Ashura / Muharram. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2612,7 +2612,7 @@ DTEND;VALUE=DATE:20181122
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ad75@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/milad-un-nabi.php to know more about Milad un Nabi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/milad_un_nabi to know more about Milad un Nabi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2627,7 +2627,7 @@ DTEND;VALUE=DATE:20190404
 DTSTAMP:20111213T124028Z
 UID:5c0f46506adac@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/lailat-al-miraj.php to know more about Lailat al Miraj. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/lailat_al_miraj to know more about Lailat al Miraj. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2642,7 +2642,7 @@ DTEND;VALUE=DATE:20190421
 DTSTAMP:20111213T124028Z
 UID:5c0f46506add4@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/lailat-al-baraah.php to know more about Lailat al Bara'ah. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/lailat_al_baraah to know more about Lailat al Bara'ah. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2657,7 +2657,7 @@ DTEND;VALUE=DATE:20190507
 DTSTAMP:20111213T124028Z
 UID:5c0f46506adfa@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/ramadan.php to know more about Ramadan (start). 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/ramadan to know more about Ramadan (start). 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2672,7 +2672,7 @@ DTEND;VALUE=DATE:20190601
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ae23@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/laylat-al-kadr.php to know more about Laylat al Qadr. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/laylat_al_kadr to know more about Laylat al Qadr. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2687,13 +2687,13 @@ DTEND;VALUE=DATE:20190605
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ae49@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/singapore/hari-raya-puasa.php to know more about Eid-al-Fitr (End of Ramadan). 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hari_raya_puasa to know more about Eid_al_Fitr (End of Ramadan). 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Eid-al-Fitr (End of Ramadan)
+SUMMARY:Eid_al_Fitr (End of Ramadan)
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2702,13 +2702,13 @@ DTEND;VALUE=DATE:20190811
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ae70@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/islam/waqf-al-arafa-hajj.php to know more about Waqf al Arafa - Hajj. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/waqf_al_arafa_hajj to know more about Waqf al Arafa _ Hajj. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Waqf al Arafa - Hajj
+SUMMARY:Waqf al Arafa _ Hajj
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2717,13 +2717,13 @@ DTEND;VALUE=DATE:20190812
 DTSTAMP:20111213T124028Z
 UID:5c0f46506ae9a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/singapore/hari-raya-haji.php to know more about Eid-al-Adha. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hari_raya_haji to know more about Eid_al_Adha. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Eid-al-Adha
+SUMMARY:Eid_al_Adha
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2732,13 +2732,13 @@ DTEND;VALUE=DATE:20190901
 DTSTAMP:20111213T124028Z
 UID:5c0f46506aec2@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/muharram.php to know more about Hijra - Islamic New Year. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/muharram to know more about Hijra _ Islamic New Year. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Hijra - Islamic New Year
+SUMMARY:Hijra _ Islamic New Year
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2747,7 +2747,7 @@ DTEND;VALUE=DATE:20190910
 DTSTAMP:20111213T124028Z
 UID:5c0f46506af0c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/muharram.php to know more about Day of Ashura / Muharram. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/muharram to know more about Day of Ashura / Muharram. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2762,7 +2762,7 @@ DTEND;VALUE=DATE:20191110
 DTSTAMP:20111213T124028Z
 UID:5c0f46506af39@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/milad-un-nabi.php to know more about Milad un Nabi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/milad_un_nabi to know more about Milad un Nabi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2777,7 +2777,7 @@ DTEND;VALUE=DATE:20191115
 DTSTAMP:20111213T124028Z
 UID:5c0f46506af73@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/milad-un-nabi.php to know more about Milad un Nabi (Shia). 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/milad_un_nabi to know more about Milad un Nabi (Shia). 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Islam
@@ -2791,15 +2791,15 @@ PRODID:fd29_jewish_religious_holidays@calendarlabs.com
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Jewish Holidays
-X-WR-TIMEZONE:America/New_York
+X_WR_CALNAME:Jewish Holidays
+X_WR_TIMEZONE:America/New_York
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20180131
 DTEND;VALUE=DATE:20180201
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c1de6@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/tu-bishvat.php to know more about Tu Bishvat. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/tu_bishvat to know more about Tu Bishvat. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2814,7 +2814,7 @@ DTEND;VALUE=DATE:20180302
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c1e8b@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/purim.php to know more about Purim. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/purim to know more about Purim. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2829,7 +2829,7 @@ DTEND;VALUE=DATE:20180303
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c1ec5@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/purim.php to know more about Shushan Purim. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/purim to know more about Shushan Purim. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2844,13 +2844,13 @@ DTEND;VALUE=DATE:20180401
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c1f09@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/passover.php to know more about Passover - First Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/passover to know more about Passover _ First Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Passover - First Day
+SUMMARY:Passover _ First Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2859,13 +2859,13 @@ DTEND;VALUE=DATE:20180403
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c1fa5@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/passover.php to know more about Passover - Second Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/passover to know more about Passover _ Second Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Passover - Second Day
+SUMMARY:Passover _ Second Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2874,13 +2874,13 @@ DTEND;VALUE=DATE:20180407
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2000@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/passover.php to know more about Passover - Final Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/passover to know more about Passover _ Final Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Passover - Final Day
+SUMMARY:Passover _ Final Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -2889,7 +2889,7 @@ DTEND;VALUE=DATE:20180413
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c20ab@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-hashoah.php to know more about Yom Hashoah. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_hashoah to know more about Yom Hashoah. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2904,7 +2904,7 @@ DTEND;VALUE=DATE:20180419
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2123@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-hazikaron.php to know more about Yom HaZikaron. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_hazikaron to know more about Yom HaZikaron. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2919,7 +2919,7 @@ DTEND;VALUE=DATE:20180420
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c216e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-haatzmaut.php to know more about Yom HaAtzma'ut. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_haatzmaut to know more about Yom HaAtzma'ut. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2934,7 +2934,7 @@ DTEND;VALUE=DATE:20180504
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2204@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/lag-bomer.php to know more about Lag BaOmer. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/lag_bomer to know more about Lag BaOmer. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2949,7 +2949,7 @@ DTEND;VALUE=DATE:20180514
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2238@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-yerushalayim.php to know more about Yom Yerushalayim. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_yerushalayim to know more about Yom Yerushalayim. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2964,7 +2964,7 @@ DTEND;VALUE=DATE:20180521
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2259@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/shavuot.php to know more about Shavuot (1st day). 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/shavuot to know more about Shavuot (1st day). 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2979,7 +2979,7 @@ DTEND;VALUE=DATE:20180522
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c227e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/shavuot.php to know more about Shavuot. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/shavuot to know more about Shavuot. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -2994,7 +2994,7 @@ DTEND;VALUE=DATE:20180723
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c22a3@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/tisha-bav.php to know more about Tisha B'Av. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/tisha_bav to know more about Tisha B'Av. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3009,7 +3009,7 @@ DTEND;VALUE=DATE:20180911
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c22c7@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/rosh-hashanah.php to know more about Rosh HaShanah Starts. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/rosh_hashanah to know more about Rosh HaShanah Starts. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3024,7 +3024,7 @@ DTEND;VALUE=DATE:20180912
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c22ec@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/rosh-hashanah.php to know more about Rosh HaShanah Ends. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/rosh_hashanah to know more about Rosh HaShanah Ends. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3039,7 +3039,7 @@ DTEND;VALUE=DATE:20180913
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2311@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/fast-of-gedaliah.php to know more about Fast of Gedaliah. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/fast_of_gedaliah to know more about Fast of Gedaliah. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3054,7 +3054,7 @@ DTEND;VALUE=DATE:20180920
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2336@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-kippur.php to know more about Yom Kippur. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_kippur to know more about Yom Kippur. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3069,7 +3069,7 @@ DTEND;VALUE=DATE:20180925
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c237a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/sukkot.php to know more about Sukkot Starts. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/sukkot to know more about Sukkot Starts. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3084,7 +3084,7 @@ DTEND;VALUE=DATE:20181001
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c23a1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/sukkot.php to know more about Sukkot Ends. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/sukkot to know more about Sukkot Ends. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3099,7 +3099,7 @@ DTEND;VALUE=DATE:20181002
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c23d7@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/shemini-atzeret.php to know more about Shemini Atzeret. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/shemini_atzeret to know more about Shemini Atzeret. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3114,7 +3114,7 @@ DTEND;VALUE=DATE:20181003
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c240b@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/simhat-torah.php to know more about Simhat Torah. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/simhat_torah to know more about Simhat Torah. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3129,7 +3129,7 @@ DTEND;VALUE=DATE:20181204
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c244e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/hanukkah.php to know more about Hanukkah Starts. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hanukkah to know more about Hanukkah Starts. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3144,7 +3144,7 @@ DTEND;VALUE=DATE:20181211
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2471@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/hanukkah.php to know more about Hanukkah Ends. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hanukkah to know more about Hanukkah Ends. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3159,7 +3159,7 @@ DTEND;VALUE=DATE:20190122
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2495@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/tu-bishvat.php to know more about Tu Bishvat. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/tu_bishvat to know more about Tu Bishvat. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3174,7 +3174,7 @@ DTEND;VALUE=DATE:20190322
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c24b7@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/purim.php to know more about Purim. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/purim to know more about Purim. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3189,7 +3189,7 @@ DTEND;VALUE=DATE:20190323
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c24d8@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/purim.php to know more about Shushan Purim. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/purim to know more about Shushan Purim. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3204,13 +3204,13 @@ DTEND;VALUE=DATE:20190421
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2507@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/passover.php to know more about Passover - First Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/passover to know more about Passover _ First Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Passover - First Day
+SUMMARY:Passover _ First Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -3219,13 +3219,13 @@ DTEND;VALUE=DATE:20190422
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2526@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/passover.php to know more about Passover - Second Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/passover to know more about Passover _ Second Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Passover - Second Day
+SUMMARY:Passover _ Second Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -3234,13 +3234,13 @@ DTEND;VALUE=DATE:20190428
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2547@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/passover.php to know more about Passover - Final Day. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/passover to know more about Passover _ Final Day. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Passover - Final Day
+SUMMARY:Passover _ Final Day
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -3249,7 +3249,7 @@ DTEND;VALUE=DATE:20190503
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2568@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-hashoah.php to know more about Yom Hashoah. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_hashoah to know more about Yom Hashoah. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3264,7 +3264,7 @@ DTEND;VALUE=DATE:20190509
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2587@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-hazikaron.php to know more about Yom HaZikaron. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_hazikaron to know more about Yom HaZikaron. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3279,7 +3279,7 @@ DTEND;VALUE=DATE:20190510
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c25bf@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-haatzmaut.php to know more about Yom HaAtzma'ut. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_haatzmaut to know more about Yom HaAtzma'ut. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3294,7 +3294,7 @@ DTEND;VALUE=DATE:20190524
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c25e9@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/lag-bomer.php to know more about Lag BaOmer. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/lag_bomer to know more about Lag BaOmer. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3309,7 +3309,7 @@ DTEND;VALUE=DATE:20190603
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2609@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-yerushalayim.php to know more about Yom Yerushalayim. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_yerushalayim to know more about Yom Yerushalayim. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3324,7 +3324,7 @@ DTEND;VALUE=DATE:20190610
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2647@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/shavuot.php to know more about Shavuot (1st day). 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/shavuot to know more about Shavuot (1st day). 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3339,7 +3339,7 @@ DTEND;VALUE=DATE:20190611
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2669@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/shavuot.php to know more about Shavuot. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/shavuot to know more about Shavuot. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3354,7 +3354,7 @@ DTEND;VALUE=DATE:20190812
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2685@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/tisha-bav.php to know more about Tish'a B'Av. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/tisha_bav to know more about Tish'a B'Av. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3369,7 +3369,7 @@ DTEND;VALUE=DATE:20191001
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c26a1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/rosh-hashanah.php to know more about Rosh HaShana Starts. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/rosh_hashanah to know more about Rosh HaShana Starts. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3384,7 +3384,7 @@ DTEND;VALUE=DATE:20191002
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c26be@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/rosh-hashanah.php to know more about Rosh HaShana Ends. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/rosh_hashanah to know more about Rosh HaShana Ends. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3399,7 +3399,7 @@ DTEND;VALUE=DATE:20191003
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c26da@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/fast-of-gedaliah.php to know more about Fast of Gedaliah. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/fast_of_gedaliah to know more about Fast of Gedaliah. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3414,7 +3414,7 @@ DTEND;VALUE=DATE:20191010
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c26f6@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/yom-kippur.php to know more about Yom Kippur. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/yom_kippur to know more about Yom Kippur. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3429,7 +3429,7 @@ DTEND;VALUE=DATE:20191015
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2712@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/sukkot.php to know more about Sukkot Starts. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/sukkot to know more about Sukkot Starts. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3444,7 +3444,7 @@ DTEND;VALUE=DATE:20191021
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c272e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/sukkot.php to know more about Sukkot Ends. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/sukkot to know more about Sukkot Ends. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3459,7 +3459,7 @@ DTEND;VALUE=DATE:20191022
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c274a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/shemini-atzeret.php to know more about Shmini Atzeret. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/shemini_atzeret to know more about Shmini Atzeret. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3474,7 +3474,7 @@ DTEND;VALUE=DATE:20191023
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c276b@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/simhat-torah.php to know more about Simchat Torah. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/simhat_torah to know more about Simchat Torah. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3489,7 +3489,7 @@ DTEND;VALUE=DATE:20191224
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c2788@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/hanukkah.php to know more about Hanukkah Starts. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hanukkah to know more about Hanukkah Starts. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3504,7 +3504,7 @@ DTEND;VALUE=DATE:20191231
 DTSTAMP:20111213T124028Z
 UID:5c0f4660c27a4@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/jewish/hanukkah.php to know more about Hanukkah Ends. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hanukkah to know more about Hanukkah Ends. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Jewish
@@ -3518,15 +3518,15 @@ PRODID:fd29_sikh_religious_holidays@calendarlabs.com
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Sikh Holidays
-X-WR-TIMEZONE:America/New_York
+X_WR_CALNAME:Sikh Holidays
+X_WR_TIMEZONE:America/New_York
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20180105
 DTEND;VALUE=DATE:20180106
 DTSTAMP:20111213T124028Z
 UID:5c0f46691069c@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/guru-gobind-singh-birthday.php to know more about Guru Gobind Singh Birthday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/guru_gobind_singh_birthday to know more about Guru Gobind Singh Birthday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3541,13 +3541,13 @@ DTEND;VALUE=DATE:20180114
 DTSTAMP:20111213T124028Z
 UID:5c0f466910779@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/maghi-lohri.php to know more about Maghi - Lohri. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/maghi_lohri to know more about Maghi _ Lohri. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Maghi - Lohri
+SUMMARY:Maghi _ Lohri
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -3556,7 +3556,7 @@ DTEND;VALUE=DATE:20180304
 DTSTAMP:20111213T124028Z
 UID:5c0f4669107c4@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/holi.php to know more about Holi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holi to know more about Holi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3571,7 +3571,7 @@ DTEND;VALUE=DATE:20180315
 DTSTAMP:20111213T124028Z
 UID:5c0f4669107f1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/hola-mohalla.php to know more about Hola Mohalla. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hola_mohalla to know more about Hola Mohalla. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3586,7 +3586,7 @@ DTEND;VALUE=DATE:20180415
 DTSTAMP:20111213T124028Z
 UID:5c0f466910818@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/vaisakhi.php to know more about Vaisakhi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vaisakhi to know more about Vaisakhi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3601,7 +3601,7 @@ DTEND;VALUE=DATE:20180419
 DTSTAMP:20111213T124028Z
 UID:5c0f466910841@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/birthday-of-guru-angad-dev.php to know more about Birthday of Guru Angad Dev. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/birthday_of_guru_angad_dev to know more about Birthday of Guru Angad Dev. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3616,7 +3616,7 @@ DTEND;VALUE=DATE:20180617
 DTSTAMP:20111213T124028Z
 UID:5c0f46691086a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/martyrdom-of-guru-arjan-dev-sahib.php to know more about Martyrdom of Guru Arjan Dev Sahib. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/martyrdom_of_guru_arjan_dev_sahib to know more about Martyrdom of Guru Arjan Dev Sahib. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3631,7 +3631,7 @@ DTEND;VALUE=DATE:20181021
 DTSTAMP:20111213T124028Z
 UID:5c0f4669108fd@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/birth-of-the-guru-granth.php to know more about Birth of the Guru Granth. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/birth_of_the_guru_granth to know more about Birth of the Guru Granth. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3646,7 +3646,7 @@ DTEND;VALUE=DATE:20181108
 DTSTAMP:20111213T124028Z
 UID:5c0f46691096b@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/diwali.php to know more about Diwali. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/diwali to know more about Diwali. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3661,7 +3661,7 @@ DTEND;VALUE=DATE:20181124
 DTSTAMP:20111213T124028Z
 UID:5c0f4669109ff@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/guru-nanak-birthday.php to know more about Guru Nanak Birthday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/guru_nanak_birthday to know more about Guru Nanak Birthday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3676,7 +3676,7 @@ DTEND;VALUE=DATE:20181125
 DTSTAMP:20111213T124028Z
 UID:5c0f466910a46@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/martyrdom-of-guru-tegh-bahadur-sahib.php to know more about Martyrdom of Guru Tegh Bahadur Sahib. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/martyrdom_of_guru_tegh_bahadur_sahib to know more about Martyrdom of Guru Tegh Bahadur Sahib. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3691,7 +3691,7 @@ DTEND;VALUE=DATE:20190106
 DTSTAMP:20111213T124028Z
 UID:5c0f466910aa1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/guru-gobind-singh-birthday.php to know more about Guru Gobind Singh Birthday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/guru_gobind_singh_birthday to know more about Guru Gobind Singh Birthday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3706,13 +3706,13 @@ DTEND;VALUE=DATE:20190114
 DTSTAMP:20111213T124028Z
 UID:5c0f466910ac8@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/maghi-lohri.php to know more about Maghi - Lohri. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/maghi_lohri to know more about Maghi _ Lohri. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Maghi - Lohri
+SUMMARY:Maghi _ Lohri
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -3721,7 +3721,7 @@ DTEND;VALUE=DATE:20190321
 DTSTAMP:20111213T124028Z
 UID:5c0f466910ae8@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/holi.php to know more about Holi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/holi to know more about Holi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3736,7 +3736,7 @@ DTEND;VALUE=DATE:20190322
 DTSTAMP:20111213T124028Z
 UID:5c0f466910b0d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/hola-mohalla.php to know more about Hola Mohalla. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/hola_mohalla to know more about Hola Mohalla. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3751,7 +3751,7 @@ DTEND;VALUE=DATE:20190415
 DTSTAMP:20111213T124028Z
 UID:5c0f466910b2e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/vaisakhi.php to know more about Vaisakhi. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/vaisakhi to know more about Vaisakhi. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3766,7 +3766,7 @@ DTEND;VALUE=DATE:20190419
 DTSTAMP:20111213T124028Z
 UID:5c0f466910b4d@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/birthday-of-guru-angad-dev.php to know more about Birthday of Guru Angad Dev. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/birthday_of_guru_angad_dev to know more about Birthday of Guru Angad Dev. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3781,7 +3781,7 @@ DTEND;VALUE=DATE:20190617
 DTSTAMP:20111213T124028Z
 UID:5c0f466910b72@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/martyrdom-of-guru-arjan-dev-sahib.php to know more about Martyrdom of Guru Arjan Dev Sahib. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/martyrdom_of_guru_arjan_dev_sahib to know more about Martyrdom of Guru Arjan Dev Sahib. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3796,7 +3796,7 @@ DTEND;VALUE=DATE:20191021
 DTSTAMP:20111213T124028Z
 UID:5c0f466910ba1@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/birth-of-the-guru-granth.php to know more about Birth of the Guru Granth. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/birth_of_the_guru_granth to know more about Birth of the Guru Granth. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3811,7 +3811,7 @@ DTEND;VALUE=DATE:20191027
 DTSTAMP:20111213T124028Z
 UID:5c0f466910bef@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/india/diwali.php to know more about Diwali. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/diwali to know more about Diwali. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3826,7 +3826,7 @@ DTEND;VALUE=DATE:20191113
 DTSTAMP:20111213T124028Z
 UID:5c0f466910c4a@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/guru-nanak-birthday.php to know more about Guru Nanak Birthday. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/guru_nanak_birthday to know more about Guru Nanak Birthday. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
@@ -3841,7 +3841,7 @@ DTEND;VALUE=DATE:20191125
 DTSTAMP:20111213T124028Z
 UID:5c0f466910c6e@calendarlabs.com
 CREATED:20111213T123901Z
-DESCRIPTION:Visit https://calendarlabs.com/holidays/sikh/martyrdom-of-guru-tegh-bahadur-sahib.php to know more about Martyrdom of Guru Tegh Bahadur Sahib. 
+DESCRIPTION:Visit https://en.wikipedia.org/wiki/martyrdom_of_guru_tegh_bahadur_sahib to know more about Martyrdom of Guru Tegh Bahadur Sahib. 
 
 LAST-MODIFIED:20111213T123901Z
 LOCATION:Sikh
