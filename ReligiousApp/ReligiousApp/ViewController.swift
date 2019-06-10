@@ -257,7 +257,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                         let eventListQuery = GTLRCalendarQuery_EventsList.query(withCalendarId: calID)
                         service.executeQuery(eventListQuery, completionHandler: {(ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
                             let eventList = object as! GTLRCalendar_Events
-                            if(eventList.items?.count == 0){
+                            if(!self.checkGoogleEventsList(eventList: eventList, calendarID: calID)){
                                 //The events need to be added
                                 print("CALENDAR HAS NO EVENTS")
                                 self.addGoogleEvents(service: service, calendarID: calID)
@@ -310,6 +310,34 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             dismissControllerHelper()
         }
         
+        
+    }
+    
+    //Check if the events are in the array
+    func checkGoogleEventsList(eventList: GTLRCalendar_Events, calendarID: String) -> Bool{
+        let del = UIApplication.shared.delegate as! AppDelegate
+        var eventArray = del.EventArr
+        var calEvent:GTLRCalendar_Event = GTLRCalendar_Event.init()
+
+        
+        for event in eventArray{
+            calEvent.summary = event.name
+            
+            //Set date
+            var startDateTime:GTLRDateTime = GTLRDateTime.init(date: event.startDate)
+            var start:GTLRCalendar_EventDateTime = GTLRCalendar_EventDateTime.init()
+            var GTLREvent = eventList.items![0]
+            start.dateTime = startDateTime
+            start.timeZone = localTimeZoneName
+            calEvent.start = start
+            var cond1 = GTLREvent.summary == calEvent.summary
+//            var cond2 = GTLREvent.start == calEvent.start
+            if(cond1){
+                //Event is found
+                return true
+            }
+        }
+        return false
         
     }
     
