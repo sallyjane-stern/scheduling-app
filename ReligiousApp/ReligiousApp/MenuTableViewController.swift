@@ -37,8 +37,8 @@ class MenuTableViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
     }
     
     
@@ -62,11 +62,13 @@ class MenuTableViewController: UIViewController {
     
     
     func editLabel(){
-        var main = helloLabel.text
+//        var main = helloLabel.text
         if(isWeek){
-            main = main?.replacingOccurrences(of: "day", with: "week")
+//            main = main?.replacingOccurrences(of: "day", with: "week")
+            self.navigationItem.title = "Your Week"
         } else {
-            main = main?.replacingOccurrences(of: "week", with: "day")
+            self.navigationItem.title = "Your Day"
+//            main = main?.replacingOccurrences(of: "week", with: "day")
         }
     }
     

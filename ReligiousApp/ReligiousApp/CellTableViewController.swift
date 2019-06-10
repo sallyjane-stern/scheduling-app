@@ -18,6 +18,7 @@ class CellTableViewController: UITableViewController {
     public var searchEvents = [Event]()
     private var isSearching = false
 
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -188,6 +189,10 @@ class CellTableViewController: UITableViewController {
 
 extension CellTableViewController: UISearchBarDelegate{
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         //Add the events to a list that I can search through
         let del = UIApplication.shared.delegate as! AppDelegate
@@ -206,8 +211,11 @@ extension CellTableViewController: UISearchBarDelegate{
         }
         if(searchText == ""){
             isSearching = false
+            self.searchBar.showsCancelButton = false
+            
         } else {
             isSearching = true
+            self.searchBar.showsCancelButton = true
         }
         cellArray[0] = createEventList()
         tableView.reloadData()
@@ -216,6 +224,8 @@ extension CellTableViewController: UISearchBarDelegate{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         isSearching = false
         searchBar.text = ""
+        self.searchBar.showsCancelButton = false
+        self.searchBar.resignFirstResponder()
         cellArray[0] = createEventList()
         tableView.reloadData()
     }

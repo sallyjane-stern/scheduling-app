@@ -64,7 +64,7 @@ class EventViewcontroller:UITableViewController{
         updateHeaderView()
         
         //Set Bar Style to White
-        navigationController?.navigationBar.barStyle = .black
+//        navigationController?.navigationBar.barStyle = .black
         
         //Get the Appropriate Image
         var googleURL = ""
@@ -89,12 +89,15 @@ class EventViewcontroller:UITableViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //Change the opacity of the navigation controller
-        self.navigationController?.setNavigationBarHidden(false, animated: true) //Sets the bar to visible
-        let color = UIColor.init(red: 125/255, green: 125/255, blue: 125/255, alpha: 0.4)
+//        self.navigationController?.setNavigationBarHidden(false, animated: true) //Sets the bar to visible
+        let color = UIColor.init(red: 125/255, green: 125/255, blue: 125/255, alpha: 0.01)
         let colorImage = UIImage().imageFromColor(color: color, frame: CGRect(x: 0, y: 0, width: 340, height: 64))
-        self.navigationController?.navigationBar.setBackgroundImage(colorImage, for: .default)
-        //Set tint color to white
+//        self.navigationController?.navigationBar.setBackgroundImage(colorImage, for: .default)
+        self.navigationController?.navigationBar.barTintColor = UIColor(patternImage: colorImage)
+        self.navigationController?.navigationBar.isTranslucent = true
+//        //Set tint color to white
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         
         
         //Event Cell
@@ -211,9 +214,13 @@ class EventViewcontroller:UITableViewController{
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         //Resets the navigation controller to its default look
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+//        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 141/255, green: 25/255, blue: 42/255, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = self.view.tintColor
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
