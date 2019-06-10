@@ -1,0 +1,6 @@
+framework module Pods_InterfaithIt {
+  umbrella header "Pods-InterfaithIt-umbrella.h"
+
+  export *
+  module * { export * }
+}
