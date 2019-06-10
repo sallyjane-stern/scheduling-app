@@ -257,7 +257,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                         let eventListQuery = GTLRCalendarQuery_EventsList.query(withCalendarId: calID)
                         service.executeQuery(eventListQuery, completionHandler: {(ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
                             let eventList = object as! GTLRCalendar_Events
-                            if(eventList.items?.count == 0){
+                            if(!self.checkGoogleEventsList(eventList: eventList, calendarID: calID)){
                                 //The events need to be added
                                 print("CALENDAR HAS NO EVENTS")
                                 self.addGoogleEvents(service: service, calendarID: calID)
@@ -286,12 +286,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                         })
                         
                     }
-                    
+                    self.dismissControllerHelper()
                 })
-                
-                
-                
-                
             } else {
                 let alert = UIAlertController(title: "Calendar Error", message: "Please sign into your Google Account", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
@@ -317,6 +313,34 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
     }
     
+    //Check if the events are in the array
+    func checkGoogleEventsList(eventList: GTLRCalendar_Events, calendarID: String) -> Bool{
+        let del = UIApplication.shared.delegate as! AppDelegate
+        var eventArray = del.EventArr
+        var calEvent:GTLRCalendar_Event = GTLRCalendar_Event.init()
+
+        
+        for event in eventArray{
+            calEvent.summary = event.name
+            
+            //Set date
+            var startDateTime:GTLRDateTime = GTLRDateTime.init(date: event.startDate)
+            var start:GTLRCalendar_EventDateTime = GTLRCalendar_EventDateTime.init()
+            var GTLREvent = eventList.items![0]
+            start.dateTime = startDateTime
+            start.timeZone = localTimeZoneName
+            calEvent.start = start
+            var cond1 = GTLREvent.summary == calEvent.summary
+//            var cond2 = GTLREvent.start == calEvent.start
+            if(cond1){
+                //Event is found
+                return true
+            }
+        }
+        return false
+        
+    }
+    
     //Using the service that has the Oath2 Token and the Calendar ID, Add Events to the Calendar
     //Calendar ID has to be a paramater as calID may be nil when creating a new calendar due to
     //  the asynchronized function
@@ -333,6 +357,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         service.executeQuery(batchQuery, completionHandler: {(ticket: GTLRServiceTicket, object: Any?, error: Error?) -> Void in
             let qObject = object
             print("=======FINISHED ADDING TO GOOGLE CALENDAR=======")
+            self.dismissControllerHelper()
             if(error != nil){print("\(qObject) Error: \(error)")}
         })
     }

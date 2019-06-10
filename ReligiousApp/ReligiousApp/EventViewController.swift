@@ -12,6 +12,8 @@ import AVFoundation
 import UIKit
 import SDWebImage
 import GoogleAPIClientForREST
+import Alamofire
+import SwiftSoup
 
 //Class representing the Event Information Screen
 class EventViewcontroller:UITableViewController{
@@ -45,10 +47,21 @@ class EventViewcontroller:UITableViewController{
     @IBOutlet weak var greetingText: UILabel!
     @IBOutlet weak var detailText: UILabel!
     
+    //The Cells
+    @IBOutlet weak var impactsCell: UITableViewCell!
+    @IBOutlet weak var detailsTextCell: UITableViewCell!
+    @IBOutlet weak var detailsCell: UITableViewCell!
+    @IBOutlet weak var greetingInfoCell: UITableViewCell!
+    @IBOutlet weak var greetingCell: UITableViewCell!
+    @IBOutlet weak var foodListCell: UITableViewCell!
+    @IBOutlet weak var foodCell: UITableViewCell!
+    @IBOutlet weak var getInvolvedCell: UITableViewCell!
+    @IBOutlet weak var impactsListCell: UITableViewCell!
     public var theEvent: Event!
     private var infoStruct: SheetData?
     private let kTableHeaderHeight: CGFloat = 246.0
     var headerView: UIView!
+    private var isInGoogleSheets: Bool?
     
     
     override func viewDidLoad() {
@@ -67,10 +80,16 @@ class EventViewcontroller:UITableViewController{
         navigationController?.navigationBar.barStyle = .black
         
         //Get the Appropriate Image
+        isInGoogleSheets = checkGoogleSheets()
         var googleURL = ""
-        if(!googleURL.contains(".jpg")){
-            googleURL.append(".jpg")
-            //print(googleURL)
+        if(isInGoogleSheets!){
+            //Get URL from Google Sheets
+            if(!googleURL.contains(".jpg")){
+                googleURL.append(".jpg")
+                //print(googleURL)
+            }
+        } else {
+            googleURL = getDefaultImageURL().absoluteString
         }
         let url = URL(string: googleURL)
         //Use SDWebView Library to get the appropriate image asyncronisly
@@ -79,12 +98,24 @@ class EventViewcontroller:UITableViewController{
         
         imageView.sd_setImage(with: url, placeholderImage: defaultImage) { (image, error, cache, url) in
             //If Image fails to load then set the default image to a random animal
-            if(self.imageView.image == defaultImage){
-                self.imageView.sd_setImage(with: self.getDefaultImageURL(), placeholderImage: defaultImage)
-            }
         }
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let row = indexPath.row
+        let section = indexPath.section
+        //print("SHEETS VALUE: \(isInGoogleSheets!)")
+        var willSetZero = !isInGoogleSheets!
+        if(willSetZero && section == 0){
+            if(row >= 2 && row <= 8){
+                return 0
+            } else {
+                return UITableView.automaticDimension
+            }
+        } else {
+            return UITableView.automaticDimension
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -98,16 +129,18 @@ class EventViewcontroller:UITableViewController{
         
         
         //Event Cell
+        isInGoogleSheets = checkGoogleSheets()
         
         //Set Button to unclickable
         EventTitle.isUserInteractionEnabled = false
         //Get Holiday Name
-        //Code Here
         EventName.text = theEvent.name
         //Get Pronounciation
-        //Code Here
-        if(pronunciation.text == "Pronounce"){
-            pronunciation.text = "No Pronunciation Found"
+        if(!isInGoogleSheets!){
+            //pronunciation.text = "No Pronunciation Found"
+            pronunciation.text = "Hoh-lee"
+        } else {
+            //Get the Pronunciation from Google Sheets
         }
         
         //Date
@@ -172,7 +205,12 @@ class EventViewcontroller:UITableViewController{
         //Set up the stack view
         funView.sizeThatFits(CGSize.init(width: 40, height: 92))
         //Get Moods - Order is Celbratory, Fun, Reflective, Serious, Mournful
-        let moodArray = [true, true, false, false, false]
+        var moodArray = [true, true, false, false, false]
+        if(!isInGoogleSheets!){
+            moodArray = [false, false, false, false, false]
+        } else {
+            //Get Mood from Google Sheets
+        }
         celebratoryView.isHidden = !moodArray[0]
         funView.isHidden = !moodArray[1]
         reflectiveView.isHidden = !moodArray[2]
@@ -186,23 +224,97 @@ class EventViewcontroller:UITableViewController{
         
         //ImpactsListCell
         
-        let impactList = [true, true, true, false]
-        if(!impactList[0]) { fastingCheck.image = UIImage.init(named: "XSymbol")} else { fastingCheck.image = UIImage.init(named: "CheckSymbol")}
-        if(!impactList[1]) { travelCheck.image = UIImage.init(named: "XSymbol")} else { travelCheck.image = UIImage.init(named: "CheckSymbol")}
-        if(!impactList[2]) { expectCheck.image = UIImage.init(named: "XSymbol")} else { expectCheck.image = UIImage.init(named: "CheckSymbol")}
-        if(!impactList[3]) { busyCheck.image = UIImage.init(named: "XSymbol")} else { busyCheck.image = UIImage.init(named: "CheckSymbol")}
+        var impactList = [true, true, true, true]
+        if(!isInGoogleSheets!){
+            impactList = [false, false, false, false]
+        } else {
+            //Get Impacts from Google Sheets
+            
+            
+            
+            //Set Impact
+            if(!impactList[0]) { fastingCheck.image = UIImage.init(named: "XSymbol")} else { fastingCheck.image = UIImage.init(named: "CheckSymbol")}
+            if(!impactList[1]) { travelCheck.image = UIImage.init(named: "XSymbol")} else { travelCheck.image = UIImage.init(named: "CheckSymbol")}
+            if(!impactList[2]) { expectCheck.image = UIImage.init(named: "XSymbol")} else { expectCheck.image = UIImage.init(named: "CheckSymbol")}
+            if(!impactList[3]) { busyCheck.image = UIImage.init(named: "XSymbol")} else { busyCheck.image = UIImage.init(named: "CheckSymbol")}
+        }
+        
         
         //FoodListCell
         
-        foodList.text = "Lorem ipsum dolor sit amet weafouahwf;oeha;fuheliwasuhfiewuhfiluhliuaehzfliuheawlifhewlifhilewhflieahlifehlieuhaflihawleifhealiufhehlfahufelihauef end"
+        foodList.text = "Lorem ipsum dolor sit amet"
         
         //GreetingInfoCell
         
         greetingText.text = "Happy Greeting"
         
         //DetailsTextCell
+        if(!isInGoogleSheets!){
+            //            detailText.text = "Click the wikipedia button to learn more!"
+            let text:String = EventName.text!.replacingOccurrences(of: " ", with: "_")
+            let url = "https://en.wikipedia.org/wiki/\(text)"
+            
+            Alamofire.request(url).responseString { response in
+                //                print("Request: \(String(describing: response.request))")   // original url request
+                //                print("Response: \(String(describing: response.response))") // http url response
+                //                print("Result: \(response.result)")                         // response serialization result
+                
+                //SwiftSoup.parse(response.result.description)
+                var body = ""
+                do {
+                    let html = response.result.value
+                    let doc: Document = try SwiftSoup.parse(html!)
+                    var t = try doc.text()
+                    var details = "From Wikipedia:\n"
+                    var wordCount = 0
+                    //String parsing
+                    var distance:Int = 0
+                    
+                    if let startIndex = t.firstIndex(of: "["){
+                        distance = t.distance(from: t.startIndex, to: startIndex)}
+                    
+                    if(distance != 0){
+                        for index in 0...distance{
+                            t.removeFirst()
+                        }
+                        
+                        
+                        for index in distance...t.count {
+                            var char:Character = t.removeFirst()
+                            if(wordCount < 200){
+                                if(char == " "){
+                                    wordCount += 1
+                                }
+                                details.append(char)
+                            } else {
+                                break
+                            }
+                        }
+                        
+                    } else {
+                        details.append("Click Wikipedia Button for more details")
+                    }
+                    
+                    details.append("...")
+                    //print("=======DETAILS====")
+                    //print(details)
+                    self.detailText.text = details
+                    self.view.setNeedsLayout()
+                    self.tableView.reloadData()
+                    
+                    //self.detailText.text = try doc.text()
+                } catch Exception.Error(let type, let message) {
+                    print("Error1")
+                } catch {
+                    print("Error2")
+                }
+                
+            }
+            
+            
+            
+        }
         
-        detailText.text = " Star. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.\nLorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. End"
         
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
@@ -216,9 +328,9 @@ class EventViewcontroller:UITableViewController{
         self.navigationController?.navigationBar.tintColor = self.view.tintColor
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
+    //    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return UITableView.automaticDimension
+    //    }
     
     func updateHeaderView() {
         var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
@@ -234,13 +346,20 @@ class EventViewcontroller:UITableViewController{
         updateHeaderView()
     }
     
+    func checkGoogleSheets() -> Bool {
+        //Check if the event is in Google Sheets
+        var isInSheets:Bool = false
+        
+        return isInSheets
+    }
+    
     func googleSheetsParser() {
         let service = GTLRService()
         let spreadSheetID = "1issBSCYE-qq00dk2_CD8AH95HPi_Mik1TGBd_0DLNGE"
         let range = "A1:K"
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadSheetID, range: range)
         service.executeQuery(query, completionHandler: nil)
-
+        
     }
     func addToSheetData(ticket: GTLRServiceTicket, finishedWithObject result : GTLRSheets_ValueRange, error : NSError?) {
         
@@ -249,9 +368,9 @@ class EventViewcontroller:UITableViewController{
             return
         }
         let data = result.values!
-//        for row in data {
-//            infoSheet = SheetData.init(name: <#T##String#>, pronounce: <#T##String#>, tradition: <#T##String#>, mood: <#T##String#>, impacts: <#T##String#>, food: <#T##String#>, greeting: <#T##String#>, desc: <#T##String#>, imageURL: <#T##String#>, restrictions: <#T##String#>)
-//        }
+        //        for row in data {
+        //            infoSheet = SheetData.init(name: <#T##String#>, pronounce: <#T##String#>, tradition: <#T##String#>, mood: <#T##String#>, impacts: <#T##String#>, food: <#T##String#>, greeting: <#T##String#>, desc: <#T##String#>, imageURL: <#T##String#>, restrictions: <#T##String#>)
+        //        }
     }
     //Function that uses a random number generator to select a random animal from the list and return that animal as an image to be displayed
     func getDefaultImageURL() -> URL{

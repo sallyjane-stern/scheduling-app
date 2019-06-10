@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0B8DF0D269B3874B966B85C0 /* Pods_ReligiousAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1406B42A1ABC8ACC7C90A5 /* Pods_ReligiousAppUITests.framework */; };
-		24AA5EF10B90848806BF685F /* Pods_ReligiousApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F755D91702F95518881F7ACF /* Pods_ReligiousApp.framework */; };
+		36EE7F42EC0DF62E40199809 /* Pods_InterfaithIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5869FBE1B4F813E4929E1092 /* Pods_InterfaithIt.framework */; };
 		7083A8532287609500792A1B /* religious_holidays.ics in Resources */ = {isa = PBXBuildFile; fileRef = C9036573227368770046588C /* religious_holidays.ics */; };
+		A9EB0946B17C81A1CD309E7C /* Pods_InterfaithItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5186FDD49E3039D7B19EBE /* Pods_InterfaithItUITests.framework */; };
 		B4FAC6AD69E48E48C8DD0EE3 /* Pods_ReligiousAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E744D341F19CF46DCD7A9A3 /* Pods_ReligiousAppTests.framework */; };
+		B9611FA354F2DC72AE06974C /* Pods_InterfaithItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CF07559B26E7C495956736 /* Pods_InterfaithItTests.framework */; };
 		C9036574227368770046588C /* religious_holidays.ics in Resources */ = {isa = PBXBuildFile; fileRef = C9036573227368770046588C /* religious_holidays.ics */; };
 		C96FA041227D0CC0002828C9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96FA040227D0CC0002828C9 /* EventViewController.swift */; };
 		C9A8AA5B226FE6E200231FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8AA5A226FE6E200231FD9 /* AppDelegate.swift */; };
@@ -46,11 +48,18 @@
 /* Begin PBXFileReference section */
 		09FA5CC6B37119A0B8F9F745 /* Pods-ReligiousApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReligiousApp.release.xcconfig"; path = "Target Support Files/Pods-ReligiousApp/Pods-ReligiousApp.release.xcconfig"; sourceTree = "<group>"; };
 		0F1406B42A1ABC8ACC7C90A5 /* Pods_ReligiousAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReligiousAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13CF07559B26E7C495956736 /* Pods_InterfaithItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaithItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B391330244E774E8A0184D /* Pods-ReligiousApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReligiousApp.debug.xcconfig"; path = "Target Support Files/Pods-ReligiousApp/Pods-ReligiousApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1D5186FDD49E3039D7B19EBE /* Pods_InterfaithItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaithItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E744D341F19CF46DCD7A9A3 /* Pods_ReligiousAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReligiousAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5869FBE1B4F813E4929E1092 /* Pods_InterfaithIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaithIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB0ADF8F6C58FB800D942E2 /* Pods-InterfaithItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterfaithItTests.release.xcconfig"; path = "Target Support Files/Pods-InterfaithItTests/Pods-InterfaithItTests.release.xcconfig"; sourceTree = "<group>"; };
+		8508F319B1F2F9F679350A23 /* Pods-InterfaithItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterfaithItUITests.debug.xcconfig"; path = "Target Support Files/Pods-InterfaithItUITests/Pods-InterfaithItUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA54C8FFD238D140575106E4 /* Pods-ReligiousAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReligiousAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReligiousAppUITests/Pods-ReligiousAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0B4160DCCAF172375443F6A /* Pods-ReligiousAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReligiousAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ReligiousAppTests/Pods-ReligiousAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B43DC6CAE1721E05615D30C3 /* Pods-InterfaithIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterfaithIt.release.xcconfig"; path = "Target Support Files/Pods-InterfaithIt/Pods-InterfaithIt.release.xcconfig"; sourceTree = "<group>"; };
 		B82FC0FC92F10168BCD8901A /* Pods-ReligiousAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReligiousAppTests.release.xcconfig"; path = "Target Support Files/Pods-ReligiousAppTests/Pods-ReligiousAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		BBE17EBCBB79A68A4A3DE7AF /* Pods-InterfaithItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterfaithItTests.debug.xcconfig"; path = "Target Support Files/Pods-InterfaithItTests/Pods-InterfaithItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9036573227368770046588C /* religious_holidays.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = religious_holidays.ics; sourceTree = "<group>"; };
 		C96FA040227D0CC0002828C9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C9A8AA57226FE6E200231FD9 /* InterfaithIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterfaithIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +79,8 @@
 		C9B1EFFB228A075B0036926E /* CellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewController.swift; sourceTree = "<group>"; };
 		C9B67DF42295914B00207D15 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C9C66C12227F635C004EE009 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		D95C3140D8076B2A6D3F0AB6 /* Pods-InterfaithIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterfaithIt.debug.xcconfig"; path = "Target Support Files/Pods-InterfaithIt/Pods-InterfaithIt.debug.xcconfig"; sourceTree = "<group>"; };
+		DD58F039F099D3C427975EC3 /* Pods-InterfaithItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterfaithItUITests.release.xcconfig"; path = "Target Support Files/Pods-InterfaithItUITests/Pods-InterfaithItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F755D91702F95518881F7ACF /* Pods_ReligiousApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReligiousApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD0A5B05D190E94B51D2785E /* Pods-ReligiousAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReligiousAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ReligiousAppUITests/Pods-ReligiousAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24AA5EF10B90848806BF685F /* Pods_ReligiousApp.framework in Frameworks */,
+				36EE7F42EC0DF62E40199809 /* Pods_InterfaithIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4FAC6AD69E48E48C8DD0EE3 /* Pods_ReligiousAppTests.framework in Frameworks */,
+				B9611FA354F2DC72AE06974C /* Pods_InterfaithItTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B8DF0D269B3874B966B85C0 /* Pods_ReligiousAppUITests.framework in Frameworks */,
+				A9EB0946B17C81A1CD309E7C /* Pods_InterfaithItUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +121,9 @@
 				F755D91702F95518881F7ACF /* Pods_ReligiousApp.framework */,
 				1E744D341F19CF46DCD7A9A3 /* Pods_ReligiousAppTests.framework */,
 				0F1406B42A1ABC8ACC7C90A5 /* Pods_ReligiousAppUITests.framework */,
+				5869FBE1B4F813E4929E1092 /* Pods_InterfaithIt.framework */,
+				13CF07559B26E7C495956736 /* Pods_InterfaithItTests.framework */,
+				1D5186FDD49E3039D7B19EBE /* Pods_InterfaithItUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +137,12 @@
 				B82FC0FC92F10168BCD8901A /* Pods-ReligiousAppTests.release.xcconfig */,
 				AA54C8FFD238D140575106E4 /* Pods-ReligiousAppUITests.debug.xcconfig */,
 				FD0A5B05D190E94B51D2785E /* Pods-ReligiousAppUITests.release.xcconfig */,
+				D95C3140D8076B2A6D3F0AB6 /* Pods-InterfaithIt.debug.xcconfig */,
+				B43DC6CAE1721E05615D30C3 /* Pods-InterfaithIt.release.xcconfig */,
+				BBE17EBCBB79A68A4A3DE7AF /* Pods-InterfaithItTests.debug.xcconfig */,
+				5AB0ADF8F6C58FB800D942E2 /* Pods-InterfaithItTests.release.xcconfig */,
+				8508F319B1F2F9F679350A23 /* Pods-InterfaithItUITests.debug.xcconfig */,
+				DD58F039F099D3C427975EC3 /* Pods-InterfaithItUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -326,26 +348,30 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReligiousApp/Pods-ReligiousApp-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-InterfaithIt/Pods-InterfaithIt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MXLCalendarManagerSwift/MXLCalendarManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXLCalendarManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReligiousApp/Pods-ReligiousApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InterfaithIt/Pods-InterfaithIt-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		87CA5F717AC7AA1992531D10 /* [CP] Copy Pods Resources */ = {
@@ -356,7 +382,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReligiousApp/Pods-ReligiousApp-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-InterfaithIt/Pods-InterfaithIt-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -367,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReligiousApp/Pods-ReligiousApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InterfaithIt/Pods-InterfaithIt-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		93E263FE92AC1960610DABD0 /* [CP] Check Pods Manifest.lock */ = {
@@ -385,7 +411,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReligiousAppUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-InterfaithItUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -407,7 +433,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReligiousAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-InterfaithItTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -429,7 +455,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReligiousApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-InterfaithIt-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -622,7 +648,7 @@
 		};
 		C9A8AA80226FE6E400231FD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18B391330244E774E8A0184D /* Pods-ReligiousApp.debug.xcconfig */;
+			baseConfigurationReference = D95C3140D8076B2A6D3F0AB6 /* Pods-InterfaithIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -644,7 +670,7 @@
 		};
 		C9A8AA81226FE6E400231FD9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09FA5CC6B37119A0B8F9F745 /* Pods-ReligiousApp.release.xcconfig */;
+			baseConfigurationReference = B43DC6CAE1721E05615D30C3 /* Pods-InterfaithIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -666,7 +692,7 @@
 		};
 		C9A8AA83226FE6E400231FD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0B4160DCCAF172375443F6A /* Pods-ReligiousAppTests.debug.xcconfig */;
+			baseConfigurationReference = BBE17EBCBB79A68A4A3DE7AF /* Pods-InterfaithItTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -688,7 +714,7 @@
 		};
 		C9A8AA84226FE6E400231FD9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B82FC0FC92F10168BCD8901A /* Pods-ReligiousAppTests.release.xcconfig */;
+			baseConfigurationReference = 5AB0ADF8F6C58FB800D942E2 /* Pods-InterfaithItTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -710,7 +736,7 @@
 		};
 		C9A8AA86226FE6E400231FD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA54C8FFD238D140575106E4 /* Pods-ReligiousAppUITests.debug.xcconfig */;
+			baseConfigurationReference = 8508F319B1F2F9F679350A23 /* Pods-InterfaithItUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -731,7 +757,7 @@
 		};
 		C9A8AA87226FE6E400231FD9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD0A5B05D190E94B51D2785E /* Pods-ReligiousAppUITests.release.xcconfig */;
+			baseConfigurationReference = DD58F039F099D3C427975EC3 /* Pods-InterfaithItUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
