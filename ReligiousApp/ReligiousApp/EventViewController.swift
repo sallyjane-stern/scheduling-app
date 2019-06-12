@@ -63,6 +63,20 @@ class EventViewcontroller:UITableViewController{
     var headerView: UIView!
     private var isInGoogleSheets: Bool?
     
+    //google sheets information for event
+    private var sheetsURL: String = ""
+    private var sheetsPronunciation: String = ""
+    private var sheetsImpact: [String] = []
+    private var sheetsMood: [String] = []
+    private var sheetsFood: String = ""
+    private var sheetsGreeting: String = ""
+    private var sheetsDescription: String = ""
+    private var sheetsRestrictions: String = ""
+    
+    
+    private var del = UIApplication.shared.delegate as! AppDelegate
+
+    
     
     override func viewDidLoad() {
         print("Got to view did load")
@@ -84,12 +98,14 @@ class EventViewcontroller:UITableViewController{
         var googleURL = ""
         if(isInGoogleSheets!){
             //Get URL from Google Sheets
+            googleURL = sheetsURL
             if(!googleURL.contains(".jpg")){
                 googleURL.append(".jpg")
                 //print(googleURL)
             }
         } else {
             googleURL = getDefaultImageURL().absoluteString
+        
         }
         let url = URL(string: googleURL)
         //Use SDWebView Library to get the appropriate image asyncronisly
@@ -144,6 +160,7 @@ class EventViewcontroller:UITableViewController{
             pronunciation.text = "Hoh-lee"
         } else {
             //Get the Pronunciation from Google Sheets
+            pronunciation.text = sheetsPronunciation
         }
         
         //Date
@@ -208,11 +225,24 @@ class EventViewcontroller:UITableViewController{
         //Set up the stack view
         funView.sizeThatFits(CGSize.init(width: 40, height: 92))
         //Get Moods - Order is Celbratory, Fun, Reflective, Serious, Mournful
-        var moodArray = [true, true, false, false, false]
+        var moodArray = [false, false, false, false, false]
         if(!isInGoogleSheets!){
             moodArray = [false, false, false, false, false]
         } else {
-            //Get Mood from Google Sheets
+            for mood in sheetsMood {
+                if(mood == "Celebratory") {
+                    moodArray[0] = true
+                } else if(mood == "Fun") {
+                    moodArray[1] = true
+                } else if(mood == "Reflective") {
+                    moodArray[2] = true
+                } else if(mood == "Serious") {
+                    moodArray[3] = true
+                } else if(mood == "Mornful") {
+                    moodArray[4] = true
+                }
+            }
+            
         }
         celebratoryView.isHidden = !moodArray[0]
         funView.isHidden = !moodArray[1]
@@ -231,7 +261,18 @@ class EventViewcontroller:UITableViewController{
         if(!isInGoogleSheets!){
             impactList = [false, false, false, false]
         } else {
-            //Get Impacts from Google Sheets
+            for impact in sheetsImpact {
+                if(impact == "Fasting") {
+                    impactList[0] = true
+                } else if(impact == "Traveling") {
+                    impactList[1] = true
+                } else if(impact == "Managing Family Expectations/Obligations") {
+                    impactList[2] = true
+                } else if(impact == "Busy with Holiday Preparation") {
+                    impactList[3] = true
+                }
+                
+            }
             
             
             
@@ -244,7 +285,9 @@ class EventViewcontroller:UITableViewController{
         
         
         //FoodListCell
-        
+        if(isInGoogleSheets!) {
+            foodList.text = sheetsFood
+        }
         foodList.text = "Lorem ipsum dolor sit amet"
         
         //GreetingInfoCell
@@ -354,8 +397,23 @@ class EventViewcontroller:UITableViewController{
     }
     
     func checkGoogleSheets() -> Bool {
+        print("checkingSheets")
         //Check if the event is in Google Sheets
         var isInSheets:Bool = false
+        for sheet in del.SheetArr {
+            if theEvent.name == sheet.name {
+                isInSheets = true
+                
+                sheetsURL = sheet.imageURL
+                sheetsFood = sheet.food
+                sheetsMood = sheet.mood
+                sheetsImpact = sheet.impacts
+                sheetsGreeting = sheet.greeting
+                sheetsPronunciation = sheet.pronounce
+                sheetsDescription = sheet.desc
+                sheetsRestrictions = sheet.restrictions
+            }
+        }
         
         return isInSheets
     }
@@ -463,17 +521,3 @@ extension UIImage {
     }
 }
 
-//Struct that will lay out the Sheet Data to be filled in by the Google Sheet Parser
-struct SheetData {
-    var name: String
-    var pronounce: String
-    var tradition: String
-    var mood: String
-    var impacts: String
-    var food: String
-    var greeting: String
-    var desc: String
-    var imageURL: String
-    var restrictions: String
-    
-}

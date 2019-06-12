@@ -9,12 +9,18 @@
 import UIKit
 import GoogleSignIn
 import MXLCalendarManagerSwift
+import GoogleAPIClientForREST
+
 
 @UIApplicationMain
 //App Delegate
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
     public var EventArr = [Event]()
+    public var SheetArr = [SheetData]()
+    
+    private let service = GTLRSheetsService()
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -25,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         // Create an event array
         var event = Event.init()
+        openSpreadsheet()
         //Only Parse through the calendar files the first time the app is loaded
         if(!UserDefaults.standard.bool(forKey: "onBoard")){
             let eventList = parseEventFile()
@@ -210,6 +217,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return eventList
     }
 
+    @objc func openSpreadsheet() {
 
+        let spreadsheetId = "1issBSCYE-qq00dk2_CD8AH95HPi_Mik1TGBd_0DLNGE"
+        let range = "Responses!A2:K"
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadsheetId, range:range)
+        
+        service.executeQuery(query, delegate: self, didFinish:#selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
+        
+    }
+    
+    @objc func displayResultWithTicket(ticket: GTLRServiceTicket,
+                            finishedWithObject result : GTLRSheets_ValueRange,
+                            error : NSError?) {
+
+        if let error = error {
+            print("ERROR")
+            return
+        }
+        let rows = result.values!
+
+        
+        
+        if rows.isEmpty {
+            print("empty")
+            return
+        }
+        for row in rows {
+            let moodString = row[4] as! String
+            let moodArr = moodString.components(separatedBy: ", ")
+            let impactString = row[5] as! String
+            let impactArr = impactString.components(separatedBy: ", ")
+            
+            let infoSheet = SheetData.init(name: row[1] as! String, pronounce: row[2] as! String, tradition: row[3] as! String, mood: moodArr, impacts: impactArr, food: row[6] as! String, greeting: row[7] as! String, desc: row[8] as! String, imageURL: row[9] as! String, restrictions: row[10] as! String)
+            SheetArr.append(infoSheet)
+            
+        }
+        
+    }
+    
+    
+}
+
+//Struct that will lay out the Sheet Data to be filled in by the Google Sheet Parser
+struct SheetData {
+    var name: String
+    var pronounce: String
+    var tradition: String
+    var mood: [String]
+    var impacts: [String]
+    var food: String
+    var greeting: String
+    var desc: String
+    var imageURL: String
+    var restrictions: String
+    
 }
 
